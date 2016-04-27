@@ -51,11 +51,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void ButtonCredits(){
-		mainMenu.SetActive (false);
-		options.SetActive (false);
-		newGame.SetActive (false);
-		credits.SetActive (true);
-		evento.SetSelectedGameObject (backCredits);
+		SceneManager.LoadScene (4);
 	}
 
 	public void ButtonBack(){
