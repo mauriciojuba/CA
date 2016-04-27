@@ -1,0 +1,54 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class DoorOpen : MonoBehaviour {
+
+	public bool canOpen1;
+	public bool canOpen2;
+	public GameObject porta1;
+	public GameObject porta2;
+	public GameObject porta3;
+	public GameObject porta4;
+	public GameObject player;
+
+	// Use this for initialization
+	void Start () {
+		canOpen1 = false;
+		canOpen2 = false;
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if ((Input.GetKeyDown (KeyCode.JoystickButton0) || Input.GetKeyDown (KeyCode.X)) && canOpen1) {
+			player.GetComponentInChildren<AudioManager> ().PlaySound (3);
+			porta1.GetComponent<Animation> ().Play();
+			porta2.GetComponent<Animation> ().Play ();
+			player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa();
+			canOpen1 = false;
+		}
+		if ((Input.GetKeyDown (KeyCode.JoystickButton0) || Input.GetKeyDown (KeyCode.X)) && canOpen2) {
+			player.GetComponentInChildren<AudioManager> ().PlaySound (3);
+			porta3.GetComponent<Animation> ().Play ();
+			porta4.GetComponent<Animation> ().Play ();
+			player.GetComponent<DialogHandlerTutorial> ().message = "FIM";
+			player.GetComponent<DialogHandlerTutorial> ().canTalk = true;
+			canOpen2 = false;
+		}
+	}
+
+	void OnTriggerEnter(Collider hit){
+		if (hit.tag == "Player2") 
+			canOpen1 = true;
+	
+		if (hit.tag == "Player1")
+			canOpen2 = true;
+	}
+
+	void OnTriggerExit(Collider hit){
+		if (hit.tag == "Player2") 
+			canOpen1 = false;
+
+		if (hit.tag == "Player1")
+			canOpen2 = false;
+	}
+}

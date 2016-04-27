@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 2de61180eba49474da827f0bd074d458
+timeCreated: 1461702292
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - audio: {instanceID: 0}
+  - pegaVida: {fileID: 8300000, guid: 01d9782dcb436f841a5eb52b9a32fdf6, type: 3}
+  - destroiErva: {fileID: 8300000, guid: 08271475e1c160b45a624be37c6ee714, type: 3}
+  - abrirPortaCeleiro: {fileID: 8300000, guid: 32b90994bead03c45a078ba3f1a803ff, type: 3}
+  - magicaNabos: {fileID: 8300000, guid: 35087d43a9fdb3540bc9c5a4129738b4, type: 3}
+  - faseConcluida: {fileID: 8300000, guid: 063e4137119945c4db7a4de5514f5857, type: 3}
+  - start: {instanceID: 0}
+  - selectMenu: {instanceID: 0}
+  - questCompleted: {instanceID: 0}
+  - gameOver: {fileID: 8300000, guid: b8e9d820e8ed85448b793e50a97a9700, type: 3}
+  - tacarNabos: {fileID: 8300000, guid: 3182964c8169f4e4a8b6f0c19363ef0f, type: 3}
+  - ataqueTurnip: {fileID: 8300000, guid: 43a02abb63cd3d64ba20db0bb20928f3, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
