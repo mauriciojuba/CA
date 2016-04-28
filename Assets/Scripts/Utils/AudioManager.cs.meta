@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2de61180eba49474da827f0bd074d458
-timeCreated: 1461702292
+timeCreated: 1461849255
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -17,6 +17,19 @@ MonoImporter:
   - gameOver: {fileID: 8300000, guid: b8e9d820e8ed85448b793e50a97a9700, type: 3}
   - tacarNabos: {fileID: 8300000, guid: 3182964c8169f4e4a8b6f0c19363ef0f, type: 3}
   - ataqueTurnip: {fileID: 8300000, guid: 43a02abb63cd3d64ba20db0bb20928f3, type: 3}
+  - Blobman_Ataque: {fileID: 8300000, guid: c0af93feb0ebb554db907a8849f85541, type: 3}
+  - Blobman_Dano: {fileID: 8300000, guid: ec26c085d9baf4c41967b914d597f0a8, type: 3}
+  - Blobman_Morte: {fileID: 8300000, guid: 8f2415292c2ac75499713927ce20b401, type: 3}
+  - Blobman_Passos: {fileID: 8300000, guid: c7e026a34e49fe84d88a2671c3365351, type: 3}
+  - Demonio_Agua_Voz_1: {fileID: 8300000, guid: 98e118804d0534f4fa504339628f304e,
+      type: 3}
+  - Demonio_Agua_Voz_2: {fileID: 8300000, guid: 140236afc35fad14b8803ff6470c471e,
+      type: 3}
+  - Demonio_Agua_Voz_3: {fileID: 8300000, guid: a250520de23fb7645abd134f93fb8021,
+      type: 3}
+  - Demonio_Agua_Dano: {fileID: 8300000, guid: 06108a3b279272242885fd9d3fa80a10, type: 3}
+  - Demonio_Agua_Morte: {fileID: 8300000, guid: b57087910841f394fbca3ec0a1027cf9,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -39,6 +39,12 @@ public class AudioManager : MonoBehaviour {
 
 	#region Sons Demonio de Agua
 
+	public AudioClip Demonio_Agua_Voz_1;
+	public AudioClip Demonio_Agua_Voz_2;
+	public AudioClip Demonio_Agua_Voz_3;
+	public AudioClip Demonio_Agua_Dano;
+	public AudioClip Demonio_Agua_Morte;
+
 	#endregion
 
 	#region Sons Demonio de Pedra
