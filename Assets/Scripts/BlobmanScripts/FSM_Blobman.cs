@@ -37,15 +37,12 @@ public class FSM_Blobman : MonoBehaviour {
 
 	public float vida = 100;
 	private bool dano = false;
-	private float contar = 0.5f;
 
 	#endregion
 
 	#region Unity Functions
 
 	void Start () {
-
-		target = GameObject.FindWithTag ("Player1");
 		
 		currentWaypoint = 0;
 		timer           = 0;
@@ -86,8 +83,6 @@ public class FSM_Blobman : MonoBehaviour {
 	#region Andar
 	private void Andar_State(){
 
-
-
 		if (direcao.magnitude <= distanceToStartChasing) {
 			state = FSMStates.Perseguir;
 			return;
@@ -116,12 +111,6 @@ public class FSM_Blobman : MonoBehaviour {
 
 		contToAtaque = setCont;
 
-		contar -= Time.deltaTime;
-
-		if (contar < 0) {
-			target.GetComponentInChildren<AudioManager> ().PlaySound (11);
-			contar = 0.5f;
-		}
 		if (direcao.magnitude > distanceToStopChasing) {
 			state = FSMStates.Andar;
 			return;
@@ -146,12 +135,9 @@ public class FSM_Blobman : MonoBehaviour {
 
 		Ataque.SetActive (false);
 
-
 		contToAtaque -= Time.deltaTime;
 
 		if (direcao.magnitude <= distanceToAtaque && contToAtaque <= 0 ) {
-
-			target.GetComponentInChildren<AudioManager> ().PlaySound (8);
 
 			Ataque.SetActive (true);
 			contToAtaque = setCont;
