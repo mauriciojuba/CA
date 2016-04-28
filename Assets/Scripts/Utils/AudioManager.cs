@@ -30,6 +30,11 @@ public class AudioManager : MonoBehaviour {
 
 	#region Sons Blobman
 
+	public AudioClip Blobman_Ataque;
+	public AudioClip Blobman_Dano;
+	public AudioClip Blobman_Morte;
+	public AudioClip Blobman_Passos;
+
 	#endregion
 
 	#region Sons Demonio de Agua
