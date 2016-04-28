@@ -1,10 +1,15 @@
 fileFormatVersion: 2
 guid: 92f2ee8d98724f9409db0a68f506e3cf
-timeCreated: 1461603190
+timeCreated: 1461877218
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waterSound: {fileID: 8300000, guid: 8c128546b971c3a4e90d3ef1d2e846c4, type: 3}
+  - earthSound: {fileID: 8300000, guid: 2857d26bbbc4b974baac05da9c136383, type: 3}
+  - woodSound: {fileID: 8300000, guid: 64cefe01a7921c04c9827379dbcd15bd, type: 3}
+  - grassSound: {fileID: 8300000, guid: 2857d26bbbc4b974baac05da9c136383, type: 3}
+  - audio: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
