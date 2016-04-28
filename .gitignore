@@ -47,3 +47,6 @@ Temporary Items
 .apdisk
 Temp/
 Library/
+.csproj
+.sln
+.userprefs

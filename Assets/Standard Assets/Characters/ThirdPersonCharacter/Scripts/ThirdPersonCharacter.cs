@@ -221,5 +221,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Animator.applyRootMotion = false;
 			}
 		}
-	}
+        public void Attacking(bool attack)
+        {
+            m_Animator.SetBool("isAttacking", attack);
+        }
+    }
 }
