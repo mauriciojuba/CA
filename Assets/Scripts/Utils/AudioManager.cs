@@ -91,6 +91,30 @@ public class AudioManager : MonoBehaviour {
 			audio.PlayOneShot(tacarNabos);
 		}
 		#endregion
+
+		#region SONS DO BLOBMAN
+		if(sound == 8)
+			audio.PlayOneShot(Blobman_Ataque);
+		if(sound == 9)
+			audio.PlayOneShot(Blobman_Dano);
+		if(sound == 10)
+			audio.PlayOneShot(Blobman_Morte);
+		if(sound == 11)
+			audio.PlayOneShot(Blobman_Passos);
+		#endregion
+
+		#region SONS DO DEMONIO DA AGUA
+		if(sound == 12)
+			audio.PlayOneShot(Demonio_Agua_Voz_1);
+		if(sound == 13)
+			audio.PlayOneShot(Demonio_Agua_Voz_2);
+		if(sound == 14)
+			audio.PlayOneShot(Demonio_Agua_Voz_3);
+		if(sound == 15)
+			audio.PlayOneShot(Demonio_Agua_Dano);
+		if(sound == 16)
+			audio.PlayOneShot(Demonio_Agua_Morte);
+		#endregion
 	}
 	
 }
