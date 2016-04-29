@@ -4,12 +4,18 @@
 // <author>Adam Ellis</author>
 using System;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 /// <summary>
 /// Controller class for two player Magic Splitscreen camera(s)
 /// </summary>
 public class MagicSplitscreen : MonoBehaviour
 {
+	private float velocidade = 4f;
+	private RaycastHit hit;
+	private LayerMask playerMask = 1 << 9;
+	private LayerMask camMask = 1 << 0;
+	public Transform playerRay1, playerRay2;
     #region Unity inspector values
     /// <summary>
     /// Distance away from the player(s) that the camera(s) should be
@@ -173,20 +179,26 @@ public class MagicSplitscreen : MonoBehaviour
     /// <summary>
     /// Gets a value representing an active player: p1 if it's assigned; p2 if it's assigned and p1 isn't; null otherwise.
     /// </summary>
+
+// if (player1.GetComponent<ThirdPersonUserControl> ().enabled) {
+//	MainPlayer = this.player1;
+//} else if (player2.GetComponent<ThirdPersonUserControl> ().enabled) {
+//	MainPlayer = this.player2;
+//}
     public Transform MainPlayer
     {
         get
         {
-            if (this.player1)
-            {
-                return this.player1;
-            }
-            else if (this.player2)
-            {
-                return this.player2;
-            }
-            else
-            {
+			if (this.player1) 
+			{
+				return this.player1;
+			}
+			else if (this.player2) 
+			{
+				return this.player2;
+			} 
+			else 
+			{
                 return null;
             }
         }
@@ -246,6 +258,8 @@ public class MagicSplitscreen : MonoBehaviour
         this.distanceBetweenPlayers = this.centralPosition - this.MainPlayer.position;
         this.PerformSplitscreenCheck();
 
+
+
         // Position camera(s)
         if (this.IsSplitscreenOn)
         {
@@ -255,8 +269,8 @@ public class MagicSplitscreen : MonoBehaviour
             // Aim cameras at players
             this.cameraTarget1 = this.player1.position + this.cameraDisplacement2d;
             this.cameraTarget2 = this.player2.position - this.cameraDisplacement2d;
-            this.MoveCamera(this.primaryCamera, this.cameraTarget1);
-            this.MoveCamera(this.secondaryCamera, this.cameraTarget2);
+			this.MoveCamera(this.primaryCamera, this.cameraTarget1, this.playerRay1.position);
+			this.MoveCamera(this.secondaryCamera, this.cameraTarget2, this.playerRay2.position);
 
             // Position the splitscreen mask in front of the second camera
             this.PositionSplitscreenMask(this.secondaryCamera, this.player2.position, this.player2.position + this.cameraDisplacement2d);
@@ -264,7 +278,7 @@ public class MagicSplitscreen : MonoBehaviour
         }
         else
         {
-            this.MoveCamera(this.primaryCamera, this.MainPlayer.position + this.distanceBetweenPlayers);
+			this.MoveCamera(this.primaryCamera, this.MainPlayer.position + this.distanceBetweenPlayers, this.playerRay1.position);
         }
     }
     #endregion
@@ -402,7 +416,7 @@ public class MagicSplitscreen : MonoBehaviour
         // Position primary camera to look at the main player
         // Note, it is not necessary to position the secondary camera here
         this.primaryCamera.transform.localRotation = this.cameraQuaternion;
-        this.MoveCamera(this.primaryCamera, this.MainPlayer.position);
+		this.MoveCamera(this.primaryCamera, this.MainPlayer.position, playerRay1.position);
 
         // Specifically initialize splitscreen settings by turning it off for now
         this.StopSplitscreenCamera();
@@ -414,10 +428,19 @@ public class MagicSplitscreen : MonoBehaviour
     /// <param name="camera">The camera to move</param>
     /// <param name="targetPos">The position for that camera to look at</param>
     /// <remarks>This is the place to add specialized camera movement behavior if you want it.</remarks>
-    private void MoveCamera(Camera camera, Vector3 targetPos)
+	private void MoveCamera(Camera camera, Vector3 targetPos, Vector3 rayPos)
     {
-        camera.transform.localRotation = this.cameraQuaternion;
-        camera.transform.position = targetPos - (camera.transform.forward * this.cameraDistance);
+		if (Physics.Linecast (rayPos, camera.transform.position, out hit, camMask)) {
+			camera.transform.position = Vector3.Lerp (camera.transform.position, hit.point, (velocidade * 2) * Time.deltaTime);
+			camera.transform.LookAt (rayPos);
+			if (this.cameraDistance > 15) {
+				camera.transform.position = targetPos - (camera.transform.forward * this.cameraDistance);
+			}
+		} else {
+			camera.transform.position = targetPos - (camera.transform.forward * this.cameraDistance);
+			camera.transform.localRotation = this.cameraQuaternion;
+		}
+
     }
 
     /// <summary>
@@ -471,12 +494,12 @@ public class MagicSplitscreen : MonoBehaviour
     /// </summary>
     private void PerformSplitscreenCheck()
     {
-        if (!this.IsSplitscreenOn && this.distanceBetweenPlayers.sqrMagnitude > this.triggerDistance * this.triggerDistance)
+        if (!this.IsSplitscreenOn && (this.distanceBetweenPlayers.sqrMagnitude > this.triggerDistance * this.triggerDistance || Physics.Linecast (playerRay1.position, playerRay2.position, out hit, playerMask)))
         {
             this.StartSplitscreenCamera();
         }
 
-        if (this.IsSplitscreenOn && this.distanceBetweenPlayers.sqrMagnitude < this.triggerDistance * this.triggerDistance)
+        if (this.IsSplitscreenOn && (this.distanceBetweenPlayers.sqrMagnitude < this.triggerDistance * this.triggerDistance && !Physics.Linecast (playerRay1.position, playerRay2.position, out hit, playerMask)))
         {
             this.StopSplitscreenCamera();
         }
