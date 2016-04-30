@@ -18,6 +18,8 @@ public class FSM_MiniDemonio : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		target = GameObject.FindWithTag ("Demonio_de_agua");
+
 		mini = this.gameObject;
 		rb = GetComponent<Rigidbody>();
 		tempo = TimerParaVirar;
@@ -26,6 +28,9 @@ public class FSM_MiniDemonio : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (target.GetComponent<FSM_Demonio_Agua>().Morto)
+			Destroy (gameObject);
 
 		direcao = target.transform.position - transform.position;
 

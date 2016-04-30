@@ -30,6 +30,8 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	public float CooldownToATKmax = 10;
 
 	public bool Ativar_Demonio = false;
+	private bool atacar = false;
+	public bool Morto = false;
 
 
 
@@ -104,6 +106,9 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 		CooldownToATK -= Time.deltaTime;
 
 		if (CooldownToATK <= 0) {
+
+			atacar = true;
+
 			state = FSMStates.Ataque;
 			return;
 		}
@@ -119,26 +124,35 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	private void Ataque_State(){
 		print ("Ataque State");
 
-		CooldownToATK = Random.Range (CooldownToATKmin, CooldownToATKmax);
 
-		float r = 10;
-		for (int i = 0; i < 36; i++) {
+		CooldownToATK -= Time.deltaTime;
 
-
-			Quaternion rodar = Quaternion.Euler (0, r, 0);
-			GameObject ataque;
-			ataque = GameObject.Instantiate (Onda, SpawAtaque.transform.position, SpawAtaque.transform.rotation) as GameObject;
-			ataque.GetComponent<Rigidbody>().AddForce(ataque.transform.forward * force);
-			Destroy (ataque, 10);
-			SpawAtaque.transform.localRotation = rodar;
-			r += 10;
+		if (atacar) {
+			target.GetComponentInChildren<AudioManager> ().PlaySound (17);
+			atacar = false;
 		}
 
-		print (SpawAtaque.transform.localRotation);
+		if (CooldownToATK <= -1) {
+			float r = 10;
+			for (int i = 0; i < 36; i++) {
 
 
-		state = FSMStates.Andar;
-		return;
+				Quaternion rodar = Quaternion.Euler (0, r, 0);
+				GameObject ataque;
+				ataque = GameObject.Instantiate (Onda, SpawAtaque.transform.position, SpawAtaque.transform.rotation) as GameObject;
+				ataque.GetComponent<Rigidbody> ().AddForce (ataque.transform.forward * force);
+				Destroy (ataque, 10);
+				SpawAtaque.transform.localRotation = rodar;
+				r += 10;
+			}
+
+			print (SpawAtaque.transform.localRotation);
+
+			CooldownToATK = Random.Range (CooldownToATKmin, CooldownToATKmax);
+
+			state = FSMStates.Andar;
+			return;
+		}
 
 	}
 
@@ -148,6 +162,8 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	private void Dano_State(){
 
 		print ("Dano State");
+
+		target.GetComponentInChildren<AudioManager> ().PlaySound (15);
 
 		vida -= 5;
 
@@ -224,13 +240,9 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	#region Morrer
 	private void Morrer_State(){
 
-        if (vida > 0) {
-
-            state = FSMStates.Andar;
-            return;
-
-        }
-
+		Morto = true;
+		target.GetComponentInChildren<AudioManager> ().PlaySound (16);
+		gameObject.SetActive (false);
 		print ("Morrer State");
 
 	}

@@ -44,6 +44,7 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip Demonio_Agua_Voz_3;
 	public AudioClip Demonio_Agua_Dano;
 	public AudioClip Demonio_Agua_Morte;
+	public AudioClip Demonio_Agua_Ataque;
 
 	#endregion
 
@@ -114,6 +115,9 @@ public class AudioManager : MonoBehaviour {
 			audio.PlayOneShot(Demonio_Agua_Dano);
 		if(sound == 16)
 			audio.PlayOneShot(Demonio_Agua_Morte);
+		if(sound == 17)
+			audio.PlayOneShot(Demonio_Agua_Ataque);
+
 		#endregion
 	}
 	
