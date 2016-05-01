@@ -258,6 +258,7 @@
     <Compile Include="Assets\Scripts\Utils\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
+    <Compile Include="Assets\Scripts\Utils\TransparencyManager.cs" />
     <Compile Include="Assets\Scripts\Utils\TransparentObject.cs" />
     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
     <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />

@@ -4,6 +4,7 @@ using System.Collections;
 public class TurnTrans : MonoBehaviour {
 
 	public Transform player1, player2;
+    public TransparencyManager TM;
 	public LayerMask ignorePlayer;
 	void Start () {
 	
@@ -22,11 +23,13 @@ public class TurnTrans : MonoBehaviour {
                 if(hit.collider.GetComponent<TransparentObject>() == null)
                 {
                     hit.collider.gameObject.AddComponent<TransparentObject>();
-                    hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    TM.New = hit.collider.gameObject;
                 }
                 else
                 {
-                    hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    TM.New = hit.collider.gameObject;
                 }
 			}
 		}
@@ -36,11 +39,13 @@ public class TurnTrans : MonoBehaviour {
                 if (hit2.collider.GetComponent<TransparentObject>() == null)
                 {
                     hit2.collider.gameObject.AddComponent<TransparentObject>();
-                    hit2.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    TM.New = hit2.collider.gameObject;
                 }
                 else
                 {
-                    hit2.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
+                    TM.New = hit2.collider.gameObject;
                 }
             }
 		}

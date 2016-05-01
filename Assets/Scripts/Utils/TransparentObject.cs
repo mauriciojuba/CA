@@ -17,5 +17,9 @@ public class TransparentObject : MonoBehaviour {
         {
             render.sharedMaterial = Tranparent;
         }
+        else
+        {
+            render.sharedMaterial = Standard;
+        }
 	}
 }
