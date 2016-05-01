@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class MenuControll : MonoBehaviour {
 
 
-
+	private float dampTime;
 	public bool isOnMainMenu;
 	private float volume;
 	private int graphicQuality;
 	public GameObject mainMenu, options, newGame;
+	public GameObject volumeSlider;
 	public EventSystem evento;
 	public GameObject newGameButton;
 	public GameObject singlePlayerButton;
@@ -22,8 +23,11 @@ public class MenuControll : MonoBehaviour {
 	public GameObject lowButton;
 	private bool musicSelected;
 	private bool qualitySelected;
+	public Slider vol;
+
 
 	void Start(){
+		dampTime = 0;
 		isOnMainMenu = true;
 		mainMenu.SetActive (true);
 		musicSelected = false;
@@ -41,17 +45,30 @@ public class MenuControll : MonoBehaviour {
 		//		} else {
 		//			PlayerPrefs.SetFloat("volume", volume);
 		//		}
-		//		//qualidades graficas
-		//		if (PlayerPrefs.HasKey ("graphicQuality")) {
-		//			graphicQuality = PlayerPrefs.GetInt ("graphicQuality");
-		//		} else {
-		//			PlayerPrefs.SetInt("graphicQuality", graphicQuality);
-		//		}
-		//
+				//qualidades graficas
+		if (PlayerPrefs.HasKey ("graphicQuality")) {
+			graphicQuality = PlayerPrefs.GetInt ("graphicQuality");
+		} else {
+			PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+		}
+		if (graphicQuality == 0) {
+			QualitySettings.SetQualityLevel (0);
+			lowButton.SetActive (true);
+		} else if (graphicQuality == 1) {
+			QualitySettings.SetQualityLevel (1);
+			mediumButton.SetActive (true);
+		} else if (graphicQuality == 2) {
+			QualitySettings.SetQualityLevel (2);
+			highButton.SetActive (true);
+		}
+				
 	}
 
 	void Update(){
-
+		dampTime += Time.deltaTime;
+		ButtonBack ();
+		if(qualitySelected)
+		NavigateQualityButtons ();
 	}
 
 
@@ -69,6 +86,7 @@ public class MenuControll : MonoBehaviour {
 
 	public void ButtonBack(){
 		if(Input.GetKeyDown(KeyCode.JoystickButton1)){
+			Debug.Log ("voltar");
 		if (options.activeSelf) {
 				if (musicSelected) {
 					musicSelected = false;
@@ -112,10 +130,79 @@ public class MenuControll : MonoBehaviour {
 		SceneManager.LoadScene(1);
 	}
 
+	public void ButtonVolume(){
+		musicSelected = true;
+		evento.SetSelectedGameObject (volumeSlider);
+	}
+
+	public void ButtonQuality(){
+		qualitySelected = true;
+		if (graphicQuality == 0) {
+			evento.SetSelectedGameObject (lowButton);
+		} else if (graphicQuality == 1) {
+			evento.SetSelectedGameObject (mediumButton);
+		} else if (graphicQuality == 2) {
+			evento.SetSelectedGameObject (highButton);
+		}
+
+	}
+
+	public void NavigateQualityButtons(){
+		if (Input.GetAxisRaw ("XBOX_DpadHorizontal") > 0 && dampTime > 0.2) {
+			if (highButton.activeSelf) {
+				highButton.SetActive (false);
+				lowButton.SetActive (true);
+				evento.SetSelectedGameObject (lowButton);
+			} else if (mediumButton.activeSelf) {
+				mediumButton.SetActive (false);
+				highButton.SetActive (true);
+				evento.SetSelectedGameObject (highButton);
+			} else if (lowButton.activeSelf) {
+				lowButton.SetActive (false);
+				mediumButton.SetActive (true);
+				evento.SetSelectedGameObject (mediumButton);
+			}
+			dampTime = 0;
+		} else if (Input.GetAxisRaw ("XBOX_DpadHorizontal") < 0 && dampTime > 0.2) {
+			if (highButton.activeSelf) {
+				highButton.SetActive (false);
+				mediumButton.SetActive (true);
+				evento.SetSelectedGameObject (mediumButton);
+			} else if (mediumButton.activeSelf) {
+				mediumButton.SetActive (false);
+				lowButton.SetActive (true);
+				evento.SetSelectedGameObject (lowButton);
+			} else if (lowButton.activeSelf) {
+				lowButton.SetActive (false);
+				highButton.SetActive (true);
+				evento.SetSelectedGameObject (highButton);
+			}
+			dampTime = 0;
+		}
+		
+	}
+
+	public void HighQuality(){
+		QualitySettings.SetQualityLevel (2);
+		graphicQuality = 2;
+	}
+
+	public void MediumQuality(){
+		QualitySettings.SetQualityLevel (1);
+		graphicQuality = 1;
+	}
+
+	public void LowQuality(){
+		QualitySettings.SetQualityLevel (0);
+		graphicQuality = 0;
+	}
+
 	public void ButtonQuit(){
 		Application.Quit();
 	}
 
-
+	public void VolumeChange(){
+//		GetComponent<AudioSource> ().volume = vol.value;
+	}
 
 }
