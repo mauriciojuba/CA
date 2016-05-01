@@ -9,15 +9,22 @@ public class FSM_MiniDemonio : MonoBehaviour {
 	public float TimerParaVirar = 3;
 	private float tempo;
 	public GameObject target;
+	private GameObject minionsom;
 
 	private Vector3 direcao;
 
 	public float timer;
 	private GameObject mini;
 
+	public float cooldownToAndar = 1;
+	public float cooldownToVoice = 2;
+	public float cooldownToVoiceMin = 2;
+	public float cooldownToVoiceMax = 2;
+
 	// Use this for initialization
 	void Start () {
 
+		minionsom = GameObject.FindWithTag ("Player1");
 		target = GameObject.FindWithTag ("Demonio_de_agua");
 
 		mini = this.gameObject;
@@ -27,25 +34,52 @@ public class FSM_MiniDemonio : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-		if (target.GetComponent<FSM_Demonio_Agua>().Morto)
+
+		if (cooldownToVoice <= 0) {
+
+			float voice;
+			voice = Random.Range (0, 3);
+
+
+			if(voice < 1)
+				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (18);
+
+			else if(voice < 1 && voice <2)
+				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (19);
+
+			else
+				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (20);
+
+
+
+			cooldownToVoice = Random.Range (cooldownToVoiceMin, cooldownToVoiceMax);
+		}
+
+		if (cooldownToAndar <= 0){
+			minionsom.GetComponentInChildren<AudioManager> ().PlaySound (21);
+			cooldownToAndar = 1;
+		}
+
+		if (target.GetComponent<FSM_Demonio_Agua> ().Morto) {
+			minionsom.GetComponentInChildren<AudioManager> ().PlaySound (22);
 			Destroy (gameObject);
-
+		}
 		direcao = target.transform.position - transform.position;
 
-		//if (mini.GetComponent<FSM_Demonio_Agua>().junta) {
 		if(timer <= 0){
 			transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * velocidadeDeRotacao);
 			transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 			rb.MovePosition(transform.position + transform.forward * velocidade * Time.deltaTime);
 		}
+
 		rb.MovePosition(transform.position + transform.forward * velocidade * Time.deltaTime);
-		//mini.GetComponent<Rigidbody> ().AddForce (transform.forward * velocidade);
 
 		TimerParaVirar -= Time.deltaTime;
 		timer -= Time.deltaTime;
-
+		cooldownToAndar -= Time.deltaTime;
+		cooldownToVoice -= Time.deltaTime;
 
 		if (TimerParaVirar <= 0 && timer > 0) {
 

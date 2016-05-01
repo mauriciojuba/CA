@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2de61180eba49474da827f0bd074d458
-timeCreated: 1462055311
+timeCreated: 1462118948
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -25,11 +25,21 @@ MonoImporter:
       type: 3}
   - Demonio_Agua_Voz_2: {fileID: 8300000, guid: e97dbbeb14743634aa6a7753d807afbe,
       type: 3}
-  - Demonio_Agua_Voz_3: {instanceID: 0}
+  - Demonio_Agua_Andar: {fileID: 8300000, guid: 3b2f924b24b34614d8aa7d2238e091cc,
+      type: 3}
   - Demonio_Agua_Dano: {fileID: 8300000, guid: 6b105d1f972060446af1944418624ec8, type: 3}
   - Demonio_Agua_Morte: {fileID: 8300000, guid: 95a47c12bdc3e3f4fa764b79b55a21b7,
       type: 3}
   - Demonio_Agua_Ataque: {fileID: 8300000, guid: cd2f403b46a999448b761b9a83f2ef9e,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_1: {fileID: 8300000, guid: 3eac0ca5e0e555140acac7882e9f3d76,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_2: {fileID: 8300000, guid: 17f3cc28ee64c5447bb4f4168bd87b78,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_3: {instanceID: 0}
+  - Demonio_Agua_Mob_Andar: {fileID: 8300000, guid: 774184a174071204b81085c80a8db17e,
+      type: 3}
+  - Demonio_Agua_Mob_Morte: {fileID: 8300000, guid: e8b73128dbb541d4389ac1c6fa0c6d19,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

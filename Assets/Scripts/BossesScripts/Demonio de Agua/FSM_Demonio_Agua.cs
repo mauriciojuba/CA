@@ -28,6 +28,10 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	public float CooldownToATK = 10;
 	public float CooldownToATKmin = 10;
 	public float CooldownToATKmax = 10;
+	public float CooldowToVoice = 3;
+	public float CooldowToVmin = 3;
+	public float CooldowToVmax = 3;
+
 
 	public bool Ativar_Demonio = false;
 	private bool atacar = false;
@@ -41,6 +45,8 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	#region Unity Functions
 
 	void Start () {
+
+		target = GameObject.FindWithTag ("Player1");
 
 	}
 
@@ -104,6 +110,21 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 		}
 
 		CooldownToATK -= Time.deltaTime;
+		CooldowToVoice -= Time.deltaTime;
+
+		if (CooldowToVoice <= 0) {
+			float Voice;
+
+			Voice = Random.Range (0, 2);
+
+			if (Voice >= 1)
+				target.GetComponentInChildren<AudioManager> ().PlaySound (12);
+			else
+				target.GetComponentInChildren<AudioManager> ().PlaySound (13);
+
+			CooldowToVoice = Random.Range (CooldowToVmin, CooldowToVmax);
+
+		}
 
 		if (CooldownToATK <= 0) {
 

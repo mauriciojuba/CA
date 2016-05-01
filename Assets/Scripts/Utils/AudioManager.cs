@@ -41,10 +41,20 @@ public class AudioManager : MonoBehaviour {
 
 	public AudioClip Demonio_Agua_Voz_1;
 	public AudioClip Demonio_Agua_Voz_2;
-	public AudioClip Demonio_Agua_Voz_3;
+	public AudioClip Demonio_Agua_Andar;
 	public AudioClip Demonio_Agua_Dano;
 	public AudioClip Demonio_Agua_Morte;
 	public AudioClip Demonio_Agua_Ataque;
+
+	#endregion
+
+	#region Sons Mob Demonio de Agua
+
+	public AudioClip Demonio_Agua_Mob_Voz_1;
+	public AudioClip Demonio_Agua_Mob_Voz_2;
+	public AudioClip Demonio_Agua_Mob_Voz_3;
+	public AudioClip Demonio_Agua_Mob_Andar;
+	public AudioClip Demonio_Agua_Mob_Morte;
 
 	#endregion
 
@@ -110,7 +120,7 @@ public class AudioManager : MonoBehaviour {
 		if(sound == 13)
 			audio.PlayOneShot(Demonio_Agua_Voz_2);
 		if(sound == 14)
-			audio.PlayOneShot(Demonio_Agua_Voz_3);
+			audio.PlayOneShot(Demonio_Agua_Andar);
 		if(sound == 15)
 			audio.PlayOneShot(Demonio_Agua_Dano);
 		if(sound == 16)
@@ -118,6 +128,19 @@ public class AudioManager : MonoBehaviour {
 		if(sound == 17)
 			audio.PlayOneShot(Demonio_Agua_Ataque);
 
+		#endregion
+
+		#region Sons Mob Demonio de Agua
+		if(sound == 18)
+			audio.PlayOneShot(Demonio_Agua_Mob_Voz_1);
+		if(sound == 19)
+			audio.PlayOneShot(Demonio_Agua_Mob_Voz_2);
+		if(sound == 20)
+			audio.PlayOneShot(Demonio_Agua_Mob_Voz_3);
+		if(sound == 21)
+			audio.PlayOneShot(Demonio_Agua_Mob_Andar);
+		if(sound == 22)
+			audio.PlayOneShot(Demonio_Agua_Mob_Morte);
 		#endregion
 	}
 	
