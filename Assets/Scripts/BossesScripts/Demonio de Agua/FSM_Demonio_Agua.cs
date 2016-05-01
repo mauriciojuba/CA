@@ -37,6 +37,11 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	private bool atacar = false;
 	public bool Morto = false;
 
+	public AudioClip MusicBoss;
+	public AudioSource audio;
+
+	private int iniciar = 1;
+
 
 
 
@@ -47,6 +52,7 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	void Start () {
 
 		target = GameObject.FindWithTag ("Player1");
+
 
 	}
 
@@ -59,7 +65,17 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	public void FixedUpdate(){
 
 
+
 		if (Ativar_Demonio) {
+
+
+
+			if (iniciar == 1) {
+				audio.clip = MusicBoss;
+				audio.Play();
+				audio.volume = 1;
+				iniciar = 2;
+			}
 
 			//switch funciona como um "if" mas só para variaveis inteiras
 
