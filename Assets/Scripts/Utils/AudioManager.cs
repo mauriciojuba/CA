@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour {
 	#region Sons do Menu e Progressao do Jogo
 	public AudioClip start;
 	public AudioClip selectMenu;
+	public AudioClip navigateMenu;
 	public AudioClip questCompleted;
 	public AudioClip gameOver;
 	#endregion
@@ -65,6 +66,7 @@ public class AudioManager : MonoBehaviour {
 	void Start(){
 		if(audio == null)
 			audio = gameObject.GetComponentInChildren<AudioSource> ();
+		
 	}
 	
 	public void PlaySound(int sound){

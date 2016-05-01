@@ -69,6 +69,7 @@ public class MenuControll : MonoBehaviour {
 		ButtonBack ();
 		if(qualitySelected)
 		NavigateQualityButtons ();
+		VolumeChange ();
 	}
 
 
@@ -119,14 +120,12 @@ public class MenuControll : MonoBehaviour {
 	public void ButtonSinglePlayer(){
 		isOnMainMenu = false;
 		Debug.Log ("Roda Jogo");
-		//Application.LoadLevel(1);
 		SceneManager.LoadScene (1);
 	}
 
 	public void ButtonTwoPlayers(){
 		isOnMainMenu = false;
 		Debug.Log ("Roda Jogo");
-		//Application.LoadLevel(1);
 		SceneManager.LoadScene(1);
 	}
 
@@ -202,7 +201,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void VolumeChange(){
-//		GetComponent<AudioSource> ().volume = vol.value;
+		this.GetComponentInChildren<AudioSource> ().volume = vol.value;
 	}
 
 }
