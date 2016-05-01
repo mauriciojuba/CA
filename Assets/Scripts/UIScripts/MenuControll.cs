@@ -11,19 +11,27 @@ public class MenuControll : MonoBehaviour {
 	public bool isOnMainMenu;
 	private float volume;
 	private int graphicQuality;
-	public GameObject mainMenu, credits, options, newGame;
+	public GameObject mainMenu, options, newGame;
 	public EventSystem evento;
 	public GameObject newGameButton;
-	public GameObject backOptions;
-	public GameObject backCredits;
 	public GameObject singlePlayerButton;
+	public GameObject qualityButton;
+	public GameObject musicButton;
+	public GameObject highButton;
+	public GameObject mediumButton;
+	public GameObject lowButton;
+	private bool musicSelected;
+	private bool qualitySelected;
 
 	void Start(){
 		isOnMainMenu = true;
 		mainMenu.SetActive (true);
-		credits.SetActive (false);
+		musicSelected = false;
+		qualitySelected = false;
 		options.SetActive (false);
 		newGame.SetActive (false);
+		lowButton.SetActive (false);
+		mediumButton.SetActive (false);
 		Time.timeScale = 1;
 		//
 		//		//preferencias salvas
@@ -41,13 +49,18 @@ public class MenuControll : MonoBehaviour {
 		//		}
 		//
 	}
+
+	void Update(){
+
+	}
+
+
 	//
 	public void ButtonOptions(){
 		mainMenu.SetActive (false);
-		credits.SetActive (false);
 		newGame.SetActive (false);
 		options.SetActive (true);
-		evento.SetSelectedGameObject (backOptions);
+		evento.SetSelectedGameObject (musicButton);
 	}
 
 	public void ButtonCredits(){
@@ -55,23 +68,31 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void ButtonBack(){
-
-		if (credits.activeSelf) {
-			credits.SetActive(false);
-		}
+		if(Input.GetKeyDown(KeyCode.JoystickButton1)){
 		if (options.activeSelf) {
-			options.SetActive(false);
+				if (musicSelected) {
+					musicSelected = false;
+					evento.SetSelectedGameObject (musicButton);
+				} else if (qualitySelected) {
+					qualitySelected = false;
+					evento.SetSelectedGameObject (qualityButton);
+				} else {
+					options.SetActive (false);
+					mainMenu.SetActive (true);
+					evento.SetSelectedGameObject (newGameButton);
+				}
 		}
 		if (newGame.activeSelf) {
 			newGame.SetActive (false);
+			mainMenu.SetActive (true);
+			evento.SetSelectedGameObject (newGameButton);
 		}
-		mainMenu.SetActive (true);
-		evento.SetSelectedGameObject (newGameButton);
+		
+		}
 	}
 
 	public void ButtonNewGame(){
 		mainMenu.SetActive (false);
-		credits.SetActive (false);
 		newGame.SetActive (true);
 		options.SetActive (false);
 		evento.SetSelectedGameObject (singlePlayerButton);
