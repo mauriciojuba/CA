@@ -236,6 +236,7 @@
      <Compile Include="Assets\Scripts\Utils\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
+     <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
      <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
      <None Include="Assets\AssetStore\Fungus\README.txt" />
      <None Include="Assets\AssetStore\Fungus\Flowchart\Editor\Resources\GLLineDraw.shader" />

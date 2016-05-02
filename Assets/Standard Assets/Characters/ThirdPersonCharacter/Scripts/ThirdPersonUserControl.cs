@@ -83,16 +83,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void Attack()
         {
-            if (Input.GetKeyUp(KeyCode.K) && !m_Attack)
+            if (InputManager.GetKeyUp(KeyCode.K) && !m_Attack)
             //if(CrossPlatformInputManager.GetButtonDown("XBOX_buttonX") && cooldown >= 2) {
             {
                 m_Attack = true;
-                if (gameObject.CompareTag("Player1"))
-                {
-                }
-                else
-                {
-                }
             }
         //}
         }
