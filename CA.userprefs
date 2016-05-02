@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayersScripts\SwitchPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayersScripts\FSM_Turnip.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utils\InputManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Scripts\MagicSplitscreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="50" Column="4" />
-      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" Line="9" Column="46" />
-      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="192" Column="57" />
-      <File FileName="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" Line="13" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="215" Column="1" />
+      <File FileName="Assets\Scripts\Utils\InputManager.cs" Line="104" Column="25" />
+      <File FileName="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Scripts\MagicSplitscreen.cs" Line="355" Column="10" />
+      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="32" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" Line="98" Column="21" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="18" Column="19" />
+      <File FileName="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" Line="9" Column="24" />
+      <File FileName="Assets\Scripts\PlayersScripts\Nabo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utils\TurnTrans.cs" Line="51" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" Line="129" Column="3" />
+      <File FileName="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" Line="124" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,6 +19,11 @@
           <Node name="CA" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="AssetStore" expanded="True">
+                <Node name="Armoire Cannonball Utilities" expanded="True">
+                  <Node name="Magic Splitscreen" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
                 <Node name="Fungus" expanded="True">
                   <Node name="Flowchart" expanded="True">
                     <Node name="Scripts" expanded="True">
@@ -25,9 +33,10 @@
                 </Node>
               </Node>
               <Node name="Scripts" expanded="True">
+                <Node name="BlobmanScripts" expanded="True" />
                 <Node name="FarmScripts" expanded="True" />
                 <Node name="PlayersScripts" expanded="True">
-                  <Node name="SwitchPlayer.cs" selected="True" />
+                  <Node name="FSM_Turnip.cs" selected="True" />
                 </Node>
                 <Node name="Utils" expanded="True" />
               </Node>

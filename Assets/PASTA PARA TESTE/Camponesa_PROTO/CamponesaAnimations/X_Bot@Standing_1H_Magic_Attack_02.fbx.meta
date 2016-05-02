@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 18ffbf3a3f068c548a184ccb60ee5bb9
-timeCreated: 1460849259
+guid: 292bac363a87c6443bee774728a0a7a6
+timeCreated: 1462218676
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -141,7 +141,7 @@ ModelImporter:
     400130: mixamorig:Spine1
     400132: mixamorig:Spine2
     400134: //RootNode
-    7400000: Standing_1H_Magic_Attack_01
+    7400000: Standing_1H_Magic_Attack_02
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -168,7 +168,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Standing_1H_Magic_Attack_01
+      name: Standing_1H_Magic_Attack_02
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 96
@@ -194,15 +194,7 @@ ModelImporter:
       - time: 0.36534446
         functionName: ThrowNabo
         data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 041a9a40886fe6142b79923027683e74,
-          type: 3}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.6722338
-        functionName: EndAtk
-        data: 
-        objectReferenceParameter: {fileID: 11500000, guid: 041a9a40886fe6142b79923027683e74,
+        objectReferenceParameter: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899,
           type: 3}
         floatParameter: 0
         intParameter: 0

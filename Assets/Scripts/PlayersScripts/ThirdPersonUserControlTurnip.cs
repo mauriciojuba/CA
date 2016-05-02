@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_CamForward;             // The current forward direction of the camera
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-
+		public GameObject atkCollider;
         //metodo ataque
         bool m_Attack;
 
@@ -41,8 +41,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             if (!m_Jump)
             {
-				m_Jump = Input.GetKeyDown (KeyCode.Space);
-				//m_Jump = CrossPlatformInputManager.GetButtonDown("XBOX_buttonA");
+				m_Jump = InputManager.AButton ();
             }
             Attack();
             m_Character.Attacking(m_Attack);
@@ -54,9 +53,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void FixedUpdate()
         {
             // read inputs
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
-            bool crouch = Input.GetKey(KeyCode.C);
+			float h = InputManager.LeftStickHorizontal();
+			float v = InputManager.LeftStickVertical ();
+			bool crouch = false;
 
             // calculate move direction to pass to character
             if (m_Cam != null)
@@ -91,5 +90,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
         //}
         }
+
+		public void ThrowNabo(){
+			atkCollider.GetComponent<BoxCollider> ().enabled = true;
+		}
+
+		public void EndAtk(){
+			atkCollider.GetComponent<BoxCollider> ().enabled = false;
+		}
     }
 }

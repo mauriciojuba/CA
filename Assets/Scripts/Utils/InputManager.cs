@@ -4,6 +4,7 @@ using System.Collections;
 public static class InputManager
 {
 	public static int players;
+	private static float deadZone = 0.2f;
 
 	#region Axis
 	public static float LeftStickHorizontal(){
@@ -97,8 +98,17 @@ public static class InputManager
 	}
 	#endregion
 
-	#region Axis as Buttons
-	public static bool LeftStickInUse = false;
+	#region Hold Buttons
+	public static bool BButtonHold()
+	{
+		return Input.GetButton ("XBOX_buttonB");
+	}
+	#endregion
 
+	#region Axis as Buttons
+	public static bool LeftTriggerInUse = false;
+//	public static bool LeftTriggerButton(){
+//
+//	}
 	#endregion
 }

@@ -13,7 +13,7 @@ public class FSM_Camponesa : MonoBehaviour {
     #endregion
 
     #region Generic Variable
-    public GameObject target;
+	public GameObject target;
     public Transform follow;
     public float speed;
     public float rotSpeed;
@@ -21,7 +21,10 @@ public class FSM_Camponesa : MonoBehaviour {
     private Vector3 dir;
     private Rigidbody rb;
     private int life = 10;
-
+	private Transform myTransform;
+	private bool m_Attack;
+	private ThirdPersonCharacter m_Character;
+	public List<Transform> targets;
     #endregion
 
     #region Follow
@@ -61,13 +64,43 @@ public class FSM_Camponesa : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
      
         follow = GameObject.FindWithTag("Player2").transform;
-
-
+		m_Character = GetComponent<ThirdPersonCharacter>();
+		myTransform = m_Character.transform;
+		targets = new List<Transform>();
+		AddAllEnemies ();
     }
 
+	public void AddAllEnemies()
+	{
+		GameObject[] go = GameObject.FindGameObjectsWithTag("Enemy");
 
+		foreach (GameObject enemy in go)
+			AddTarget(enemy.transform);
+	}
+
+	public void AddTarget(Transform enemy)
+	{
+		targets.Add(enemy);
+	}
+
+	public void SortTargetByDistance()
+	{
+		targets.Sort(delegate (Transform t1, Transform t2) { return (Vector3.Distance(t1.position, myTransform.position).CompareTo(Vector3.Distance(t2.position, myTransform.position))); });
+
+	}
 
     public void FixedUpdate() {
+
+		for (int i = 0; i < (targets.Count - 1); i++) {
+			if (targets [i] == null) {
+				targets.RemoveAt (i);
+			}
+		}
+
+		if (target == null) {
+			SortTargetByDistance ();
+			target = targets [0].gameObject;
+		}
         dir = target.transform.position - transform.position;
 
         switch (state) {
@@ -90,7 +123,10 @@ public class FSM_Camponesa : MonoBehaviour {
             state = FSMStates.Die;
             return;
         }
-
+		SortTargetByDistance ();
+		if(Vector3.Distance(target.transform.position, myTransform.position) > Vector3.Distance(targets[0].position, myTransform.position))
+			target = targets [0].gameObject;
+		
         // Check if target is in range to chase
         if (dir.magnitude <= distanceToStartChasing) {
             state = FSMStates.Chasing;
@@ -187,8 +223,8 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Hitting State
     private void HitState() {
-        Debug.Log("Hit");
-
+        m_Character.Attacking(m_Attack);
+		m_Attack = false;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
         
@@ -196,7 +232,7 @@ public class FSM_Camponesa : MonoBehaviour {
         timer += Time.deltaTime;
         if (timer >= hitTime && dir.magnitude <= distanceToHit) {
             timer = 0;
-
+			m_Attack = true;
         }
         else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToAttack)
         {

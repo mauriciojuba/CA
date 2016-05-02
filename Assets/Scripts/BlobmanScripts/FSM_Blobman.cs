@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class FSM_Blobman : MonoBehaviour {
 
@@ -35,7 +36,7 @@ public class FSM_Blobman : MonoBehaviour {
 	public float distanceToStopChasing;
 	public float distanceToAtaque;
 
-	public float vida = 100;
+	public float vida = 10;
 	private bool dano = false;
 	private float contar = 0.5f;
 
@@ -202,7 +203,7 @@ public class FSM_Blobman : MonoBehaviour {
 
 	#region Morrer
 	private void Morrer_State(){
-
+		Destroy (this.gameObject);
 		print ("morreu");
 
 	}
@@ -217,4 +218,11 @@ public class FSM_Blobman : MonoBehaviour {
 	}
 	#endregion
 
+	#region TriggerEnter
+	public void OnTriggerEnter(Collider hit){
+		if (hit.tag == "TurnipAtk") {
+			dano = true;
+		}
+	}
+	#endregion
 }
