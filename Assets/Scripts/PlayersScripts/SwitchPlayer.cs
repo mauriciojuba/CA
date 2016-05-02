@@ -9,6 +9,8 @@ public class SwitchPlayer : MonoBehaviour
 
 	public void Start()
 	{
+		if (InputManager.players == 2)
+			this.enabled = false;
 		player1 = GameObject.FindWithTag ("Player1");
 		player2 = GameObject.FindWithTag ("Player2");
 		controlling = "Player1";
@@ -18,25 +20,23 @@ public class SwitchPlayer : MonoBehaviour
 	{
 		if (controlling == "Player1")
 		{
-
-//			player1.GetComponent<CamponesaController>().enabled = true;
-//			player2.GetComponent<TurnipController>().enabled = false;
+			player1.GetComponent<ThirdPersonUserControlCamponesa>().enabled = true;
+			player2.GetComponent<ThirdPersonUserControlTurnip>().enabled = false;
 			player1.GetComponent<FSM_Camponesa>().enabled = false;
 			player2.GetComponent<FSM_Turnip>().enabled = true;
+			player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
+			player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 		}
 		else if (controlling == "Player2")
 		{
-
-
-//			player2.GetComponent<TurnipController>().enabled = true;
-//			player1.GetComponent<CamponesaController>().enabled = false;
+			player2.GetComponent<ThirdPersonUserControlTurnip>().enabled = true;
+			player1.GetComponent<ThirdPersonUserControlCamponesa>().enabled = false;
 			player1.GetComponent<FSM_Camponesa>().enabled = true;
 			player2.GetComponent<FSM_Turnip> ().enabled = false;
+			player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
+			player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 		}
-	}
 
-	public void FixedUpdate()
-	{
 		if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E))
 		{
 			if (controlling == "Player1")
@@ -48,5 +48,10 @@ public class SwitchPlayer : MonoBehaviour
 				controlling = "Player1";
 			}
 		}
+	}
+
+	public void FixedUpdate()
+	{
+		
 	}
 }

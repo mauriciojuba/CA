@@ -1,11 +1,12 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]
-    public class ThirdPersonUserControl : MonoBehaviour
+    public class ThirdPersonUserControlTurnip : MonoBehaviour
     {
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
@@ -83,7 +84,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void Attack()
         {
-            if (InputManager.GetKeyUp(KeyCode.K) && !m_Attack)
+			if (InputManager.XButton() && !m_Attack)
             //if(CrossPlatformInputManager.GetButtonDown("XBOX_buttonX") && cooldown >= 2) {
             {
                 m_Attack = true;

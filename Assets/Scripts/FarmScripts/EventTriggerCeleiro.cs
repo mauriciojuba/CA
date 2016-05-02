@@ -17,15 +17,15 @@ public class EventTriggerCeleiro : MonoBehaviour {
 
 	public void TurnipActivation(){
 		player1.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		player1.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		player1.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
 		player2.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		player2.GetComponent<ThirdPersonUserControl> ().enabled = true;
+		player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 	}
 
 	public void CamponesaActivation(){
 		player1.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		player1.GetComponent<ThirdPersonUserControl> ().enabled = true;
+		player1.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
 		player2.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		player2.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 	}
 }
