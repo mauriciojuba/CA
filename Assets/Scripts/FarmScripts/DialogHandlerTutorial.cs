@@ -189,25 +189,25 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void DesativarPlayers(){
 		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
 		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		turnip.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
 	}
 
 	public void TurnipActivation(){
 		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
 		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		turnip.GetComponent<ThirdPersonUserControl> ().enabled = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 	}
 
 	public void CamponesaActivation(){
 		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		camponesa.GetComponent<ThirdPersonUserControl> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
 		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		turnip.GetComponent<ThirdPersonUserControl> ().enabled = false;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 	}
 
 	public void ActivateFollowTurnip(){

@@ -1,22 +1,55 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs">
-    <Files>
-      <File FileName="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" Line="67" Column="3" />
-      <File FileName="Assets\Scripts\Utils\AudioManager.cs" Line="67" Column="62" />
-=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayersScripts\SwitchPlayer.cs">
     <Files>
-      <File FileName="Assets\Scripts\UIScripts\MenuControll.cs" Line="204" Column="30" />
-      <File FileName="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utils\AudioManager.cs" Line="92" Column="37" />
->>>>>>> origin/master
-      <File FileName="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_MiniDemonio.cs" Line="55" Column="4" />
-      <File FileName="Assets\Scripts\UIScripts\PauseMenu.cs" Line="91" Column="3" />
-      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="32" Column="66" />
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" Line="87" Column="93" />
+      <File FileName="Assets\Scripts\Utils\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Scripts\MagicSplitscreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="50" Column="4" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" Line="9" Column="46" />
+      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="192" Column="57" />
+      <File FileName="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" Line="13" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="215" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="AssetStore" expanded="True">
+                <Node name="Fungus" expanded="True">
+                  <Node name="Flowchart" expanded="True">
+                    <Node name="Scripts" expanded="True">
+                      <Node name="Commands" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="FarmScripts" expanded="True" />
+                <Node name="PlayersScripts" expanded="True">
+                  <Node name="SwitchPlayer.cs" selected="True" />
+                </Node>
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Assembly-CSharp-firstpass" expanded="True">
+              <Node name="Standard Assets" expanded="True">
+                <Node name="Characters" expanded="True">
+                  <Node name="ThirdPersonCharacter" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

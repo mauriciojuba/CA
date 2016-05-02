@@ -228,7 +228,8 @@
      <Compile Include="Assets\Scripts\PlayersScripts\Nabo.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" />
-     <Compile Include="Assets\Scripts\PlayersScripts\SwitchPlayerAntigo.cs" />
+     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" />
+     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" />
      <Compile Include="Assets\Scripts\UIScripts\CreditScreenGUI.cs" />
      <Compile Include="Assets\Scripts\UIScripts\MenuControll.cs" />
      <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />
@@ -236,6 +237,10 @@
      <Compile Include="Assets\Scripts\Utils\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
+     <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\TransparencyManager.cs" />
+     <Compile Include="Assets\Scripts\Utils\TransparentObject.cs" />
+     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
      <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
      <None Include="Assets\AssetStore\Fungus\README.txt" />
      <None Include="Assets\AssetStore\Fungus\Flowchart\Editor\Resources\GLLineDraw.shader" />
