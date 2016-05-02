@@ -14,9 +14,9 @@ public class TurnTrans : MonoBehaviour {
 	void Update () {
         if (this.gameObject.name == "Main Camera(Clone)")
         {
-            Ray ray2 = new Ray(player2.position, Camera.main.transform.position);
+            Ray ray2 = new Ray(player2.position, this.transform.position);
             RaycastHit hit2;
-            if (Physics.Linecast(player2.position, Camera.main.transform.position, out hit2, ignorePlayer) && this.gameObject.name == "Main Camera(Clone)")
+            if (Physics.Linecast(player2.position, this.transform.position, out hit2, ignorePlayer) && this.gameObject.name == "Main Camera(Clone)")
             {
                 Debug.Log(hit2.collider);
                 if (!(hit2.collider.GetComponent<Renderer>() == null))
