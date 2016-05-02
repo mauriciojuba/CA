@@ -251,6 +251,8 @@
     <Compile Include="Assets\Scripts\PlayersScripts\FootstepAudio.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\Nabo.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" />
+    <Compile Include="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" />
+    <Compile Include="Assets\Scripts\PlayersScripts\SwitchPlayerAntigo.cs" />
     <Compile Include="Assets\Scripts\UIScripts\CreditScreenGUI.cs" />
     <Compile Include="Assets\Scripts\UIScripts\MenuControll.cs" />
     <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />

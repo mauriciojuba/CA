@@ -131,9 +131,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Andar
     private void Idle_State() {
 
-        if (!isAttacking)
+        if (!isAttacking && distanceToStartBattle < 10)
         {
-            Debug.Log("Escolherataque");
 			Invoke("EscolherAtaque", 5f);
         }
     }
@@ -174,7 +173,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			}
 			else if (distanceToStartBattle < 10)
 			{
-				float random = Random.RandomRange(0.0f, 1.0f);
+				float random = Random.Range(0.0f, 1.0f);
 				if (random <= 0.3f)
 				{
 					state = FSMStates.Ataque_Laser;

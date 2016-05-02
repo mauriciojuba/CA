@@ -14,7 +14,7 @@ public class TransparencyManager : MonoBehaviour {
 	void Update () {
         CheckObjects();
         if(transparent != null) transparent.GetComponent<TransparentObject>().beTransparent = true;
-        Last.GetComponent<TransparentObject>().beTransparent = false;
+        if(Last != null) Last.GetComponent<TransparentObject>().beTransparent = false;
     }
     
 
