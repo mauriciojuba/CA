@@ -10,12 +10,14 @@ public static class InputManager
 	public static float LeftStickHorizontal(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickHorizontal");
+		r += Input.GetAxis ("Horizontal");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
 	}
 
 	public static float LeftStickVertical(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickVertical");
+		r += Input.GetAxis ("Vertical");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
 	}
 
