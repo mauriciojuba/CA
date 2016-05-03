@@ -40,6 +40,11 @@ public class FSM_Blobman : MonoBehaviour {
 	private bool dano = false;
 	private float contar = 0.5f;
 
+	private GameObject turnip, camponesa;
+	private float turnipDis, camponesaDis;
+
+	private bool morrer = true;
+
 	#endregion
 
 	#region Unity Functions
@@ -47,6 +52,9 @@ public class FSM_Blobman : MonoBehaviour {
 	void Start () {
 
 		target = GameObject.FindWithTag ("Player1");
+
+		camponesa = GameObject.FindWithTag ("Player1");
+		turnip = GameObject.FindWithTag ("Player2");
 		
 		currentWaypoint = 0;
 		timer           = 0;
@@ -86,6 +94,20 @@ public class FSM_Blobman : MonoBehaviour {
 
 	#region Andar
 	private void Andar_State(){
+
+
+		turnipDis = Vector3.Distance(transform.position, turnip.transform.position);
+		camponesaDis = Vector3.Distance(transform.position, camponesa.transform.position);
+
+		if (turnipDis < camponesaDis)
+		{
+			target= turnip;
+		}
+		else
+		{
+			target= camponesa;
+		}
+			
 
 
 
@@ -152,11 +174,11 @@ public class FSM_Blobman : MonoBehaviour {
 
 		if (direcao.magnitude <= distanceToAtaque && contToAtaque <= 0 ) {
 
-			target.GetComponentInChildren<AudioManager> ().PlaySound (8);
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (8);
+
 
 			Ataque.SetActive (true);
 			contToAtaque = setCont;
-
 
 		} 
 		else if(contToAtaque <= 0) {
@@ -203,8 +225,14 @@ public class FSM_Blobman : MonoBehaviour {
 
 	#region Morrer
 	private void Morrer_State(){
-		Destroy (this.gameObject);
-		print ("morreu");
+
+		if (morrer) {
+			
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (10);
+			Destroy (this.gameObject, 1f);
+			print ("morreu");
+			morrer = false;
+		}
 
 	}
 	#endregion

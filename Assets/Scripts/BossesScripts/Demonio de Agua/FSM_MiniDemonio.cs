@@ -44,13 +44,13 @@ public class FSM_MiniDemonio : MonoBehaviour {
 
 
 			if(voice < 1)
-				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (18);
+				gameObject.GetComponentInChildren<AudioManager> ().PlaySound (18);
 
 			else if(voice < 1 && voice <2)
-				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (19);
+				gameObject.GetComponentInChildren<AudioManager> ().PlaySound (19);
 
 			else
-				minionsom.GetComponentInChildren<AudioManager> ().PlaySound (20);
+				gameObject.GetComponentInChildren<AudioManager> ().PlaySound (20);
 
 
 
@@ -58,12 +58,12 @@ public class FSM_MiniDemonio : MonoBehaviour {
 		}
 
 		if (cooldownToAndar <= 0){
-			minionsom.GetComponentInChildren<AudioManager> ().PlaySound (21);
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (21);
 			cooldownToAndar = 1;
 		}
 
 		if (target.GetComponent<FSM_Demonio_Agua> ().Morto) {
-			minionsom.GetComponentInChildren<AudioManager> ().PlaySound (22);
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (22);
 			Destroy (gameObject);
 		}
 		direcao = target.transform.position - transform.position;

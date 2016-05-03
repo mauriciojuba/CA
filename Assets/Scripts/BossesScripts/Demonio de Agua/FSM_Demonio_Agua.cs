@@ -134,9 +134,9 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 			Voice = Random.Range (0, 2);
 
 			if (Voice >= 1)
-				target.GetComponentInChildren<AudioManager> ().PlaySound (12);
+				gameObject.GetComponentInChildren<AudioManager> ().PlaySound (12);
 			else
-				target.GetComponentInChildren<AudioManager> ().PlaySound (13);
+				gameObject.GetComponentInChildren<AudioManager> ().PlaySound (13);
 
 			CooldowToVoice = Random.Range (CooldowToVmin, CooldowToVmax);
 
@@ -165,7 +165,7 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 		CooldownToATK -= Time.deltaTime;
 
 		if (atacar) {
-			target.GetComponentInChildren<AudioManager> ().PlaySound (17);
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (17);
 			atacar = false;
 		}
 
@@ -200,7 +200,7 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 
 		print ("Dano State");
 
-		target.GetComponentInChildren<AudioManager> ().PlaySound (15);
+		gameObject.GetComponentInChildren<AudioManager> ().PlaySound (15);
 
 		vida -= 5;
 
@@ -278,7 +278,7 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	private void Morrer_State(){
 
 		Morto = true;
-		target.GetComponentInChildren<AudioManager> ().PlaySound (16);
+		gameObject.GetComponentInChildren<AudioManager> ().PlaySound (16);
 		gameObject.SetActive (false);
 		print ("Morrer State");
 
