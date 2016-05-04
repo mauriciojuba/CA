@@ -119,13 +119,13 @@ public class MenuControll : MonoBehaviour {
 
 	public void ButtonSinglePlayer(){
 		isOnMainMenu = false;
-		Debug.Log ("Roda Jogo");
+		InputManager.players = 1;
 		SceneManager.LoadScene (1);
 	}
 
 	public void ButtonTwoPlayers(){
 		isOnMainMenu = false;
-		Debug.Log ("Roda Jogo");
+		InputManager.players = 2;
 		SceneManager.LoadScene(1);
 	}
 

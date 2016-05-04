@@ -53,8 +53,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void FixedUpdate()
         {
             // read inputs
-			float h = InputManager.LeftStickHorizontal();
-			float v = InputManager.LeftStickVertical ();
+			float h;
+			float v;
+			if (InputManager.players == 2) {
+				h = InputManager.LeftStickHorizontal2 ();
+				v = InputManager.LeftStickVertical2 ();
+			} else {
+				h = InputManager.LeftStickHorizontal ();
+				v = InputManager.LeftStickVertical ();
+			}
 			bool crouch = false;
 
             // calculate move direction to pass to character
@@ -83,12 +90,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void Attack()
         {
-			if (InputManager.XButton() && !m_Attack)
-            //if(CrossPlatformInputManager.GetButtonDown("XBOX_buttonX") && cooldown >= 2) {
-            {
-                m_Attack = true;
-            }
-        //}
+			if (InputManager.players == 2) {
+				if (InputManager.XButton2 () && !m_Attack)
+ {					//if(CrossPlatformInputManager.GetButtonDown("XBOX_buttonX") && cooldown >= 2) {
+					m_Attack = true;
+				}
+			} else {
+				if (InputManager.XButton () && !m_Attack)
+ {            //if(CrossPlatformInputManager.GetButtonDown("XBOX_buttonX") && cooldown >= 2) {
+					m_Attack = true;
+				}
+			}
         }
 
 		public void ThrowNabo(){
