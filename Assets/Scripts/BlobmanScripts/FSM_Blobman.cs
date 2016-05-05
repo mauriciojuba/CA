@@ -142,7 +142,7 @@ public class FSM_Blobman : MonoBehaviour {
 		contar -= Time.deltaTime;
 
 		if (contar < 0) {
-			target.GetComponentInChildren<AudioManager> ().PlaySound (11);
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (11);
 			contar = 0.5f;
 		}
 		if (direcao.magnitude > distanceToStopChasing) {
