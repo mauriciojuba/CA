@@ -97,12 +97,16 @@ public class FSM_Camponesa : MonoBehaviour {
 			}
 		}
 
-		if (target == null) {
-			SortTargetByDistance ();
-			target = targets [0].gameObject;
-		}
-        dir = target.transform.position - transform.position;
 
+		if (targets.Count != 0) {
+			if (target == null) {
+				SortTargetByDistance ();
+				target = targets [0].gameObject;
+			}
+		}
+		if (target != null) {
+			dir = target.transform.position - transform.position;
+		}
         switch (state) {
             case FSMStates.Following: FollowState(); break;
             case FSMStates.Chasing: ChaseState(); break;
@@ -123,10 +127,11 @@ public class FSM_Camponesa : MonoBehaviour {
             state = FSMStates.Die;
             return;
         }
-		SortTargetByDistance ();
-		if(Vector3.Distance(target.transform.position, myTransform.position) > Vector3.Distance(targets[0].position, myTransform.position))
-			target = targets [0].gameObject;
-		
+		if (target != null) {
+			SortTargetByDistance ();
+			if (Vector3.Distance (target.transform.position, myTransform.position) > Vector3.Distance (targets [0].position, myTransform.position))
+				target = targets [0].gameObject;
+		}
         // Check if target is in range to chase
         if (dir.magnitude <= distanceToStartChasing) {
             state = FSMStates.Chasing;
