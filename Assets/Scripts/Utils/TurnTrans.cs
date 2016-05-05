@@ -3,8 +3,7 @@ using System.Collections;
 
 public class TurnTrans : MonoBehaviour {
 
-	public Transform player1, player2;
-    public TransparencyManager TM;
+	public Transform player1, player2, correctionClone;
 	public LayerMask ignorePlayer;
 	void Start () {
 	
@@ -14,46 +13,47 @@ public class TurnTrans : MonoBehaviour {
 	void Update () {
         if (this.gameObject.name == "Main Camera(Clone)")
         {
-            Ray ray2 = new Ray(player2.position, this.transform.position);
-            RaycastHit hit2;
-            if (Physics.Linecast(player2.position, this.transform.position, out hit2, ignorePlayer) && this.gameObject.name == "Main Camera(Clone)")
+            Ray ray2 = new Ray(player2.transform.position, correctionClone.position - player2.transform.position);
+            Debug.DrawRay(player2.transform.position, correctionClone.position - player2.transform.position);
+            RaycastHit[] hits2;
+            hits2 = Physics.RaycastAll(ray2,this.transform.position.y, ignorePlayer);
+            foreach (RaycastHit hit2 in hits2)
             {
                 Debug.Log(hit2.collider);
-                if (!(hit2.collider.GetComponent<Renderer>() == null))
+                if (hit2.collider.GetComponent<Renderer>() != null)
                 {
                     if (hit2.collider.GetComponent<TransparentObject>() == null)
                     {
                         hit2.collider.gameObject.AddComponent<TransparentObject>();
-                        //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
-                        TM.New2 = hit2.collider.gameObject;
+                        hit2.collider.GetComponent<TransparentObject>().count = 0;
+
                     }
                     else
                     {
-                        //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
-                        TM.New2 = hit2.collider.gameObject;
+                        hit2.collider.GetComponent<TransparentObject>().count = 0;
                     }
                 }
             }
         }
         else
         {
-            Ray ray = new Ray(player1.position, Camera.main.transform.position);
+            
             RaycastHit hit;
             if (Physics.Linecast(player1.position, Camera.main.transform.position, out hit, ignorePlayer))
             {
-                Debug.Log(hit.collider);
+                //Debug.Log(hit.collider);
                 if (!(hit.collider.GetComponent<Renderer>() == null))
                 {
                     if (hit.collider.GetComponent<TransparentObject>() == null)
                     {
                         hit.collider.gameObject.AddComponent<TransparentObject>();
                         //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
-                        TM.New = hit.collider.gameObject;
+                        //TM.New = hit.collider.gameObject;
                     }
                     else
                     {
                         //hit.collider.GetComponent<TransparentObject>().beTransparent = true;
-                        TM.New = hit.collider.gameObject;
+                        //TM.New = hit.collider.gameObject;
                     }
                 }
             }

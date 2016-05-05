@@ -4,22 +4,23 @@ using System.Collections;
 public class TransparentObject : MonoBehaviour {
 
     Renderer render;
-    Material Standard, Tranparent;
-    public bool beTransparent;
-    float count = 0;
+    Material Standard, Transparent;
+    public float count = 0;
 	void Start () {
         render = GetComponent<Renderer>();
         Standard = render.sharedMaterial;
-        Tranparent = Resources.Load("Transparent") as Material;
+        Transparent = Resources.Load("Transparent") as Material;
 	}
 	void Update () {
-        if (beTransparent)
+        if (count > 5)
         {
-            render.sharedMaterial = Tranparent;
+            render.sharedMaterial = Standard;
+            Destroy(this);
         }
         else
         {
-            render.sharedMaterial = Standard;
+            render.sharedMaterial = Transparent;
+            count++;
         }
 	}
 }

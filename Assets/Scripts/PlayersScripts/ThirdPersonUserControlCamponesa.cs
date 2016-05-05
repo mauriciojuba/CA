@@ -134,7 +134,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 			int index = targets.IndexOf(selectedTarget);
-			Debug.Log ("index " + index);
+			//Debug.Log ("index " + index);
 
 			if (InputManager.DPadHorizontal() > 0 && dampTime > 0.5f)
 			{

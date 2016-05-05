@@ -118,7 +118,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Follow State
     private void FollowState() {
-        Debug.Log("Follow");
+        //Debug.Log("Follow");
         if (life <= 0) {
             state = FSMStates.Die;
             return;
