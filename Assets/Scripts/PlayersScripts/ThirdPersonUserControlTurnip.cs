@@ -20,6 +20,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         
         private void Start()
         {
+			Debug.Log (InputManager.players);
             // get the transform of the main camera
             if (Camera.main != null)
             {
@@ -41,7 +42,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             if (!m_Jump)
             {
-				m_Jump = InputManager.AButton ();
+				if (InputManager.players == 2) {
+					if(InputManager.AButton2())
+					Debug.Log ("Pula porra");
+					m_Jump = InputManager.AButton2 ();
+				} else {
+					m_Jump = InputManager.AButton ();
+				}
             }
             Attack();
             m_Character.Attacking(m_Attack);
