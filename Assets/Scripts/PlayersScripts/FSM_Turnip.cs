@@ -160,7 +160,7 @@ public class FSM_Turnip : MonoBehaviour {
     #region Chasing State
     private void ChaseState()
     {
-        Debug.Log("Chase");
+       
         if (life <= 0)
         {
             state = FSMStates.Die;
