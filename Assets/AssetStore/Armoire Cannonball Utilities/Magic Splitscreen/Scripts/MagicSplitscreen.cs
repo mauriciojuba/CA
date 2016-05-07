@@ -5,6 +5,7 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityStandardAssets.ImageEffects;
 
 /// <summary>
 /// Controller class for two player Magic Splitscreen camera(s)
@@ -16,6 +17,8 @@ public class MagicSplitscreen : MonoBehaviour
 	private LayerMask playerMask = 1 << 9;
 	private LayerMask camMask = 1 << 0;
 	public Transform playerRay1, playerRay2;
+    public float distanciaMaior;
+    float distanciaMenor;
     #region Unity inspector values
     /// <summary>
     /// Distance away from the player(s) that the camera(s) should be
@@ -229,6 +232,11 @@ public class MagicSplitscreen : MonoBehaviour
             Debug.LogError("MagicSplitscreen: There were problems initializing. This class will not run.");
         }
     }
+    void Start()
+    {
+        distanciaMenor = cameraDistance;
+
+    }
 
     /// <summary>
     /// This is called every frame after all Update methods have been called
@@ -410,6 +418,8 @@ public class MagicSplitscreen : MonoBehaviour
     {
         // Clone the primary camera
         this.secondaryCamera = GameObject.Instantiate(this.primaryCamera) as Camera;
+        this.secondaryCamera.GetComponent<BloomOptimized>().enabled = false;
+        this.secondaryCamera.GetComponent<VignetteAndChromaticAberration>().enabled = false;
         this.secondaryCamera.transform.parent = this.transform;
         this.secondaryCamera.clearFlags = CameraClearFlags.Depth;
 
@@ -488,12 +498,26 @@ public class MagicSplitscreen : MonoBehaviour
     {
         if (!this.IsSplitscreenOn && (this.distanceBetweenPlayers.sqrMagnitude > this.triggerDistance * this.triggerDistance))
         {
-            this.StartSplitscreenCamera();
+            if (cameraDistance >= distanciaMaior)
+            {
+                this.StartSplitscreenCamera();
+            }
+            else
+            {
+                cameraDistance+=Time.deltaTime*10;
+            }
         }
 
         if (this.IsSplitscreenOn && (this.distanceBetweenPlayers.sqrMagnitude < this.triggerDistance * this.triggerDistance))
         {
-            this.StopSplitscreenCamera();
+            if (cameraDistance <= distanciaMenor)
+            {
+                this.StopSplitscreenCamera();
+            }
+            else
+            {
+                cameraDistance -= Time.deltaTime*10;
+            }
         }
     }
 
