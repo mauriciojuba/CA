@@ -116,8 +116,10 @@ public class FSM_Blobman : MonoBehaviour {
 			return;
 		}
 		Vector3 wpDir         = waypoints[currentWaypoint].position - transform.position;
-		transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(wpDir), Time.deltaTime * rotSpeed);
-		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        Vector3 heightCorrectedPoint2 = new Vector3(wpDir.x, transform.position.y, wpDir.z);
+        transform.LookAt(heightCorrectedPoint2);
+        //transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(wpDir), Time.deltaTime * rotSpeed);
+		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 		if (wpDir.magnitude <= distanceToChangeWaypoint) {
 			currentWaypoint++;
 			if (currentWaypoint >= waypoints.Length)
@@ -153,9 +155,11 @@ public class FSM_Blobman : MonoBehaviour {
 		if (direcao.magnitude <= distanceToAtaque) {
 			state = FSMStates.Bater; return;
 		}
-		transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * rotSpeed);
-		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+		//transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * rotSpeed);
+		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        Vector3 heightCorrectedPoint = new Vector3(direcao.x, transform.position.y, direcao.z);
+        transform.LookAt(heightCorrectedPoint);
+        rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
 
 		if (dano) {
 			state = FSMStates.Dano; return;
