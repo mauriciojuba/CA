@@ -200,8 +200,7 @@ public class FSM_Blobman : MonoBehaviour {
 	#region Dano
 	private void Dano_State(){
 
-		print ("Dano");
-		vida -= 5;
+		
 		dano = false;
 
 		if (vida <= 0) {

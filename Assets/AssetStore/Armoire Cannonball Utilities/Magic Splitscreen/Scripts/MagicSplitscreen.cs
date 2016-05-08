@@ -339,7 +339,7 @@ public class MagicSplitscreen : MonoBehaviour
         AudioListener cameraListener = this.primaryCamera.GetComponent<AudioListener>() as AudioListener;
         if (cameraListener)
         {
-            Debug.Log("MagicSplitscreen: Primary Camera has an AudioListener. It will be removed.");
+            //Debug.Log("MagicSplitscreen: Primary Camera has an AudioListener. It will be removed.");
             MonoBehaviour.Destroy(cameraListener);
         }
 
@@ -353,7 +353,7 @@ public class MagicSplitscreen : MonoBehaviour
             }
             else
             {
-                Debug.Log("MagicSplitscreen: Creating a replacement AudioListener.");
+                //Debug.Log("MagicSplitscreen: Creating a replacement AudioListener.");
             }
 
             GameObject go = new GameObject();

@@ -20,7 +20,7 @@ public class TurnTrans : MonoBehaviour {
             hits2 = Physics.RaycastAll(ray2,this.transform.position.y, ignorePlayer);
             foreach (RaycastHit hit2 in hits2)
             {
-                Debug.Log(hit2.collider);
+                //Debug.Log(hit2.collider);
                 if (hit2.collider.GetComponent<Renderer>() != null)
                 {
                     if (hit2.collider.GetComponent<TransparentObject>() == null)
@@ -44,7 +44,7 @@ public class TurnTrans : MonoBehaviour {
             hits = Physics.RaycastAll(ray, this.transform.position.y, ignorePlayer);
             foreach (RaycastHit hit in hits)
             {
-                Debug.Log(hit.collider);
+                //Debug.Log(hit.collider);
                 if (hit.collider.GetComponent<Renderer>() != null)
                 {
                     if (hit.collider.GetComponent<TransparentObject>() == null)
@@ -67,7 +67,7 @@ public class TurnTrans : MonoBehaviour {
                 hits3 = Physics.RaycastAll(ray3, this.transform.position.y, ignorePlayer);
                 foreach (RaycastHit hit3 in hits3)
                 {
-                    Debug.Log(hit3.collider);
+                    //Debug.Log(hit3.collider);
                     if (hit3.collider.GetComponent<Renderer>() != null)
                     {
                         if (hit3.collider.GetComponent<TransparentObject>() == null)

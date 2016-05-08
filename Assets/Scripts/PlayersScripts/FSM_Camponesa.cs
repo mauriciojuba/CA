@@ -161,7 +161,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Chasing State
     private void ChaseState() {
-        Debug.Log("Chase");
+        //Debug.Log("Chase");
         if (life <= 0) {
             state = FSMStates.Die;
             return;
@@ -194,7 +194,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Shooting State
     private void ShootState() {
-        Debug.Log("Shoot");
+        //Debug.Log("Shoot");
 
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
