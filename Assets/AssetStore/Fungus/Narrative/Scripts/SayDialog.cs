@@ -115,6 +115,7 @@ namespace Fungus
 
 		protected void Start()
 		{
+
 			// Dialog always starts invisible, will be faded in when writing starts
 			GetCanvasGroup().alpha = 0f;
 
