@@ -157,7 +157,7 @@ public class FSM_Blobman : MonoBehaviour {
 		}
 		//transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * rotSpeed);
 		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-        Vector3 heightCorrectedPoint = new Vector3(direcao.x, transform.position.y, direcao.z);
+        Vector3 heightCorrectedPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
         transform.LookAt(heightCorrectedPoint);
         rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
 
