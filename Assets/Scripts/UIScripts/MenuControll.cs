@@ -12,8 +12,12 @@ public class MenuControll : MonoBehaviour {
 	private float volume;
 	private int graphicQuality;
 	public GameObject mainMenu, options, newGame;
+	public GameObject painelQuit;
 	public GameObject volumeSlider;
+	public GameObject nao;
 	public EventSystem evento;
+	public GameObject optionsButton;
+	public GameObject quitButton;
 	public GameObject newGameButton;
 	public GameObject singlePlayerButton;
 	public GameObject qualityButton;
@@ -21,44 +25,62 @@ public class MenuControll : MonoBehaviour {
 	public GameObject highButton;
 	public GameObject mediumButton;
 	public GameObject lowButton;
+	public GameObject pressA;
+	public GameObject pressB;
+	public GameObject pressAny;
+	public float countPressAny;
+	private bool canPressAny;
 	private bool musicSelected;
 	private bool qualitySelected;
 	public Slider vol;
 
 
 	void Start(){
+		countPressAny = 0;
 		dampTime = 0;
-		isOnMainMenu = true;
-		mainMenu.SetActive (true);
+		painelQuit.SetActive (false);
+		pressA.SetActive (false);
+		pressB.SetActive (false);
+		pressAny.SetActive (false);
+		canPressAny = false;
+		isOnMainMenu = false;
+		mainMenu.SetActive (false);
 		musicSelected = false;
 		qualitySelected = false;
 		options.SetActive (false);
 		newGame.SetActive (false);
-		lowButton.SetActive (false);
-		mediumButton.SetActive (false);
 		Time.timeScale = 1;
-		//
-		//		//preferencias salvas
-		//		//volume
-		//		if (PlayerPrefs.HasKey ("volume")) {
-		//			volume = PlayerPrefs.GetFloat ("volume");
-		//		} else {
-		//			PlayerPrefs.SetFloat("volume", volume);
-		//		}
+		
+				//preferencias salvas
+				//volume
+		if (PlayerPrefs.HasKey ("volume")) {
+			volume = PlayerPrefs.GetFloat ("volume");
+			vol.value = volume;
+		} else {
+			PlayerPrefs.SetFloat("volume", volume);
+		}
+
 				//qualidades graficas
 		if (PlayerPrefs.HasKey ("graphicQuality")) {
 			graphicQuality = PlayerPrefs.GetInt ("graphicQuality");
 		} else {
 			PlayerPrefs.SetInt("graphicQuality", graphicQuality);
 		}
+
 		if (graphicQuality == 0) {
 			QualitySettings.SetQualityLevel (0);
 			lowButton.SetActive (true);
+			mediumButton.SetActive (false);
+			highButton.SetActive (false);
 		} else if (graphicQuality == 1) {
 			QualitySettings.SetQualityLevel (1);
+			lowButton.SetActive (false);
 			mediumButton.SetActive (true);
+			highButton.SetActive (false);
 		} else if (graphicQuality == 2) {
 			QualitySettings.SetQualityLevel (2);
+			lowButton.SetActive (false);
+			mediumButton.SetActive (false);
 			highButton.SetActive (true);
 		}
 				
@@ -70,6 +92,27 @@ public class MenuControll : MonoBehaviour {
 		if(qualitySelected)
 		NavigateQualityButtons ();
 		VolumeChange ();
+
+		if (!isOnMainMenu) {
+			countPressAny += Time.deltaTime;
+			if (countPressAny > 5) {
+				canPressAny = true;
+				pressAny.SetActive (true);
+				isOnMainMenu = true;
+				countPressAny = 0;
+			}
+		} 
+
+		if (canPressAny) {
+			if (Input.anyKeyDown) {
+				pressAny.SetActive (false);
+				mainMenu.SetActive (true);
+				evento.SetSelectedGameObject (newGameButton);
+				pressA.SetActive (true);
+				pressB.SetActive (true);
+				canPressAny = false;
+			}
+		}
 	}
 
 
@@ -79,6 +122,22 @@ public class MenuControll : MonoBehaviour {
 		newGame.SetActive (false);
 		options.SetActive (true);
 		evento.SetSelectedGameObject (musicButton);
+		if (graphicQuality == 0) {
+			QualitySettings.SetQualityLevel (0);
+			lowButton.SetActive (true);
+			mediumButton.SetActive (false);
+			highButton.SetActive (false);
+		} else if (graphicQuality == 1) {
+			QualitySettings.SetQualityLevel (1);
+			lowButton.SetActive (false);
+			mediumButton.SetActive (true);
+			highButton.SetActive (false);
+		} else if (graphicQuality == 2) {
+			QualitySettings.SetQualityLevel (2);
+			lowButton.SetActive (false);
+			mediumButton.SetActive (false);
+			highButton.SetActive (true);
+		}
 	}
 
 	public void ButtonCredits(){
@@ -86,11 +145,24 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void ButtonBack(){
-		if(Input.GetKeyDown(KeyCode.JoystickButton1)){
-			Debug.Log ("voltar");
-		if (options.activeSelf) {
+		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+			if (mainMenu.activeSelf) {
+				if (painelQuit.activeSelf) {
+					painelQuit.SetActive (false);
+					evento.SetSelectedGameObject (quitButton);
+				} else {
+					isOnMainMenu = false;
+					mainMenu.SetActive (false);
+					pressA.SetActive (false);
+					pressB.SetActive (false);
+				}
+			}
+
+			if (options.activeSelf) {
 				if (musicSelected) {
 					musicSelected = false;
+					volume = vol.value;
+					PlayerPrefs.SetFloat("volume", volume);
 					evento.SetSelectedGameObject (musicButton);
 				} else if (qualitySelected) {
 					qualitySelected = false;
@@ -98,15 +170,15 @@ public class MenuControll : MonoBehaviour {
 				} else {
 					options.SetActive (false);
 					mainMenu.SetActive (true);
-					evento.SetSelectedGameObject (newGameButton);
+					evento.SetSelectedGameObject (optionsButton);
 				}
-		}
-		if (newGame.activeSelf) {
-			newGame.SetActive (false);
-			mainMenu.SetActive (true);
-			evento.SetSelectedGameObject (newGameButton);
-		}
-		
+			}
+			if (newGame.activeSelf) {
+				newGame.SetActive (false);
+				mainMenu.SetActive (true);
+				evento.SetSelectedGameObject (newGameButton);
+			}
+
 		}
 	}
 
@@ -184,24 +256,38 @@ public class MenuControll : MonoBehaviour {
 	public void HighQuality(){
 		QualitySettings.SetQualityLevel (2);
 		graphicQuality = 2;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
 	}
 
 	public void MediumQuality(){
 		QualitySettings.SetQualityLevel (1);
 		graphicQuality = 1;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
 	}
 
 	public void LowQuality(){
 		QualitySettings.SetQualityLevel (0);
 		graphicQuality = 0;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
 	}
 
 	public void ButtonQuit(){
-		Application.Quit();
+		painelQuit.SetActive (true);
+		evento.SetSelectedGameObject (nao);
+	}
+
+	public void ButtonYes(){
+		Application.Quit ();
+	}
+
+	public void ButtonNo(){
+		painelQuit.SetActive (false);
+		evento.SetSelectedGameObject (quitButton);
 	}
 
 	public void VolumeChange(){
 		this.GetComponentInChildren<AudioSource> ().volume = vol.value;
 	}
+
 
 }
