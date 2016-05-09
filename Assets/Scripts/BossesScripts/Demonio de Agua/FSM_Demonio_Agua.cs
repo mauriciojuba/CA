@@ -296,4 +296,11 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 
 		}
 	}
+
+	public void OnTriggerEnter(Collider hit){
+		if (hit.gameObject.tag == "TurnipAtk") {
+			state = FSMStates.Dano;
+			return;
+		}
+	}
 }

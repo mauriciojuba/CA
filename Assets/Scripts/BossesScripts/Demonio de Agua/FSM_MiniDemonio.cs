@@ -91,4 +91,11 @@ public class FSM_MiniDemonio : MonoBehaviour {
 
 		}
 	}
+
+	public void OnCollisionEnter(Collision hit){
+		if (hit.gameObject.tag == "Player1" || hit.gameObject.tag == "Player2") {
+			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (22);
+			Destroy (gameObject,1f);
+		}
+	}
 }
