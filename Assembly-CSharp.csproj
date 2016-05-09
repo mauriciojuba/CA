@@ -231,6 +231,7 @@
      <Compile Include="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\FootstepAudio.cs" />
+     <Compile Include="Assets\Scripts\PlayersScripts\HelpVisuals.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\Nabo.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\NeedHelp.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" />

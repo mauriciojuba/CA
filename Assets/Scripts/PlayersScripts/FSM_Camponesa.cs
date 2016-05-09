@@ -26,7 +26,7 @@ public class FSM_Camponesa : MonoBehaviour {
 	private ThirdPersonCharacter m_Character;
 	public List<Transform> targets;
 
-	private float teste = 0.8f;
+	private float forward = 0.8f;
 	Animator m_Animator;
     #endregion
 
@@ -146,30 +146,7 @@ public class FSM_Camponesa : MonoBehaviour {
             return;
         }
 
-        // Find the direction to the current waypoint,
-        //   rotate and move towards it
-        //transform.LookAt(follow.position);
-        //transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-        //agent.SetDestination(follow.position);
-        Vector3 followDir = follow.position - transform.position;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followDir), Time.deltaTime * rotSpeed);
-        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		if (followDir.magnitude < 2 || followDir.y > 1) {
-			teste = 0;
-			rb.velocity = Vector3.zero;
-		} else if (followDir.magnitude < 3)
-			teste = Mathf.Lerp (teste, 0.3f, Time.deltaTime);
-		else if (followDir.magnitude < 4)
-			teste = Mathf.Lerp (teste, 0.6f, Time.deltaTime);
-		else // (followDir.magnitude > 5)
-			teste = Mathf.Lerp (teste, 1f, Time.deltaTime);
-        //else
-     //   {
-        //    rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
-      //  }
-
-		m_Animator.SetFloat ("Forward",teste);
-
+		animacao ();
     }
     #endregion
 
@@ -305,5 +282,30 @@ public class FSM_Camponesa : MonoBehaviour {
         life -= 1;
     }
     #endregion
+
+	private void animacao(){
+
+		// Find the direction to the current waypoint,
+		//   rotate and move towards it
+		//transform.LookAt(follow.position);
+		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+		//agent.SetDestination(follow.position);
+		Vector3 followDir = follow.position - transform.position;
+		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followDir), Time.deltaTime * rotSpeed);
+		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
+		if (followDir.magnitude < 2 || followDir.y > 1) {
+			forward = Mathf.Lerp (forward, 0f, Time.deltaTime * speed * 5);
+			rb.velocity = Vector3.zero;
+		} else if (followDir.magnitude < 3)
+			forward = Mathf.Lerp (forward, 0.4f, Time.deltaTime * speed);
+		else if (followDir.magnitude < 4)
+			forward = Mathf.Lerp (forward, 0.6f, Time.deltaTime * speed);
+		else // (followDir.magnitude > 5)
+			forward = Mathf.Lerp (forward, 1f, Time.deltaTime * speed);
+
+		m_Animator.SetFloat ("Forward",forward);
+
+	}
 
 }
