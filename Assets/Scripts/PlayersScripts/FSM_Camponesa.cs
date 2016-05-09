@@ -25,6 +25,9 @@ public class FSM_Camponesa : MonoBehaviour {
 	private bool m_Attack;
 	private ThirdPersonCharacter m_Character;
 	public List<Transform> targets;
+
+	private float teste = 0.8f;
+	Animator m_Animator;
     #endregion
 
     #region Follow
@@ -59,6 +62,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Unity Functions
     public void Start() {
+		m_Animator = GetComponent<Animator>();
         currentWaypoint = 0;
         timer = 0;
         rb = GetComponent<Rigidbody>();
@@ -122,6 +126,10 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Follow State
     private void FollowState() {
+		
+
+
+
         //Debug.Log("Follow");
         if (life <= 0) {
             state = FSMStates.Die;
@@ -146,15 +154,21 @@ public class FSM_Camponesa : MonoBehaviour {
         Vector3 followDir = follow.position - transform.position;
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followDir), Time.deltaTime * rotSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-        if (followDir.magnitude < 2)
-        {
-            rb.velocity = Vector3.zero;
-        }
-        else
-        {
-            rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
-        }
+		if (followDir.magnitude < 2 || followDir.y > 1) {
+			teste = 0;
+			rb.velocity = Vector3.zero;
+		} else if (followDir.magnitude < 3)
+			teste = Mathf.Lerp (teste, 0.3f, Time.deltaTime);
+		else if (followDir.magnitude < 4)
+			teste = Mathf.Lerp (teste, 0.6f, Time.deltaTime);
+		else // (followDir.magnitude > 5)
+			teste = Mathf.Lerp (teste, 1f, Time.deltaTime);
+        //else
+     //   {
+        //    rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+      //  }
 
+		m_Animator.SetFloat ("Forward",teste);
 
     }
     #endregion
