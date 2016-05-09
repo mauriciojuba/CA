@@ -51,7 +51,7 @@ public class CustomizeText : MonoBehaviour {
 			&& letras [id].text == "Enter") {
 
 			GameControl.control.CamponesaNome = myText.text;
-			Application.LoadLevel (1);
+			Application.LoadLevel (5);
 
 
 		}

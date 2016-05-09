@@ -213,6 +213,7 @@
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CustomizeText.cs" />
+     <Compile Include="Assets\MudaNome.cs" />
      <Compile Include="Assets\Scripts\BlobmanScripts\AtaqueBlobman.cs" />
      <Compile Include="Assets\Scripts\BlobmanScripts\FSM_Blobman.cs" />
      <Compile Include="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" />
