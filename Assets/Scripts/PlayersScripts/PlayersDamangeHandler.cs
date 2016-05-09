@@ -25,4 +25,5 @@ public class PlayersDamangeHandler : MonoBehaviour{
 		HP = HP + recoveryAmount;
 		Bar.fillAmount = (HP / MaxHP);
 	}
+    
 }
