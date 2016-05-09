@@ -7,6 +7,9 @@ public class SwitchPlayer : MonoBehaviour
 	GameObject player1, player2;
 	string controlling;
 
+	private bool Onground = true;
+	public float TimeTroca;
+
 	public void Start()
 	{
 		if (InputManager.players == 2)
@@ -21,6 +24,14 @@ public class SwitchPlayer : MonoBehaviour
 
 	public void Update()
 	{
+		if (Input.GetButtonDown ("XBOX_buttonA")) {
+			Onground = false;
+			TimeTroca = 2.5f;
+		}
+
+		if (TimeTroca < 0)
+			Onground = true;
+
 		if (player1 != null && player2 != null) {
 			if (controlling == "Player1") {
 				
@@ -44,13 +55,12 @@ public class SwitchPlayer : MonoBehaviour
 
 			if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E))
 			{
-				if (controlling == "Player1")
-				{
-					controlling = "Player2";
-				}
-				else if (controlling == "Player2")
-				{
-					controlling = "Player1";
+				if (Onground) {
+					if (controlling == "Player1") {
+						controlling = "Player2";
+					} else if (controlling == "Player2") {
+						controlling = "Player1";
+					}
 				}
 			}
 
@@ -73,6 +83,8 @@ public class SwitchPlayer : MonoBehaviour
 
 	public void FixedUpdate()
 	{
-		
+		TimeTroca -= Time.deltaTime;
 	}
+		
+		
 }
