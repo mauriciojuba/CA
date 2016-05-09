@@ -2,104 +2,93 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class NeedHelp : MonoBehaviour {
+public class NeedHelp : MonoBehaviour
+{
 
-    public Image Bar, _Button;
-    public GameObject helpParticle;
-
-
-
-
-    GameObject canvas, otherPlayer;
-    bool pressingButton;
-    bool canHelp;
-    float helpingTime, saveTime = 2f;
-    Vector3 screenPosition;
+    public HelpVisuals Help;
+    public static NeedHelp Instance;
+    GameObject canvas, hurtChar,helper;
+    HelpVisuals instance;
+    bool canSave, saving;
+    float timeToSave = 2f,timeTry = 0f;
+    public float alturaPersonagens;
 
 
 
-    void Start()
+    void Initialize()
     {
         canvas = GameObject.Find("Canvas");
-        Bar = Resources.Load("BarHelp") as Image;
-        Bar = Resources.Load("_Button") as Image;
-        SetOtherPlayer();
-        NeedHelpAnimation();
-        //helpParticle.SetActive(true);
-        screenPosition = Camera.main.WorldToScreenPoint(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z));
-        
-
+        Instance = this;
+    }
+    void Start()
+    {
+        Initialize();
     }
     void Update()
     {
-        //substituir pelo botão do controle
-        if (Input.GetKeyDown(KeyCode.L)) pressingButton = true;
-        else pressingButton = false;
-        
-        SetButtonON();
-    }
-    void FreezePlayer()
-    {
-        //stop Controlles from that Character
-    }
-    void SetOtherPlayer()
-    {
-        if (this.CompareTag("Player1"))
+        if (hurtChar != null)
         {
-            otherPlayer = GameObject.Find("PlayerTurnip");
+            KeepButtonsOnHurtedChar();
+            savingHurtedChar();
         }
-        else if (this.CompareTag("Player2"))
-        {
-            otherPlayer = GameObject.Find("PlayerCamponesa");
-        }
-        Debug.Log(otherPlayer);
-    }
-    void NeedHelpAnimation()
-    {
-        Animator anim;
-        anim = GetComponent<Animator>();
-        //set the bool to start animation
-    }
-    void Particles()
-    {
-        //Set the Particles ON
-    }
-    void SetButtonON()
-    {
-        if (canHelp)
-        {
-            //Set Button On and Place at player position
-            _Button.transform.SetParent(canvas.transform, false);
-            _Button.transform.position = screenPosition;
-            //set the bar ON
-            Bar.transform.SetParent(canvas.transform, false);
-            Bar.transform.position = screenPosition;
-            if (pressingButton)
-            {
-                //Set Circle Bar ON
-                Bar.fillAmount = ((saveTime * 5f) / (helpingTime * 5f));
-                helpingTime += Time.deltaTime;
-                if (helpingTime >= saveTime) savedPlayer();
-            }
-            else
-            {
-                helpingTime = 0;
-                Bar.fillAmount = 0;
-            }
-        }
+        if (Input.GetKeyDown(KeyCode.I) && canSave) saving = true;
+        if (Input.GetKeyUp(KeyCode.I) || !canSave) saving = false;
 
     }
-    void CheckPlayerNear()
+    void FixedUpdate()
     {
-        if (Vector3.Distance(this.transform.position, otherPlayer.transform.position) <= 1.5f) canHelp = true;
-        else canHelp = false;
+        if (hurtChar != null)
+        {
+            checkDistanceBetweenPlayers();
+        }
     }
-    void savedPlayer()
+    public void CreateHelpSign(GameObject _hurted)
     {
-        Destroy(this);
+        instance = Instantiate(Help);
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(new Vector3(_hurted.transform.position.x, _hurted.transform.position.y+alturaPersonagens, _hurted.transform.position.z));
+        instance.transform.SetParent(canvas.transform, false);
+        instance.transform.position = screenPosition; 
+        //KeepButtonsOnHurtedChar();
+        if (hurtChar != null)
+        {
+            //gameover
+        }
+        else
+        {
+            hurtChar = _hurted;
+            //PAROLI ===>  hurtChar tem que perder o controle(não conseguir se mexer)
+        }
+        defineHurtedAndHelper();
     }
-    void OnDestroy()
+    void KeepButtonsOnHurtedChar()
     {
-        this.gameObject.GetComponent<PlayersDamangeHandler>().HP = 50f;
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(new Vector3(hurtChar.transform.position.x, hurtChar.transform.position.y+alturaPersonagens, hurtChar.transform.position.z));
+        instance.transform.position = screenPosition;
+    }
+    void defineHurtedAndHelper()
+    {
+        if (hurtChar.CompareTag("Player1")) helper = GameObject.Find("PlayerTurnip");
+        else helper = GameObject.Find("PlayerCamponesa");
+    }
+    void checkDistanceBetweenPlayers()
+    {
+        if (Vector3.Distance(helper.transform.position, hurtChar.transform.position) <= 1.5f)
+        {
+            canSave = true;
+        }
+        else canSave = false;
+    }
+    void savingHurtedChar()
+    {
+        Debug.Log(timeTry);
+        if(canSave && saving) timeTry += Time.deltaTime;
+        else timeTry = 0;
+        instance.Bar.fillAmount = ((timeTry * 5f) / (timeToSave * 5f));
+    }
+    public void CharSaved()
+    {
+        hurtChar = null;
+        helper = null;
+        timeTry = 0;
     }
 }

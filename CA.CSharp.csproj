@@ -234,6 +234,7 @@
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
     <Compile Include="Assets\GameControl.cs" />
+    <Compile Include="Assets\HelpVisuals.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" />

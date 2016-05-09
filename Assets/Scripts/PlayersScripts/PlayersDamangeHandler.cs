@@ -8,16 +8,17 @@ public class PlayersDamangeHandler : MonoBehaviour{
     public Image Bar;
     public float _damangeAmount;
 
+    bool hurted = false;
+
     void Update()
     {
         Bar.fillAmount = (HP / MaxHP);
-        if (HP <= 10)
+        if (HP <= 10 && !hurted)
         {
-            if (this.gameObject.GetComponent<NeedHelp>() == null)
-            {
-                this.gameObject.AddComponent<NeedHelp>();
-            }
+            NeedHelp.Instance.CreateHelpSign(this.gameObject);
+            hurted = true;
         }
+        else if(HP > 10) hurted = false;
     }
 
 //use essa função com para infligir dano no personagem.
