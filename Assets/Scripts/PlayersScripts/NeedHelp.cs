@@ -4,25 +4,43 @@ using UnityEngine.UI;
 
 public class NeedHelp : MonoBehaviour {
 
-    public Image Bar, Button;
+    public Image Bar, _Button;
     public GameObject helpParticle;
 
 
 
-    GameObject otherPlayer;
+
+    GameObject canvas, otherPlayer;
     bool pressingButton;
     bool canHelp;
     float helpingTime, saveTime = 2f;
+    Vector3 screenPosition;
 
 
-	void Start()
+
+    void Start()
     {
+        canvas = GameObject.Find("Canvas");
+        Bar = Resources.Load("BarHelp") as Image;
+        Bar = Resources.Load("_Button") as Image;
         SetOtherPlayer();
         NeedHelpAnimation();
+        //helpParticle.SetActive(true);
+        screenPosition = Camera.main.WorldToScreenPoint(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z));
+        
+
     }
     void Update()
     {
+        //substituir pelo botão do controle
+        if (Input.GetKeyDown(KeyCode.L)) pressingButton = true;
+        else pressingButton = false;
+        
         SetButtonON();
+    }
+    void FreezePlayer()
+    {
+        //stop Controlles from that Character
     }
     void SetOtherPlayer()
     {
@@ -34,6 +52,7 @@ public class NeedHelp : MonoBehaviour {
         {
             otherPlayer = GameObject.Find("PlayerCamponesa");
         }
+        Debug.Log(otherPlayer);
     }
     void NeedHelpAnimation()
     {
@@ -50,8 +69,11 @@ public class NeedHelp : MonoBehaviour {
         if (canHelp)
         {
             //Set Button On and Place at player position
-            //aumenta o tamanho do botão
+            _Button.transform.SetParent(canvas.transform, false);
+            _Button.transform.position = screenPosition;
             //set the bar ON
+            Bar.transform.SetParent(canvas.transform, false);
+            Bar.transform.position = screenPosition;
             if (pressingButton)
             {
                 //Set Circle Bar ON

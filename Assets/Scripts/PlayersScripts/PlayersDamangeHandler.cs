@@ -11,6 +11,13 @@ public class PlayersDamangeHandler : MonoBehaviour{
     void Update()
     {
         Bar.fillAmount = (HP / MaxHP);
+        if (HP <= 10)
+        {
+            if (this.gameObject.GetComponent<NeedHelp>() == null)
+            {
+                this.gameObject.AddComponent<NeedHelp>();
+            }
+        }
     }
 
 //use essa função com para infligir dano no personagem.

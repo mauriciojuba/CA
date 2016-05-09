@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 3525e8fd5228efb4197b2506e6e3f33a
-timeCreated: 1462746977
+timeCreated: 1462760712
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Bar: {fileID: 11477348, guid: a8bd96574b092fd4aa55795090be008b, type: 2}
+  - _Button: {fileID: 11442638, guid: eb84b6b3398a15c4a8f4cb881cb81e52, type: 2}
+  - helpParticle: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
