@@ -1,15 +1,42 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayersScripts\SwitchPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utils\AudioManagerDemonioPedra.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="29" Column="20" />
+      <File FileName="Assets\Scripts\Utils\AudioManager.cs" Line="39" Column="12" />
+      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\MenuCircular\Scripts\CustomizeText.cs" Line="1" Column="1" />
       <File FileName="Assets\MudaNome.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayersScripts\FootstepAudio.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\FootstepAudio.cs" Line="60" Column="4" />
       <File FileName="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BlobmanScripts\FSM_Blobman.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utils\AudioManagerBlobman.cs" Line="22" Column="3" />
+      <File FileName="Assets\Scripts\Utils\AudioManagerCamponesa.cs" Line="23" Column="34" />
+      <File FileName="Assets\Scripts\Utils\AudioManagerDemonioPedra.cs" Line="28" Column="36" />
+      <File FileName="Assets\Scripts\Utils\AudioManagerTurnip.cs" Line="9" Column="32" />
+      <File FileName="Assets\Scripts\Utils\AudioManagerDemonioAgua.cs" Line="15" Column="39" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayersScripts" expanded="True" />
+                <Node name="Utils" expanded="True">
+                  <Node name="AudioManagerDemonioPedra.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

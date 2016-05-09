@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 5a28dc130c626654e8f7df0c18790940
+timeCreated: 1462823209
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - audio: {instanceID: 0}
+  - pegaVida: {fileID: 8300000, guid: 01d9782dcb436f841a5eb52b9a32fdf6, type: 3}
+  - destroiErva: {fileID: 8300000, guid: 08271475e1c160b45a624be37c6ee714, type: 3}
+  - abrirPortaCeleiro: {fileID: 8300000, guid: 32b90994bead03c45a078ba3f1a803ff, type: 3}
+  - magicaNabos: {fileID: 8300000, guid: 35087d43a9fdb3540bc9c5a4129738b4, type: 3}
+  - faseConcluida: {fileID: 8300000, guid: 063e4137119945c4db7a4de5514f5857, type: 3}
+  - start: {instanceID: 0}
+  - selectMenu: {instanceID: 0}
+  - questCompleted: {instanceID: 0}
+  - gameOver: {fileID: 8300000, guid: b8e9d820e8ed85448b793e50a97a9700, type: 3}
+  - tacarNabos: {fileID: 8300000, guid: 3182964c8169f4e4a8b6f0c19363ef0f, type: 3}
+  - ataqueTurnip: {fileID: 8300000, guid: 43a02abb63cd3d64ba20db0bb20928f3, type: 3}
+  - Blobman_Ataque: {fileID: 8300000, guid: 7c05b686bbac84c4fbdca9bbbced20af, type: 3}
+  - Blobman_Dano: {fileID: 8300000, guid: 8f86d4fd880903c49bb5c59e6d384c88, type: 3}
+  - Blobman_Morte: {fileID: 8300000, guid: a5b8f4fe95264b548b5ef30030879b43, type: 3}
+  - Blobman_Passos: {fileID: 8300000, guid: 90fe3253a36a00e4ebac4dc94570857f, type: 3}
+  - Demonio_Agua_Voz_1: {fileID: 8300000, guid: ebc7f57d20af34b4aa492f2a7b9e4978,
+      type: 3}
+  - Demonio_Agua_Voz_2: {fileID: 8300000, guid: e97dbbeb14743634aa6a7753d807afbe,
+      type: 3}
+  - Demonio_Agua_Andar: {fileID: 8300000, guid: 3b2f924b24b34614d8aa7d2238e091cc,
+      type: 3}
+  - Demonio_Agua_Dano: {fileID: 8300000, guid: 6b105d1f972060446af1944418624ec8, type: 3}
+  - Demonio_Agua_Morte: {fileID: 8300000, guid: 95a47c12bdc3e3f4fa764b79b55a21b7,
+      type: 3}
+  - Demonio_Agua_Ataque: {fileID: 8300000, guid: cd2f403b46a999448b761b9a83f2ef9e,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_1: {fileID: 8300000, guid: 3eac0ca5e0e555140acac7882e9f3d76,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_2: {fileID: 8300000, guid: 17f3cc28ee64c5447bb4f4168bd87b78,
+      type: 3}
+  - Demonio_Agua_Mob_Voz_3: {instanceID: 0}
+  - Demonio_Agua_Mob_Andar: {fileID: 8300000, guid: 774184a174071204b81085c80a8db17e,
+      type: 3}
+  - Demonio_Agua_Mob_Morte: {fileID: 8300000, guid: e8b73128dbb541d4389ac1c6fa0c6d19,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
