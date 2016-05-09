@@ -234,7 +234,6 @@
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
     <Compile Include="Assets\GameControl.cs" />
-    <Compile Include="Assets\HelpVisuals.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" />
@@ -257,6 +256,7 @@
     <Compile Include="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\FootstepAudio.cs" />
+    <Compile Include="Assets\Scripts\PlayersScripts\HelpVisuals.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\Nabo.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\NeedHelp.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" />
