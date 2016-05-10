@@ -15,8 +15,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private Vector3 m_Move;
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 		public List<Transform> targets;
-		[SerializeField]
-		private Transform selectedTarget;
+		public Transform selectedTarget;
 		private float dampTime = 0;
         //metodo ataque
         bool m_Attack;
@@ -64,6 +63,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					targets.RemoveAt (i);
 				}
 			}
+
+			if (InputManager.RButton ()) {
+				TargetEnemy ();
+			}
         }
 
 
@@ -99,7 +102,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
             
-			TargetEnemy();
         }
 
 		public void AddAllEnemies()
@@ -117,21 +119,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		private void TargetEnemy()
 		{
-			if (InputManager.RButton())
-			{
-				if (selectedTarget == null)
-				{ 
-					SortTargetByDistance();
-					selectedTarget = targets[0];
-					SelectTarget();
-				}
-				else
-				{
-					selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
+			
+			if (targets.Count > 0) {
+				if (selectedTarget == null) { 
+					SortTargetByDistance ();
+					selectedTarget = targets [0];
+					SelectTarget ();
+				} else {
+					selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
 					selectedTarget = null;
 					dampTime = 0;
 				}
 			}
+
 
 			int index = targets.IndexOf(selectedTarget);
 			//Debug.Log ("index " + index);
@@ -201,7 +201,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void ThrowNabo(){
 			Rigidbody b = GameObject.Instantiate(nabo, muzzle.position, muzzle.rotation) as Rigidbody;
-			muzzle.LookAt (selectedTarget.Find("Alvo").position);
+			muzzle.LookAt (selectedTarget.FindChild("Alvo").position);
 			b.AddForce(muzzle.forward * naboForce);
 		}
 

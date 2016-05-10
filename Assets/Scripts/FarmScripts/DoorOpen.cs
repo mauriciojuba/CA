@@ -10,6 +10,7 @@ public class DoorOpen : MonoBehaviour {
 	public GameObject porta3;
 	public GameObject porta4;
 	public GameObject player;
+	public GameObject naboVidaEvento;
 
 	// Use this for initialization
 	void Start () {
@@ -19,15 +20,14 @@ public class DoorOpen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((Input.GetKeyDown (KeyCode.JoystickButton0) || Input.GetKeyDown (KeyCode.X)) && canOpen1) {
-			player.GetComponentInChildren<AudioManager> ().PlaySound (3);
+		if (InputManager.YButton() && canOpen1) {
 			porta1.GetComponent<Animation> ().Play();
 			porta2.GetComponent<Animation> ().Play ();
 			player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa();
 			canOpen1 = false;
+			naboVidaEvento.SetActive (true);
 		}
-		if ((Input.GetKeyDown (KeyCode.JoystickButton0) || Input.GetKeyDown (KeyCode.X)) && canOpen2) {
-			player.GetComponentInChildren<AudioManager> ().PlaySound (3);
+		if (InputManager.YButton() && canOpen2) {
 			porta3.GetComponent<Animation> ().Play ();
 			porta4.GetComponent<Animation> ().Play ();
 			player.GetComponent<DialogHandlerTutorial> ().message = "FIM";

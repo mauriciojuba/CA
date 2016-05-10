@@ -86,5 +86,4 @@ public class SwitchPlayer : MonoBehaviour
 		TimeTroca -= Time.deltaTime;
 	}
 		
-		
 }

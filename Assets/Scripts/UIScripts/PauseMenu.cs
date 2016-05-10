@@ -29,6 +29,8 @@ public class PauseMenu : MonoBehaviour {
 	public Image lifePause2;
 	public GameObject lifeHudTurnip, lifeHudCamponesa;
 	private int graphicQuality;
+	public GameObject leftSelectN, leftSelectH;
+	public GameObject rightSelectN, rightSelectH;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +42,8 @@ public class PauseMenu : MonoBehaviour {
 		musicSelected = false;
 		qualitySelected = false;
 		Time.timeScale = 1;
+		rightSelectH.SetActive (false);
+		leftSelectH.SetActive (false);
 	
 		if (PlayerPrefs.HasKey ("volume")) {
 			volume = PlayerPrefs.GetFloat ("volume");
@@ -126,6 +130,26 @@ public class PauseMenu : MonoBehaviour {
 				} else if (qualitySelected) {
 					qualitySelected = false;
 					evento.SetSelectedGameObject (qualityButton);
+					leftSelectH.SetActive (false);
+					leftSelectN.SetActive (true);
+					rightSelectH.SetActive (false);
+					rightSelectN.SetActive (true);
+					if (graphicQuality == 0) {
+						QualitySettings.SetQualityLevel (0);
+						lowButton.SetActive (true);
+						mediumButton.SetActive (false);
+						highButton.SetActive (false);
+					} else if (graphicQuality == 1) {
+						QualitySettings.SetQualityLevel (1);
+						lowButton.SetActive (false);
+						mediumButton.SetActive (true);
+						highButton.SetActive (false);
+					} else if (graphicQuality == 2) {
+						QualitySettings.SetQualityLevel (2);
+						lowButton.SetActive (false);
+						mediumButton.SetActive (false);
+						highButton.SetActive (true);
+					}
 				} else {
 					Resume ();
 				}
@@ -185,7 +209,10 @@ public class PauseMenu : MonoBehaviour {
 				mediumButton.SetActive (true);
 				evento.SetSelectedGameObject (mediumButton);
 			}
-			dampTime = 0;
+			leftSelectH.SetActive (false);
+			leftSelectN.SetActive (true);
+			rightSelectH.SetActive (true);
+			rightSelectN.SetActive (false);
 		} else if (InputManager.RightMenuButton()) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
@@ -200,7 +227,10 @@ public class PauseMenu : MonoBehaviour {
 				highButton.SetActive (true);
 				evento.SetSelectedGameObject (highButton);
 			}
-			dampTime = 0;
+			leftSelectH.SetActive (true);
+			leftSelectN.SetActive (false);
+			rightSelectH.SetActive (false);
+			rightSelectN.SetActive (true);
 		}
 
 	}
@@ -214,21 +244,37 @@ public class PauseMenu : MonoBehaviour {
 		QualitySettings.SetQualityLevel (2);
 		graphicQuality = 2;
 		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+		leftSelectH.SetActive (false);
+		leftSelectN.SetActive (true);
+		rightSelectH.SetActive (false);
+		rightSelectN.SetActive (true);
+		qualitySelected = false;
+		evento.SetSelectedGameObject (qualityButton);
 	}
 
 	public void MediumQuality(){
 		QualitySettings.SetQualityLevel (1);
 		graphicQuality = 1;
 		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+		leftSelectH.SetActive (false);
+		leftSelectN.SetActive (true);
+		rightSelectH.SetActive (false);
+		rightSelectN.SetActive (true);
+		qualitySelected = false;
+		evento.SetSelectedGameObject (qualityButton);
 	}
 
 	public void LowQuality(){
 		QualitySettings.SetQualityLevel (0);
 		graphicQuality = 0;
 		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+		leftSelectH.SetActive (false);
+		leftSelectN.SetActive (true);
+		rightSelectH.SetActive (false);
+		rightSelectN.SetActive (true);
+		qualitySelected = false;
+		evento.SetSelectedGameObject (qualityButton);
 	}
 
-	public void Quit(){
-		Application.Quit ();
-	}
+
 }

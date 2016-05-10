@@ -134,12 +134,12 @@ public class FSM_Turnip : MonoBehaviour {
 				target = targets [0].gameObject;
 		}
         // Check if target is in range to chase
-        if (dir.magnitude <= distanceToStartChasing)
-        {
-            state = FSMStates.Chasing;
-            return;
-        }
-
+		if (targets.Count > 0) {
+			if (dir.magnitude <= distanceToStartChasing) {
+				state = FSMStates.Chasing;
+				return;
+			}
+		}
 		animacao ();
         
 
