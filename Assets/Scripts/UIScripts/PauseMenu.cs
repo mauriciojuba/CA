@@ -4,40 +4,79 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour {
-
+	private float dampTime;
 	public bool pause;
 	public EventSystem evento;
-	public GameObject panelPause, panelOptions;
-	public GameObject fps;
+	public GameObject panelPause, panelOptions, painelSure;
 	private int level;
-	public GameObject button, volume;
+	private float volume;
 	public Slider vol;
+	private bool musicSelected;
+	private bool qualitySelected;
+	public GameObject highButton;
+	public GameObject mediumButton;
+	public GameObject lowButton;
+	public GameObject qualityButton;
+	public GameObject musicButton;
+	public GameObject nao;
+	public GameObject volumeSlider;
+	public GameObject painelQuit;
+	public GameObject camponesaLife;
+	public GameObject turnipLife;
+	private int graphicQuality;
 
 	// Use this for initialization
 	void Start () {
-		panelPause = GameObject.FindWithTag ("PauseMenu");
-		panelOptions = GameObject.FindWithTag ("OptionsMenu");
-		fps = GameObject.FindWithTag ("Player1");
+		
 		pause = false;
 		panelPause.SetActive (false);
-		panelOptions.SetActive (false);
-		level = Application.loadedLevel;
-		fps.GetComponent<AudioSource> ().volume = vol.value;
+		panelOptions.SetActive (true);
+		painelSure.SetActive (false);
+		musicSelected = false;
+		qualitySelected = false;
+		Time.timeScale = 1;
+	
+		if (PlayerPrefs.HasKey ("volume")) {
+			volume = PlayerPrefs.GetFloat ("volume");
+			vol.value = volume;
+		} else {
+			PlayerPrefs.SetFloat("volume", volume);
+		}
+
+		if (PlayerPrefs.HasKey ("graphicQuality")) {
+			graphicQuality = PlayerPrefs.GetInt ("graphicQuality");
+		} else {
+			PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+		}
+
+		if (graphicQuality == 0) {
+			QualitySettings.SetQualityLevel (0);
+			lowButton.SetActive (true);
+			mediumButton.SetActive (false);
+			highButton.SetActive (false);
+		} else if (graphicQuality == 1) {
+			QualitySettings.SetQualityLevel (1);
+			lowButton.SetActive (false);
+			mediumButton.SetActive (true);
+			highButton.SetActive (false);
+		} else if (graphicQuality == 2) {
+			QualitySettings.SetQualityLevel (2);
+			lowButton.SetActive (false);
+			mediumButton.SetActive (false);
+			highButton.SetActive (true);
+		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		if (fps == null) {
-			fps = GameObject.FindWithTag ("Player1");
-		}
+		dampTime += Time.deltaTime;
 
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7)) {
 			pause = !pause;
 
 			if (pause == true) {
 				panelPause.SetActive (true);
-				evento.SetSelectedGameObject (button);
+				evento.SetSelectedGameObject (musicButton);
 				//Pause tudo que for automatico no unit
 				Time.timeScale = 0;
 
@@ -53,13 +92,6 @@ public class PauseMenu : MonoBehaviour {
 		}
 	}
 
-	public void NewGame(){
-		pause = false;
-		panelPause.SetActive (false);
-		Time.timeScale = 1;
-		Application.LoadLevel (Application.loadedLevel);
-	}
-
 	public void Resume(){
 		pause = false;
 		Time.timeScale = 1;
@@ -72,22 +104,8 @@ public class PauseMenu : MonoBehaviour {
 
 	}
 
-	public void Options(){
-		panelPause.SetActive (false);
-		panelOptions.SetActive (true);
-		evento.SetSelectedGameObject (volume);
-	}
-
-
-	public void ButtonBack(){
-		panelOptions.SetActive (false);
-		panelPause.SetActive (true);
-		evento.SetSelectedGameObject (button);
-
-	}
-
 	public void VolumeChange(){
-		fps.GetComponent<AudioSource> ().volume = vol.value;
+		
 	}
 
 	public void Quit(){
