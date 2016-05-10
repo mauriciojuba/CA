@@ -6,6 +6,24 @@ public static class InputManager
 	public static int players;
 	private static float deadZone = 0.2f;
 
+	#region Axis Menu
+	public static float MenuHorizontal(){
+		float r = 0.0f;
+		r += Input.GetAxis ("HorizontalMenu");
+		return Mathf.Clamp (r, -1.0f, 1.0f);
+	}
+
+	public static float MenuVertical(){
+		float r = 0.0f;
+		r += Input.GetAxis ("VerticalMenu");
+		return Mathf.Clamp (r, -1.0f, 1.0f);
+	}
+
+	public static Vector3 MenuNavigation(){
+		return new Vector3 (MenuHorizontal (), 0, MenuVertical ());
+	}
+	#endregion
+
 	#region Axis Joystick1
 	public static float LeftStickHorizontal(){
 		float r = 0.0f;
@@ -209,9 +227,30 @@ public static class InputManager
 	#endregion
 
 	#region Axis as Buttons
-	public static bool LeftTriggerInUse = false;
-//	public static bool LeftTriggerButton(){
-//
-//	}
+	public static bool LeftMenuInUse = false;
+	public static bool LeftMenuButton(){
+		if (MenuHorizontal () > deadZone){
+			if (!LeftMenuInUse) {
+				LeftMenuInUse = true;
+				return true;
+			}
+		} else 
+			LeftMenuInUse = false;
+
+		return false;
+	}
+
+	public static bool RightMenuInUse = false;
+	public static bool RightMenuButton(){
+		if (MenuHorizontal () < -deadZone) {
+			if (!RightMenuInUse) {
+				RightMenuInUse = true;
+				return true;
+			}
+		} else
+			RightMenuInUse = false;
+
+		return false;
+	}
 	#endregion
 }

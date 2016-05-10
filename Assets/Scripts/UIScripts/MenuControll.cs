@@ -90,7 +90,7 @@ public class MenuControll : MonoBehaviour {
 		dampTime += Time.deltaTime;
 		ButtonBack ();
 		if(qualitySelected)
-		NavigateQualityButtons ();
+			NavigateQualityButtons ();
 		VolumeChange ();
 
 		if (!isOnMainMenu) {
@@ -107,10 +107,10 @@ public class MenuControll : MonoBehaviour {
 			if (Input.anyKeyDown) {
 				pressAny.SetActive (false);
 				mainMenu.SetActive (true);
-				evento.SetSelectedGameObject (newGameButton);
 				pressA.SetActive (true);
 				pressB.SetActive (true);
 				canPressAny = false;
+				evento.SetSelectedGameObject (newGameButton);
 			}
 		}
 	}
@@ -219,7 +219,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void NavigateQualityButtons(){
-		if (Input.GetAxisRaw ("XBOX_DpadHorizontal") > 0 && dampTime > 0.2) {
+		if (InputManager.LeftMenuButton()) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
 				lowButton.SetActive (true);
@@ -234,7 +234,7 @@ public class MenuControll : MonoBehaviour {
 				evento.SetSelectedGameObject (mediumButton);
 			}
 			dampTime = 0;
-		} else if (Input.GetAxisRaw ("XBOX_DpadHorizontal") < 0 && dampTime > 0.2) {
+		} else if (InputManager.RightMenuButton()) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
 				mediumButton.SetActive (true);

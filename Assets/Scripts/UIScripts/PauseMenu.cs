@@ -2,12 +2,14 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour {
 	private float dampTime;
 	public bool pause;
 	public EventSystem evento;
-	public GameObject panelPause, panelOptions, painelSure;
+	public GameObject panelPause;
+	public GameObject panelOptions, painelSure;
 	private int level;
 	private float volume;
 	public Slider vol;
@@ -18,16 +20,19 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject lowButton;
 	public GameObject qualityButton;
 	public GameObject musicButton;
+	public GameObject backToMenuButton;
 	public GameObject nao;
 	public GameObject volumeSlider;
-	public GameObject painelQuit;
-	public GameObject camponesaLife;
-	public GameObject turnipLife;
+	public Image camponesaLife;
+	public Image turnipLife;
+	public Image lifePause1;
+	public Image lifePause2;
+	public GameObject lifeHudTurnip, lifeHudCamponesa;
 	private int graphicQuality;
 
 	// Use this for initialization
 	void Start () {
-		
+		panelPause = GameObject.Find ("PauseMenu");
 		pause = false;
 		panelPause.SetActive (false);
 		panelOptions.SetActive (true);
@@ -70,15 +75,21 @@ public class PauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		dampTime += Time.deltaTime;
+		ButtonBack ();
+		if(qualitySelected)
+			NavigateQualityButtons ();
+		VolumeChange ();
 
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7)) {
 			pause = !pause;
-
+			
 			if (pause == true) {
 				panelPause.SetActive (true);
 				evento.SetSelectedGameObject (musicButton);
 				//Pause tudo que for automatico no unit
 				Time.timeScale = 0;
+				lifePause1.fillAmount = camponesaLife.fillAmount;
+				lifePause2.fillAmount = turnipLife.fillAmount;
 
 				//Pause the other objects
 				//musicControl.SetActive(false);
@@ -104,8 +115,117 @@ public class PauseMenu : MonoBehaviour {
 
 	}
 
+	public void ButtonBack(){
+		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+			if (panelOptions.activeSelf) {
+				if (musicSelected) {
+					musicSelected = false;
+					volume = vol.value;
+					PlayerPrefs.SetFloat ("volume", volume);
+					evento.SetSelectedGameObject (musicButton);
+				} else if (qualitySelected) {
+					qualitySelected = false;
+					evento.SetSelectedGameObject (qualityButton);
+				} else {
+					Resume ();
+				}
+			}
+			if (painelSure.activeSelf) {
+				painelSure.SetActive (false);
+				panelOptions.SetActive (true);
+				evento.SetSelectedGameObject (backToMenuButton);
+			}
+		}
+	}
+
+	public void ButtonBackToMenu(){
+		panelOptions.SetActive (false);
+		painelSure.SetActive (true);
+		evento.SetSelectedGameObject (nao);
+	}
+
+	public void ButtonQuality(){
+		qualitySelected = true;
+		if (graphicQuality == 0) {
+			evento.SetSelectedGameObject (lowButton);
+		} else if (graphicQuality == 1) {
+			evento.SetSelectedGameObject (mediumButton);
+		} else if (graphicQuality == 2) {
+			evento.SetSelectedGameObject (highButton);
+		}
+
+	}
+
+	public void ButtonNo(){
+		painelSure.SetActive (false);
+		panelOptions.SetActive (true);
+		evento.SetSelectedGameObject (backToMenuButton);
+	}
+
+	public void ButtonYes(){
+		SceneManager.LoadScene(0);
+	}
+
 	public void VolumeChange(){
-		
+		GameObject.Find("GameControl").GetComponent<AudioSource> ().volume = vol.value;
+	}
+
+	public void NavigateQualityButtons(){
+		if (InputManager.LeftMenuButton()) {
+			if (highButton.activeSelf) {
+				highButton.SetActive (false);
+				lowButton.SetActive (true);
+				evento.SetSelectedGameObject (lowButton);
+			} else if (mediumButton.activeSelf) {
+				mediumButton.SetActive (false);
+				highButton.SetActive (true);
+				evento.SetSelectedGameObject (highButton);
+			} else if (lowButton.activeSelf) {
+				lowButton.SetActive (false);
+				mediumButton.SetActive (true);
+				evento.SetSelectedGameObject (mediumButton);
+			}
+			dampTime = 0;
+		} else if (InputManager.RightMenuButton()) {
+			if (highButton.activeSelf) {
+				highButton.SetActive (false);
+				mediumButton.SetActive (true);
+				evento.SetSelectedGameObject (mediumButton);
+			} else if (mediumButton.activeSelf) {
+				mediumButton.SetActive (false);
+				lowButton.SetActive (true);
+				evento.SetSelectedGameObject (lowButton);
+			} else if (lowButton.activeSelf) {
+				lowButton.SetActive (false);
+				highButton.SetActive (true);
+				evento.SetSelectedGameObject (highButton);
+			}
+			dampTime = 0;
+		}
+
+	}
+
+	public void ButtonVolume(){
+		musicSelected = true;
+		evento.SetSelectedGameObject (volumeSlider);
+	}
+
+	public void HighQuality(){
+		QualitySettings.SetQualityLevel (2);
+		graphicQuality = 2;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+	}
+
+	public void MediumQuality(){
+		QualitySettings.SetQualityLevel (1);
+		graphicQuality = 1;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
+	}
+
+	public void LowQuality(){
+		QualitySettings.SetQualityLevel (0);
+		graphicQuality = 0;
+		PlayerPrefs.SetInt("graphicQuality", graphicQuality);
 	}
 
 	public void Quit(){
