@@ -2,6 +2,7 @@
 using System.Collections;
 using Fungus;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.SceneManagement;
 
 public class DialogHandlerTutorial : MonoBehaviour {
 
@@ -9,7 +10,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
     public bool canTalk;
 	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip;
 	public bool begin, change, aim, shoot, final;
-	public int count, countDaninha;
+	public int count;
+	public static int countDaninha;
 	public GameObject camponesa, turnip, triggerCeleiro2;
 	public float delayAtk, delayToTalk;
 	public bool toTalk;
@@ -29,9 +31,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		begin = true;
 		change = false;
 		shoot = false;
-		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
-		turnip.GetComponent<SwitchPlayer> ().enabled = false;
-		InputManager.players = 1;
+		InputManager.players = 2;
+
 	}
 	void Update () {
 		delayAtk += Time.deltaTime;
@@ -65,7 +66,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 		if (aim) {
 			if (InputManager.RButton () || Input.GetKeyDown (KeyCode.U)) {
-				TargetTurnip ();
+				
 				aim = false;
 				shoot = true;
 				ChangeText ();
@@ -84,23 +85,32 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				delayToTalk = 0;
 				shoot = false;
 				ChangeText ();
+
+				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
 				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().selectedTarget = null;
-				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().targets.RemoveAt (0);
+				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().targets.Clear();
+				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().AddAllEnemies ();
 				canTalk = true;
-				message = "Farm1";
+				if(InputManager.players == 2)
+					message = "Farm2Players1";
+				else
+					message = "Farm1";
 			}
 		}
 			
 		if (shoot) {
 			if (InputManager.XButton() && delayAtk > 3) {
 				count++;
-				Debug.Log (count);
 			}
 		}
 
 		if (countDaninha == 6) {
 			canTalk = true;
-			message = "Daninha";
+			if (InputManager.players == 2) {
+				message = "Daninha2Players";
+			} else {
+				message = "Daninha";
+			}
 			countDaninha = 0;
 		}
 
@@ -109,92 +119,142 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
         if (canTalk)
         {
-			if (message == "Farm1")
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+			
+				if (message == "Farm2Players1") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "Farm2")
-            {
-				Flowchart.BroadcastFungusMessage(message);
-                canTalk = false;
-				message = "";
-            }
+				if (message == "Farm2Players2") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "Farm3")
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "Farm2Players3") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "TurnipRotate") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "Daninha2Players") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "ChangePlayer") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "TriggerVida2Players") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "Daninha") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "PegouNabo2Players") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "TriggerVida") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "Farm1") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "PegouNabo") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "Farm2") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
 
-			if (message == "FIM") 
-			{
-				Flowchart.BroadcastFungusMessage(message);
-				canTalk = false;
-				message = "";
-			}
+				if (message == "Farm3") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "TurnipRotate") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "ChangePlayer") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "Daninha") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "TriggerVida") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "PegouNabo") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "FIM") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
         }
 	}
 
     void OnTriggerEnter(Collider hit)
     {
-        if (hit.tag == "TriggerCeleiro1")
-        {
-            canTalk = true;
-			message = "Farm2";
-        }
+		if (InputManager.players == 2) {
+			if (hit.tag == "TriggerCeleiro1") {
+				canTalk = true;
+				message = "Farm2Players2";
+			}
 
-		if (hit.tag == "TriggerCeleiro2") {
-			canTalk = true;
-			message = "Farm3";
-		}
+			if (hit.tag == "TriggerCeleiro2") {
+				canTalk = true;
+				message = "Farm2Players3";
+			}
 
-		if (hit.tag == "TriggerVida") {
-			canTalk = true;
-			message = "TriggerVida";
-		}
-		if (hit.tag == "PegouNabo") {
-			canTalk = true;
-			message = "PegouNabo";
-			triggerCeleiro2.SetActive (true);
+			if (hit.tag == "TriggerVida") {
+				canTalk = true;
+				message = "TriggerVida2Players";
+			}
+			if (hit.tag == "PegouNabo") {
+				canTalk = true;
+				message = "PegouNabo2Players";
+				triggerCeleiro2.SetActive (true);
+			}
+		} else {
+			if (hit.tag == "TriggerCeleiro1") {
+				canTalk = true;
+				message = "Farm2";
+			}
+
+			if (hit.tag == "TriggerCeleiro2") {
+				canTalk = true;
+				message = "Farm3";
+			}
+
+			if (hit.tag == "TriggerVida") {
+				canTalk = true;
+				message = "TriggerVida";
+			}
+			if (hit.tag == "PegouNabo") {
+				canTalk = true;
+				message = "PegouNabo";
+				triggerCeleiro2.SetActive (true);
+			}
 		}
     }
 
@@ -228,43 +288,40 @@ public class DialogHandlerTutorial : MonoBehaviour {
 			} else {
 				atirarNabos.SetActive (false);
 			}
-		}
-		if (begin) {
-			girar.SetActive (true);
-		} else if (change) {
-			trocarPersonagem.SetActive (true);
-			girar.SetActive (false);
-		} else if (aim) {
-			mirarTurnip.SetActive (true);
-			camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().AddTarget (turnip.transform);
-			trocarPersonagem.SetActive (false);
-		} else if (shoot) {
-			mirarTurnip.SetActive (false);
-			atirarNabos.SetActive (true);
-
 		} else {
-			atirarNabos.SetActive (false);
+			if (begin) {
+				girar.SetActive (true);
+			} else if (change) {
+				trocarPersonagem.SetActive (true);
+				girar.SetActive (false);
+			} else if (aim) {
+				mirarTurnip.SetActive (true);
+				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().AddTarget (turnip.transform);
+				trocarPersonagem.SetActive (false);
+			} else if (shoot) {
+				mirarTurnip.SetActive (false);
+				atirarNabos.SetActive (true);
+
+			} else {
+				atirarNabos.SetActive (false);
+			}
 		}
 	}
 
 	public void DesativarPlayers(){
 		
 		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonCharacter> ().Move (Vector3.zero, false, false);
-		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat("Forward", 0.0f, 0.1f, Time.deltaTime);
-		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat("Turn", 0.0f, 0.1f, Time.deltaTime);
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-		turnip.GetComponent<ThirdPersonCharacter> ().Move (Vector3.zero, false, false);
-		turnip.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat("Forward", 0.0f, 0.1f, Time.deltaTime);
-		turnip.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat("Turn", 0.0f, 0.1f, Time.deltaTime);
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
 	}
 
 	public void TurnipActivation(){
-//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
 		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
@@ -273,10 +330,17 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public void CamponesaActivation(){
 //		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
 		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
+	}
+
+	public void TwoPlayersActivation(){
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
 	}
 
 	public void ActivateFollowTurnip(){
@@ -287,9 +351,11 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = true;
 	}
 
-	public void TargetTurnip(){
-		
-
+	public IEnumerator WaitAFrame(){
+		yield return 1;
 	}
 
+	public void EndGame(){
+		SceneManager.LoadScene (2);
+	}
 }

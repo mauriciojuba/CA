@@ -24,6 +24,7 @@ public class SwitchPlayer : MonoBehaviour
 
 	public void Update()
 	{
+		
 		if (Input.GetButtonDown ("XBOX_buttonA")) {
 			Onground = false;
 			TimeTroca = 2.5f;

@@ -20,12 +20,22 @@ public class DoorOpen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (InputManager.YButton() && canOpen1) {
-			porta1.GetComponent<Animation> ().Play();
-			porta2.GetComponent<Animation> ().Play ();
-			player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa();
-			canOpen1 = false;
-			naboVidaEvento.SetActive (true);
+		if (InputManager.players == 2) {
+			if (InputManager.YButton2 () && canOpen1) {
+				porta1.GetComponent<Animation> ().Play ();
+				porta2.GetComponent<Animation> ().Play ();
+				player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
+				canOpen1 = false;
+				naboVidaEvento.SetActive (true);
+			}	
+		} else {
+			if (InputManager.YButton () && canOpen1) {
+				porta1.GetComponent<Animation> ().Play ();
+				porta2.GetComponent<Animation> ().Play ();
+				player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
+				canOpen1 = false;
+				naboVidaEvento.SetActive (true);
+			}
 		}
 		if (InputManager.YButton() && canOpen2) {
 			porta3.GetComponent<Animation> ().Play ();

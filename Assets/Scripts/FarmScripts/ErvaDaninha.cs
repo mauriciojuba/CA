@@ -8,7 +8,7 @@ public class ErvaDaninha : MonoBehaviour {
 	void OnTriggerEnter(Collider hit){
 		if(hit.CompareTag("TurnipAtk")){
 			player.GetComponentInChildren<AudioManager> ().PlaySound (2);
-			player.GetComponent<DialogHandlerTutorial> ().countDaninha++;
+			DialogHandlerTutorial.countDaninha++;
 			Destroy (gameObject);
 		}
 	}
@@ -16,7 +16,7 @@ public class ErvaDaninha : MonoBehaviour {
 	void OnCollisionEnter(Collision hit){
 		if(hit.gameObject.CompareTag("Nabo")){
 			player.GetComponentInChildren<AudioManager> ().PlaySound (2);
-			player.GetComponent<DialogHandlerTutorial> ().countDaninha++;
+			DialogHandlerTutorial.countDaninha++;
 			Destroy (gameObject);
 		}
 	}
