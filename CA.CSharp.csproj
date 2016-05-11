@@ -268,6 +268,11 @@
     <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Utils\AudioColliderType.cs" />
     <Compile Include="Assets\Scripts\Utils\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Utils\AudioManagerBlobman.cs" />
+    <Compile Include="Assets\Scripts\Utils\AudioManagerCamponesa.cs" />
+    <Compile Include="Assets\Scripts\Utils\AudioManagerDemonioAgua.cs" />
+    <Compile Include="Assets\Scripts\Utils\AudioManagerDemonioPedra.cs" />
+    <Compile Include="Assets\Scripts\Utils\AudioManagerTurnip.cs" />
     <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
     <Compile Include="Assets\Scripts\Utils\GameControl.cs" />
