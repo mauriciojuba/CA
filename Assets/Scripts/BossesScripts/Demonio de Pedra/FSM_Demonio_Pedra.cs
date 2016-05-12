@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Fungus;
 
 public class FSM_Demonio_Pedra : MonoBehaviour
 {
@@ -277,6 +278,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         }
         if(vida <= 0)
         {
+			Flowchart.BroadcastFungusMessage ("FimCave");
             Destroy(gameObject);
         }
     }
@@ -301,5 +303,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         }
     }
     #endregion
+
+
 
 }

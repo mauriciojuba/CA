@@ -95,7 +95,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     public void FixedUpdate() {
 
-		for (int i = 0; i < (targets.Count - 1); i++) {
+		for (int i = 0; i <= (targets.Count - 1); i++) {
 			if (targets [i] == null) {
 				targets.RemoveAt (i);
 			}
@@ -104,7 +104,8 @@ public class FSM_Camponesa : MonoBehaviour {
 
 		if (targets.Count != 0) {
 			if (target == null) {
-				SortTargetByDistance ();
+				if(targets.Count > 1)
+					SortTargetByDistance ();
 				target = targets [0].gameObject;
 			}
 		}
@@ -141,11 +142,12 @@ public class FSM_Camponesa : MonoBehaviour {
 				target = targets [0].gameObject;
 		}
         // Check if target is in range to chase
-        if (dir.magnitude <= distanceToStartChasing) {
-            state = FSMStates.Chasing;
-            return;
-        }
-
+		if (target != null) {
+			if (dir.magnitude <= distanceToStartChasing) {
+				state = FSMStates.Chasing;
+				return;
+			}
+		}
 		animacao ();
     }
     #endregion
@@ -197,23 +199,32 @@ public class FSM_Camponesa : MonoBehaviour {
         }
 
         timer += Time.deltaTime;
-        if (timer >= frequency) {
-            timer = 0;
+		if (target != null) {
+			if (timer >= frequency) {
+				timer = 0;
 
-            Rigidbody b = GameObject.Instantiate(bullet, muzzle.position, muzzle.rotation) as Rigidbody;
-            b.AddForce(muzzle.forward * bulletInitialForce);
-            //GameObject.FindWithTag("soundcontrol").GetComponent<SoundControl>().PlaySound("shoot");
+				Rigidbody b = GameObject.Instantiate (bullet, muzzle.position, muzzle.rotation) as Rigidbody;
+				b.AddForce (muzzle.forward * bulletInitialForce);
+				//GameObject.FindWithTag("soundcontrol").GetComponent<SoundControl>().PlaySound("shoot");
 
-            numberOfShoots++;
-            if (numberOfShoots >= maxNumberOfShoots || target == null) {
-                if (dir.magnitude < distanceToAttack)
-                    numberOfShoots = 0;
-                else if (dir.magnitude > distanceToAttack && dir.magnitude <= distanceToReturnChase)
-                    state = FSMStates.Chasing;
-                else if (dir.magnitude > distanceToReturnChase || target == null)
-                    state = FSMStates.Following;
-            }
-        }
+				numberOfShoots++;
+				if (numberOfShoots >= maxNumberOfShoots || target == null) {
+					if (dir.magnitude < distanceToAttack)
+						numberOfShoots = 0;
+					else if (dir.magnitude > distanceToAttack && dir.magnitude <= distanceToReturnChase) {
+						state = FSMStates.Chasing;
+						return;
+					}
+					else if (dir.magnitude > distanceToReturnChase || target == null) {
+						state = FSMStates.Following;
+						return;
+					}
+				}
+			}
+		} else {
+			state = FSMStates.Following;
+			return;
+		}
     }
     #endregion
 
@@ -226,21 +237,23 @@ public class FSM_Camponesa : MonoBehaviour {
         
 
         timer += Time.deltaTime;
-        if (timer >= hitTime && dir.magnitude <= distanceToHit) {
-            timer = 0;
-			m_Attack = true;
-        }
-        else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToAttack)
-        {
-            rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
-        }
-        else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToReturnChase) {
-            state = FSMStates.Chasing;
-        }
-        else if (dir.magnitude > distanceToReturnChase || target == null) {
-            state = FSMStates.Following;
-        }
-        
+		if (target != null) {
+			if (timer >= hitTime && dir.magnitude <= distanceToHit) {
+				timer = 0;
+				m_Attack = true;
+			} else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToAttack) {
+				rb.MovePosition (transform.position + transform.forward * speed * Time.deltaTime);
+			} else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToReturnChase) {
+				state = FSMStates.Chasing;
+				return;
+			} else if (dir.magnitude > distanceToReturnChase) {
+				state = FSMStates.Following;
+				return;
+			}
+		} else {
+			state = FSMStates.Following;
+			return;
+		}
         if (life <= 0) {
             state = FSMStates.Die;
             return;
@@ -265,10 +278,12 @@ public class FSM_Camponesa : MonoBehaviour {
         if (dir.magnitude > distanceToAttack && dir.magnitude <= distanceToReturnChase)
         {
             state = FSMStates.Chasing;
+			return;
         }
         else if (dir.magnitude > distanceToReturnChase)
         {
             state = FSMStates.Following;
+			return;
         }
 
         if (life <= 0)

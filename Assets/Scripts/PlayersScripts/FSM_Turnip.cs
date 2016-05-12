@@ -91,7 +91,7 @@ public class FSM_Turnip : MonoBehaviour {
 
     public void FixedUpdate()
     {
-		for (int i = 0; i < (targets.Count - 1); i++) {
+		for (int i = 0; i <= (targets.Count - 1); i++) {
 			if (targets [i] == null) {
 				targets.RemoveAt (i);
 			}
@@ -99,7 +99,8 @@ public class FSM_Turnip : MonoBehaviour {
 
 		if (targets.Count != 0) {
 			if (target == null) {
-				SortTargetByDistance ();
+				if(targets.Count > 1)
+					SortTargetByDistance ();
 				target = targets [0].gameObject;
 			}
 		}
@@ -158,18 +159,20 @@ public class FSM_Turnip : MonoBehaviour {
         }
         // Check if target is close enough to shoot or hit
         //   or if target is too far way, then return to Follow
-        if (dir.magnitude > distanceToStopChasing || target == null)
-        {
-            state = FSMStates.Following;
-            return;
-        }
-        else if (dir.magnitude <= distanceToHit)
-        {
-            timer = 0;
-            rb.velocity = Vector3.zero;
-            state = FSMStates.Hitting;
-            return;
-        }
+		if (target != null) {
+			if (dir.magnitude > distanceToStopChasing || target == null) {
+				state = FSMStates.Following;
+				return;
+			} else if (dir.magnitude <= distanceToHit) {
+				timer = 0;
+				rb.velocity = Vector3.zero;
+				state = FSMStates.Hitting;
+				return;
+			}
+		} else {
+			state = FSMStates.Following;
+			return;
+		}
 
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
@@ -189,21 +192,22 @@ public class FSM_Turnip : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         timer += Time.deltaTime;
-        if (timer >= hitTime && dir.magnitude <= distanceToHit)
-        {
-            timer = 0;
-            print("hit");
-			m_Attack = true;
-        }
-        else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToReturnChase)
-        {
-            state = FSMStates.Chasing;
-        }
-        else if (dir.magnitude > distanceToReturnChase || target == null)
-        {
-            state = FSMStates.Following;
-        }
-
+		if (target != null) {
+			if (timer >= hitTime && dir.magnitude <= distanceToHit) {
+				timer = 0;
+				print ("hit");
+				m_Attack = true;
+			} else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToReturnChase) {
+				state = FSMStates.Chasing;
+				return;
+			} else if (dir.magnitude > distanceToReturnChase || target == null) {
+				state = FSMStates.Following;
+				return;
+			}
+		} else {
+			state = FSMStates.Following;
+			return;
+		}
         if (life <= 0)
         {
             state = FSMStates.Die;

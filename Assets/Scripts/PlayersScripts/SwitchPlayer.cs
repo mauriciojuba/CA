@@ -17,7 +17,7 @@ public class SwitchPlayer : MonoBehaviour
 			this.enabled = false;
 		player1 = GameObject.FindWithTag ("Player1");
 		player2 = GameObject.FindWithTag ("Player2");
-		controlling = "Player1";
+		controlling = "Player2";
 		if (InputManager.players == 2) {
 			this.enabled = false;
 		}
@@ -54,12 +54,12 @@ public class SwitchPlayer : MonoBehaviour
 				player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 
 			}
-            if (this.gameObject.GetComponent<Unite>().skill)
-            {
-                controlling = "Player2";
-                this.gameObject.GetComponent<Unite>().skill = false;
-            }
-
+			if (this.gameObject.tag == "Player1") {
+				if (this.gameObject.GetComponent<Unite> ().skill) {
+					controlling = "Player2";
+					this.gameObject.GetComponent<Unite> ().skill = false;
+				}
+			}
             if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E) )
 			{
 				if (Onground ) {

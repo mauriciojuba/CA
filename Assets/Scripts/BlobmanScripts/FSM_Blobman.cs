@@ -166,7 +166,7 @@ public class FSM_Blobman : MonoBehaviour {
 		contar -= Time.deltaTime;
 
 		if (contar < 0) {
-			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (11);
+			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (4);
 			contar = 0.5f;
 		}
 		if (direcao.magnitude > distanceToStopChasing && !target.GetComponent<PlayersDamangeHandler>().hurted) {
@@ -201,7 +201,7 @@ public class FSM_Blobman : MonoBehaviour {
 
 		if (direcao.magnitude <= distanceToAtaque && contToAtaque <= 0 ) {
 
-			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (8);
+			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (1);
 
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 			Ataque.SetActive (true);
@@ -226,8 +226,10 @@ public class FSM_Blobman : MonoBehaviour {
 
 	#region Dano
 	private void Dano_State(){
-
-		vida -= 5;
+		if (dano){
+			vida -= 5;
+			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (2);
+	}
 		dano = false;
 
 		if (vida <= 0) {
@@ -244,6 +246,9 @@ public class FSM_Blobman : MonoBehaviour {
 			state = FSMStates.Andar;
 			return;
 		}
+		if (!dano) {
+			state = FSMStates.Andar;
+		}
 
 
 	}
@@ -254,7 +259,7 @@ public class FSM_Blobman : MonoBehaviour {
 
 		if (morrer) {
 			
-			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (10);
+			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
 			Destroy (this.gameObject, 1f);
 			print ("morreu");
 			morrer = false;

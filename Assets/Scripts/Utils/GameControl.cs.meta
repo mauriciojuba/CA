@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 5928893db3e378a4a827ca6f1e09edaa
-timeCreated: 1462674628
+timeCreated: 1463081769
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - menuCircular: {fileID: 8300000, guid: 3080003d3aa7be94fbabd353c8bea992, type: 3}
+  - farm: {fileID: 8300000, guid: 606157198706b7f4d830d660a8f9dddb, type: 3}
+  - cave: {fileID: 8300000, guid: 0c81440a0c2ded1489734d42872a8482, type: 3}
+  - forest: {fileID: 8300000, guid: 3bd08eed0cfc6c94eb92697a1bedfd5d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

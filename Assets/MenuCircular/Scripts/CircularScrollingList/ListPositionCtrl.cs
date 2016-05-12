@@ -192,7 +192,7 @@ public class ListPositionCtrl : MonoBehaviour
 	}
 
 	public void axisMove(){
-		float inputAxis = Input.GetAxisRaw ("LEFT_JoystickVertical");
+		float inputAxis = Input.GetAxisRaw ("VerticalMenu");
 		buttonCooldown -= Time.deltaTime;
 
 		if (inputAxis==1f && buttonCooldown<=0) {
@@ -225,8 +225,6 @@ public class ListPositionCtrl : MonoBehaviour
 			string[] newContents = {
 				"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "Bksp", "Clear", "Enter"
 			};
-
-			print("Noncaps...");
 
 			ListBank.Instance.setListContent(newContents);
 

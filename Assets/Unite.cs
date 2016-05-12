@@ -10,25 +10,40 @@ public class Unite : MonoBehaviour {
     public bool attach,skill;
     float count = 0;
 
+
     void Update()
     {
-        
-        if ((this.GetComponent<SwitchPlayer>().controlling == "Player1") && InputManager.YButton() && closeEnough && everybodyOk && !attach)
-        {
-            skill = true;
-            //this.GetComponent<SwitchPlayer>().controlling = "Player2";
-            this.GetComponent<Animator>().SetBool("OnGround", false);
-            this.GetComponent<Animator>().enabled = false;
-            this.GetComponent<ThirdPersonUserControlCamponesa>().enabled = false;
-            this.GetComponent<CapsuleCollider>().enabled = false;
+		if (InputManager.players == 2) {
+			if (InputManager.YButton () && closeEnough && everybodyOk && !attach) {
+//				skill = true;
+				//this.GetComponent<SwitchPlayer>().controlling = "Player2";
+				this.GetComponent<Animator> ().SetBool ("OnGround", false);
+				this.GetComponent<Animator> ().enabled = false;
+				this.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+				this.GetComponent<CapsuleCollider> ().enabled = false;
+
+				//this.transform.SetParent(CampSpawner);
+
+				attach = true;
+			}
+		} else {
+        	if ((this.GetComponent<SwitchPlayer> ().controlling == "Player1") && InputManager.YButton () && closeEnough && everybodyOk && !attach) {
+				skill = true;
+				//this.GetComponent<SwitchPlayer>().controlling = "Player2";
+				this.GetComponent<Animator> ().SetBool ("OnGround", false);
+				this.GetComponent<Animator> ().enabled = false;
+				this.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+				this.GetComponent<CapsuleCollider> ().enabled = false;
             
-            //this.transform.SetParent(CampSpawner);
+				//this.transform.SetParent(CampSpawner);
             
-            attach = true;
+				attach = true;
             
 
-        }
-        if (attach)
+			}
+		}
+        
+		if (attach)
         {
             count += Time.deltaTime;
             this.gameObject.transform.position = CampSpawner.transform.position;
@@ -47,12 +62,14 @@ public class Unite : MonoBehaviour {
         }
         checkIfEverybodyIsOk();
     }
+
     void FixedUpdate()
     {
         if (Vector3.Distance(Turnip.position, this.transform.position) <= 1f) closeEnough = true;
         else closeEnough = false;
     }
-    void checkIfEverybodyIsOk()
+    
+	void checkIfEverybodyIsOk()
     {
         if(Turnip.gameObject.GetComponent<PlayersDamangeHandler>().hurted == true || this.gameObject.GetComponent<PlayersDamangeHandler>().hurted == true)
         {

@@ -17,7 +17,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public bool toTalk;
 
 	void Start () {
-		message = "";
+		message = "começou";
 		canTalk = false;
 		girar.SetActive (true);
 		mirarTurnip.SetActive (false);
@@ -31,9 +31,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		begin = true;
 		change = false;
 		shoot = false;
-		InputManager.players = 2;
-
 	}
+
 	void Update () {
 		delayAtk += Time.deltaTime;
 
@@ -114,7 +113,11 @@ public class DialogHandlerTutorial : MonoBehaviour {
 			countDaninha = 0;
 		}
 
-
+		if (message == "começou") {
+			Flowchart.BroadcastFungusMessage (message);
+			canTalk = false;
+			message = "";
+		}
 
 
         if (canTalk)
@@ -310,35 +313,43 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void DesativarPlayers(){
 		
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
+//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
+//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
+//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
 	}
 
 	public void TurnipActivation(){
-		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
+//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
+//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = false;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 	}
 
 	public void CamponesaActivation(){
 //		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = false;
+//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
+//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 	}
 
 	public void TwoPlayersActivation(){
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
 		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
 		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
 	}
@@ -356,6 +367,6 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	}
 
 	public void EndGame(){
-		SceneManager.LoadScene (2);
+		SceneManager.LoadScene (3);
 	}
 }
