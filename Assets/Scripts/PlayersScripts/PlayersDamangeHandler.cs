@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class PlayersDamangeHandler : MonoBehaviour{
 
@@ -8,7 +9,7 @@ public class PlayersDamangeHandler : MonoBehaviour{
     public Image Bar;
     public float _damangeAmount;
 
-    bool hurted = false;
+    public bool hurted = false;
 
     void Update()
     {
@@ -17,8 +18,26 @@ public class PlayersDamangeHandler : MonoBehaviour{
         {
             NeedHelp.Instance.CreateHelpSign(this.gameObject);
             hurted = true;
+            if (this.GetComponent<ThirdPersonUserControlTurnip>() != null)
+            {
+                this.GetComponent<ThirdPersonUserControlTurnip>().active = false;
+            }
+            if (this.GetComponent<ThirdPersonUserControlCamponesa>() != null)
+            {
+                this.GetComponent<ThirdPersonUserControlCamponesa>().active = false;
+            }
         }
-        else if(HP > 10) hurted = false;
+        else if(HP > 10) {
+            hurted = false;
+            if (this.GetComponent<ThirdPersonUserControlTurnip>() != null)
+            {
+                this.GetComponent<ThirdPersonUserControlTurnip>().active = true;
+            }
+            if (this.GetComponent<ThirdPersonUserControlCamponesa>() != null && !this.GetComponent<Unite>().attach)
+            {
+                this.GetComponent<ThirdPersonUserControlCamponesa>().active = true;
+            }
+        }
     }
 
 //use essa função com para infligir dano no personagem.

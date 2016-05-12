@@ -45,11 +45,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (!m_Jump) {
 					if (InputManager.players == 2) {
 						if (InputManager.AButton2 ())
-							Debug.Log ("Pula porra");
+							//Debug.Log ("Pula porra");
 						m_Jump = InputManager.AButton2 ();
 					} else {
 						m_Jump = InputManager.AButton ();
-					}
+                    }
 				}
 				Attack ();
 				m_Character.Attacking (m_Attack);
@@ -124,5 +124,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void EndAtk(){
 			atkCollider.GetComponent<BoxCollider> ().enabled = false;
 		}
+        
     }
 }

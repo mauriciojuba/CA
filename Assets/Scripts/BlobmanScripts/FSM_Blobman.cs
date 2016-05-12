@@ -44,6 +44,7 @@ public class FSM_Blobman : MonoBehaviour {
 	private float turnipDis, camponesaDis;
 
 	private bool morrer = true;
+    bool targetMachucado;
 
 	#endregion
 
@@ -87,31 +88,45 @@ public class FSM_Blobman : MonoBehaviour {
 			
 		}
 
-	}
-	#endregion
+        turnipDis = Vector3.Distance(transform.position, turnip.transform.position);
+        camponesaDis = Vector3.Distance(transform.position, camponesa.transform.position);
 
-	//Codigo dos Estados
+        if (turnipDis < camponesaDis && !turnip.GetComponent<PlayersDamangeHandler>().hurted)
+        {
+            target = turnip;
+        }
+        else if(!camponesa.GetComponent<PlayersDamangeHandler>().hurted)
+        {
+            target = camponesa;
+        }
+        else
+        {
+            //chamar gameOver
+        }
 
-	#region Andar
-	private void Andar_State(){
+        if (target.GetComponent<PlayersDamangeHandler>().hurted) state = FSMStates.Andar;
+
+    }
+    #endregion
+
+    //Codigo dos Estados
+
+    #region Andar
+    private void Andar_State(){
 
 
-		turnipDis = Vector3.Distance(transform.position, turnip.transform.position);
-		camponesaDis = Vector3.Distance(transform.position, camponesa.transform.position);
-
-		if (turnipDis < camponesaDis)
-		{
-			target= turnip;
-		}
-		else
-		{
-			target= camponesa;
-		}
-			
+        if (!turnip.GetComponent<PlayersDamangeHandler>().hurted)
+        {
+            target = turnip;
+        }
+        else if (!camponesa.GetComponent<PlayersDamangeHandler>().hurted)
+        {
+            target = camponesa;
+        }
 
 
 
-		if (direcao.magnitude <= distanceToStartChasing) {
+            if (direcao.magnitude <= distanceToStartChasing) {
 			state = FSMStates.Perseguir;
 			return;
 		}
@@ -139,7 +154,14 @@ public class FSM_Blobman : MonoBehaviour {
 	#region Perseguir
 	private void Perseguir_State(){
 
-		contToAtaque = setCont;
+        //constrains
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+        //end
+
+
+        contToAtaque = setCont;
 
 		contar -= Time.deltaTime;
 
@@ -147,12 +169,13 @@ public class FSM_Blobman : MonoBehaviour {
 			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (11);
 			contar = 0.5f;
 		}
-		if (direcao.magnitude > distanceToStopChasing) {
+		if (direcao.magnitude > distanceToStopChasing && !target.GetComponent<PlayersDamangeHandler>().hurted) {
 			state = FSMStates.Andar;
 			return;
 		}
 
-		if (direcao.magnitude <= distanceToAtaque) {
+		if (direcao.magnitude <= distanceToAtaque && !target.GetComponent<PlayersDamangeHandler>().hurted) {
+
 			state = FSMStates.Bater; return;
 		}
 		//transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * rotSpeed);
@@ -180,7 +203,7 @@ public class FSM_Blobman : MonoBehaviour {
 
 			gameObject.GetComponentInChildren<AudioManager> ().PlaySound (8);
 
-
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 			Ataque.SetActive (true);
 			contToAtaque = setCont;
 
@@ -243,7 +266,7 @@ public class FSM_Blobman : MonoBehaviour {
 	#region  ColliderEnter
 	public void OnCollisionEnter(Collision hit){
 		if (hit.gameObject.tag == "Nabo") {
-			print ("Nabo");
+			
 			dano = true;
 		}
 	}

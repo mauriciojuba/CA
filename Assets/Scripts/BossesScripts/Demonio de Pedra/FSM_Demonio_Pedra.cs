@@ -64,7 +64,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     }
 	void Update(){
-		if (subindoPedras) {
+        lifeTime();
+        if (subindoPedras) {
 			Pedras.transform.position = Vector3.MoveTowards (Pedras.transform.position, Up.transform.position, subirVel * Time.deltaTime);
 			if (Pedras.transform.position.y >= Up.transform.position.y) {
 				Pedras.tag = "AtaqueSubirPedra";
@@ -266,5 +267,39 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         
 		state = FSMStates.Idle;
     }
+
+    void lifeTime()
+    {
+        if (dano)
+        {
+            vida -= 25;
+            dano = false;
+        }
+        if(vida <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    #region  ColliderEnter
+    public void OnCollisionEnter(Collision hit)
+    {
+        if (hit.gameObject.tag == "Nabo")
+        {
+
+            dano = true;
+        }
+    }
+    #endregion
+
+    #region TriggerEnter
+    public void OnTriggerEnter(Collider hit)
+    {
+        if (hit.tag == "TurnipAtk")
+        {
+            dano = true;
+        }
+    }
+    #endregion
 
 }

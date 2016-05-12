@@ -5,10 +5,11 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class SwitchPlayer : MonoBehaviour
 {
 	GameObject player1, player2;
-	string controlling;
+	public string controlling;
 
 	private bool Onground = true;
 	public float TimeTroca;
+    public bool skill;
 
 	public void Start()
 	{
@@ -24,7 +25,7 @@ public class SwitchPlayer : MonoBehaviour
 
 	public void Update()
 	{
-		
+        
 		if (Input.GetButtonDown ("XBOX_buttonA")) {
 			Onground = false;
 			TimeTroca = 2.5f;
@@ -53,31 +54,39 @@ public class SwitchPlayer : MonoBehaviour
 				player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 
 			}
+            if (this.gameObject.GetComponent<Unite>().skill)
+            {
+                controlling = "Player2";
+                this.gameObject.GetComponent<Unite>().skill = false;
+            }
 
-			if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E) )
 			{
-				if (Onground) {
+				if (Onground ) {
 					if (controlling == "Player1") {
 						controlling = "Player2";
 					} else if (controlling == "Player2") {
 						controlling = "Player1";
 					}
 				}
+                
 			}
 
-		} else if (player1 == null) {
-			
-			player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
-			player2.GetComponent<FSM_Turnip> ().enabled = false;
-			player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
-			controlling = "Player2";
-
-		} else if (player2 == null) {
-			player1.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-			player1.GetComponent<FSM_Camponesa> ().enabled = false;
-			player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
-			controlling = "Player1";
 		}
+  //      else if (player1 == null) {
+			
+		//	player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
+		//	player2.GetComponent<FSM_Turnip> ().enabled = false;
+		//	player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
+		//	controlling = "Player2";
+
+		//}
+  //      else if (player2 == null) {
+		//	player1.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+		//	player1.GetComponent<FSM_Camponesa> ().enabled = false;
+		//	player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
+		//	controlling = "Player1";
+		//}
 
 
 	}

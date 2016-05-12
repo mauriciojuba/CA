@@ -8,6 +8,7 @@ public class AtaqueLaser : MonoBehaviour {
     public PlayersDamangeHandler Turnip, Camponesa;
     private GameObject luzColisao;
     public bool isAttacking;
+    float cont = 0;
     void Start()
     {
         isAttacking = false;
@@ -48,13 +49,15 @@ public class AtaqueLaser : MonoBehaviour {
         }
         if (isAttacking)
         {
-            if (PontoDeColisao.collider.CompareTag("Player1"))
+            cont += Time.deltaTime;
+            if (PontoDeColisao.collider.CompareTag("Player1") && cont >= 1)
             {
-                Camponesa.HitPLayer(0.2f);
+                Camponesa.HitPLayer(0.08f);
+
             }
-            if (PontoDeColisao.collider.CompareTag("Player2"))
+            if (PontoDeColisao.collider.CompareTag("Player2") && cont >= 1)
             {
-                Turnip.HitPLayer(0.2f);
+                Turnip.HitPLayer(0.08f);
             }
         }
 

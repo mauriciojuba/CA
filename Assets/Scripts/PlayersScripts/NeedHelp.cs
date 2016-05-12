@@ -89,7 +89,6 @@ public class NeedHelp : MonoBehaviour
     }
     void savingHurtedChar()
     {
-        Debug.Log(timeTry);
         if(canSave && saving) timeTry += Time.deltaTime;
         else timeTry = 0;
         instance.Bar.fillAmount = ((timeTry * 5f) / (timeToSave * 5f));
