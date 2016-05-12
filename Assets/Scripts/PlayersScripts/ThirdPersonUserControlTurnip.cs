@@ -16,10 +16,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public GameObject atkCollider;
         //metodo ataque
         bool m_Attack;
-
+		public bool active;
         
         private void Start()
         {
+			active = true;
 			//Debug.Log (InputManager.players);
             // get the transform of the main camera
             if (Camera.main != null)
@@ -40,19 +41,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
-            {
-				if (InputManager.players == 2) {
-					if(InputManager.AButton2())
-					Debug.Log ("Pula porra");
-					m_Jump = InputManager.AButton2 ();
-				} else {
-					m_Jump = InputManager.AButton ();
+			if (active) {
+				if (!m_Jump) {
+					if (InputManager.players == 2) {
+						if (InputManager.AButton2 ())
+							Debug.Log ("Pula porra");
+						m_Jump = InputManager.AButton2 ();
+					} else {
+						m_Jump = InputManager.AButton ();
+					}
 				}
-            }
-            Attack();
-            m_Character.Attacking(m_Attack);
-            m_Attack = false;
+				Attack ();
+				m_Character.Attacking (m_Attack);
+				m_Attack = false;
+			}
         }
 
 
@@ -62,12 +64,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // read inputs
 			float h;
 			float v;
-			if (InputManager.players == 2) {
-				h = InputManager.LeftStickHorizontal2 ();
-				v = InputManager.LeftStickVertical2 ();
+			if (active) {
+				if (InputManager.players == 2) {
+					h = InputManager.LeftStickHorizontal2 ();
+					v = InputManager.LeftStickVertical2 ();
+				} else {
+					h = InputManager.LeftStickHorizontal ();
+					v = InputManager.LeftStickVertical ();
+				}
 			} else {
-				h = InputManager.LeftStickHorizontal ();
-				v = InputManager.LeftStickVertical ();
+				h = 0;
+				v = 0;
 			}
 			bool crouch = false;
 

@@ -23,9 +23,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public Rigidbody nabo;
 		public float naboForce;
 		public Transform muzzle;
+		public bool active;
         
         private void Start()
         {
+			active = true;
             // get the transform of the main camera
             if (Camera.main != null)
             {
@@ -49,24 +51,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Update()
         {
-            if (!m_Jump)
-            {
-				m_Jump = InputManager.AButton ();
-            }
-            Attack();
-            m_Character.Attacking(m_Attack);
-            m_Attack = false;
-			dampTime += Time.deltaTime;
+			if (active) {
+				if (!m_Jump) {
+					m_Jump = InputManager.AButton ();
+				}
+				Attack ();
+				m_Character.Attacking (m_Attack);
+				m_Attack = false;
+				dampTime += Time.deltaTime;
 
+				if (InputManager.RButton ()) {
+					TargetEnemy ();
+				}
+			}
 			for (int i = 0; i < (targets.Count - 1); i++) {
 				if (targets [i] == null) {
 					targets.RemoveAt (i);
 				}
 			}
 
-			if (InputManager.RButton ()) {
-				TargetEnemy ();
-			}
         }
 
 
@@ -75,12 +78,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
 
 
-
+			float h;
+			float v;
+			bool crouch;
             // read inputs
-			float h = InputManager.LeftStickHorizontal();
-			float v = InputManager.LeftStickVertical();
-			bool crouch = InputManager.BButtonHold ();
-
+			if (active) {
+				h = InputManager.LeftStickHorizontal ();
+				v = InputManager.LeftStickVertical ();
+				crouch = InputManager.BButtonHold ();
+			} else {
+				h = 0;
+				v = 0;
+				crouch = false;
+			}
             // calculate move direction to pass to character
             if (m_Cam != null)
             {
@@ -95,7 +105,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
 #if !MOBILE_INPUT
 			// walk speed multiplier
-	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+//	        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
 #endif
 
             // pass all parameters to the character control script
