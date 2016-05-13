@@ -233,7 +233,6 @@
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
-    <Compile Include="Assets\JumpHandler.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\CustomizeText.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
@@ -263,6 +262,7 @@
     <Compile Include="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" />
+    <Compile Include="Assets\Scripts\PlayersScripts\Unite.cs" />
     <Compile Include="Assets\Scripts\UIScripts\CreditScreenGUI.cs" />
     <Compile Include="Assets\Scripts\UIScripts\MenuControll.cs" />
     <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />
@@ -282,7 +282,6 @@
     <Compile Include="Assets\Scripts\Utils\TriggerBarreira.cs" />
     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
     <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
-    <Compile Include="Assets\Unite.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Shaders\Splitscreen Mask.shader" />
