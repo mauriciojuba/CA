@@ -15,6 +15,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public GameObject camponesa, turnip, triggerCeleiro2;
 	public float delayAtk, delayToTalk;
 	public bool toTalk;
+	public GameObject dialogCamp, dialogTurnip;
 
 	void Start () {
 		message = "começou";
@@ -31,12 +32,21 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		begin = true;
 		change = false;
 		shoot = false;
+		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
+		turnip.GetComponent<SwitchPlayer> ().enabled = false;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+
 	}
 
 	void Update () {
 		delayAtk += Time.deltaTime;
+//
+//		if (dialogCamp.activeSelf || dialogTurnip.activeSelf) {
+//			
+//		}
 
 		if (begin) {
+			DesativarPlayers ();
 			if (InputManager.players == 2) {
 				if (InputManager.XButton2 () || Input.GetKeyDown (KeyCode.X)) {
 					TurnipRotate ();
@@ -89,6 +99,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().selectedTarget = null;
 				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().targets.Clear();
 				camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().AddAllEnemies ();
+
 				canTalk = true;
 				if(InputManager.players == 2)
 					message = "Farm2Players1";
@@ -275,6 +286,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		canTalk = true;
 		message = "ChangePlayer";
 		trocarPersonagem.SetActive (false);
+		CamponesaActivation ();
 	}
 
 	public void ChangeText(){
@@ -313,43 +325,38 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void DesativarPlayers(){
 		
-//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
-//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
+		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
+		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 	}
 
 	public void TurnipActivation(){
-//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
-//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
-//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = false;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 	}
 
 	public void CamponesaActivation(){
-//		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
-//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = false;
-//		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
-//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 		camponesa.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 		turnip.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 	}
 
 	public void TwoPlayersActivation(){
-//		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-//		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
-		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().active = true;
-		turnip.GetComponent<ThirdPersonUserControlTurnip> ().active = true;
+		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = true;
 		turnip.GetComponent<ThirdPersonCharacter> ().enabled = true;
 	}
@@ -360,6 +367,11 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void ActivateFollowCamponesa(){
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = true;
+	}
+
+	public void SwitchActivation(){
+		camponesa.GetComponent<SwitchPlayer> ().enabled = true;
+		turnip.GetComponent<SwitchPlayer> ().enabled = true;
 	}
 
 	public IEnumerator WaitAFrame(){

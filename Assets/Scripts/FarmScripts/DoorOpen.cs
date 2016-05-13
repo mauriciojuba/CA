@@ -32,6 +32,8 @@ public class DoorOpen : MonoBehaviour {
 				canOpen1 = false;
 				open1 = true;
 				naboVidaEvento.SetActive (true);
+				texto.SetActive (false);
+				Destroy (this.gameObject);
 			}	
 		} else {
 			if (InputManager.YButton () && canOpen1) {
@@ -41,6 +43,9 @@ public class DoorOpen : MonoBehaviour {
 				canOpen1 = false;
 				open1 = true;
 				naboVidaEvento.SetActive (true);
+				texto.SetActive (false);
+				Destroy(GameObject.Find("BarreiraEvento"));
+				Destroy (this.gameObject);
 			}
 		}
 		if (InputManager.YButton() && canOpen2) {
@@ -50,6 +55,8 @@ public class DoorOpen : MonoBehaviour {
 			player.GetComponent<DialogHandlerTutorial> ().canTalk = true;
 			canOpen2 = false;
 			open2 = true;
+			texto.SetActive (false);
+			Destroy (this.gameObject);
 		}
 	}
 
