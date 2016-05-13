@@ -35,6 +35,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
+		InputManager.players = 2;
 
 	}
 
@@ -75,7 +76,6 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 		if (aim) {
 			if (InputManager.RButton () || Input.GetKeyDown (KeyCode.U)) {
-				
 				aim = false;
 				shoot = true;
 				ChangeText ();
@@ -147,6 +147,12 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				}
 
 				if (message == "Farm2Players3") {
+					Flowchart.BroadcastFungusMessage (message);
+					canTalk = false;
+					message = "";
+				}
+
+				if (message == "TurnipRotate2Players") {
 					Flowchart.BroadcastFungusMessage (message);
 					canTalk = false;
 					message = "";
@@ -244,10 +250,12 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				canTalk = true;
 				message = "TriggerVida2Players";
 			}
-			if (hit.tag == "PegouNabo") {
-				canTalk = true;
-				message = "PegouNabo2Players";
-				triggerCeleiro2.SetActive (true);
+			if (this.gameObject.tag == "Player2") {
+				if (hit.tag == "PegouNabo") {
+					canTalk = true;
+					message = "PegouNabo2Players";
+					triggerCeleiro2.SetActive (true);
+				}
 			}
 		} else {
 			if (hit.tag == "TriggerCeleiro1") {
@@ -264,10 +272,12 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				canTalk = true;
 				message = "TriggerVida";
 			}
-			if (hit.tag == "PegouNabo") {
-				canTalk = true;
-				message = "PegouNabo";
-				triggerCeleiro2.SetActive (true);
+			if (this.gameObject.tag == "Player2") {
+				if (hit.tag == "PegouNabo") {
+					canTalk = true;
+					message = "PegouNabo";
+					triggerCeleiro2.SetActive (true);
+				}
 			}
 		}
     }
@@ -279,7 +289,10 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void TurnipRotate(){
 		canTalk = true;
-		message = "TurnipRotate";
+		if (InputManager.players == 2)
+			message = "TurnipRotate2Players";
+		else
+			message = "TurnipRotate";
 	}
 
 	public void ChangePlayer(){

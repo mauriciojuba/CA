@@ -7,8 +7,10 @@ public class AudioManagerDemonioPedra : MonoBehaviour {
 
 	#region Sons Demonio de Pedra
 	public AudioClip laser;
-	public AudioClip andar;
+	public AudioClip dano;
 	public AudioClip ataquePedras;
+	public AudioClip ataqueNormal;
+	public AudioClip morte;
 	#endregion
 
 	void Start(){
@@ -23,9 +25,13 @@ public class AudioManagerDemonioPedra : MonoBehaviour {
 		if(sound == 1)
 			audio.PlayOneShot(laser);
 		if(sound == 2)
-			audio.PlayOneShot(andar);
+			audio.PlayOneShot(dano);
 		if(sound == 3)
 			audio.PlayOneShot(ataquePedras);
+		if(sound == 4)
+			audio.PlayOneShot(ataqueNormal);
+		if(sound == 5)
+			audio.PlayOneShot(morte);
   		#endregion
 	}
 	

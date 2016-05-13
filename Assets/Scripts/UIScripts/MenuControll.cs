@@ -286,7 +286,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void VolumeChange(){
-		this.GetComponentInChildren<AudioSource> ().volume = vol.value;
+		GameObject.Find("GameControl").GetComponent<AudioSource> ().volume = vol.value;
 	}
 
 

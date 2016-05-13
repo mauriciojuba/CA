@@ -34,9 +34,19 @@ public class NeedHelp : MonoBehaviour
             KeepButtonsOnHurtedChar();
             savingHurtedChar();
         }
-        if (Input.GetKeyDown(KeyCode.I) && canSave) saving = true;
-        if (Input.GetKeyUp(KeyCode.I) || !canSave) saving = false;
-
+		if (InputManager.players == 2) {
+			if (helper.tag == "Player2") {
+				if (InputManager.YButton2 () && canSave)
+					saving = true;
+				if (Input.GetKeyUp (KeyCode.Joystick2Button3) || !canSave)
+					saving = false;
+			}
+		} else {
+			if (InputManager.YButton () && canSave)
+				saving = true;
+			if (Input.GetKeyUp (KeyCode.JoystickButton3) || !canSave)
+				saving = false;
+		}
     }
     void FixedUpdate()
     {

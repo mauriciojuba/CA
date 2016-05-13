@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5928893db3e378a4a827ca6f1e09edaa
-timeCreated: 1463081769
+timeCreated: 1463171852
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -9,6 +9,9 @@ MonoImporter:
   - farm: {fileID: 8300000, guid: 606157198706b7f4d830d660a8f9dddb, type: 3}
   - cave: {fileID: 8300000, guid: 0c81440a0c2ded1489734d42872a8482, type: 3}
   - forest: {fileID: 8300000, guid: 3bd08eed0cfc6c94eb92697a1bedfd5d, type: 3}
+  - menu: {fileID: 8300000, guid: 3080003d3aa7be94fbabd353c8bea992, type: 3}
+  - credits: {fileID: 8300000, guid: 713261181c8ce3a46a79d21bc8db0c77, type: 3}
+  - gameover: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

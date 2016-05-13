@@ -132,6 +132,10 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     #region Andar
     private void Idle_State() {
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
 
         if (!isAttacking && distanceToStartBattle < 10)
         {
@@ -143,7 +147,12 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region EscolherOponente
     void EscolherOponente()
     {
-        turnipDistance = Vector3.Distance(transform.position, Turnip.position);
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
+
+		turnipDistance = Vector3.Distance(transform.position, Turnip.position);
         camponesaDistance = Vector3.Distance(transform.position, Camponesa.position);
 
         if (turnipDistance < camponesaDistance)
@@ -163,6 +172,11 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region EscolherAtaque
     private void EscolherAtaque()
     {
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
+
 		if (state == FSMStates.Idle && !isAttacking)
         {
 			if (distanceToStartBattle < 2) {
@@ -204,9 +218,15 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 4
     private void Ataque_Laser_State()
     {
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
+
         isAttacking = true;
         Eye.SetActive(true);
-        Invoke("ApagarLaser", 8f);
+		Invoke("ApagarLaser", 8f);
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (1);
     }
     void ApagarLaser()
     {
@@ -220,9 +240,14 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 5
     private void Ataque_CriarPedra_State()
     {
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
+
         if (!isAttacking)
         {
-            
+			
             ataquedePedras.SetActive(true);
             Invoke("SubirPedras",2f);
 			isAttacking = true;
@@ -234,8 +259,14 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 6
     private void Ataque_Comum_State()
 	{
+		if (vida <= 0) {
+			state = FSMStates.Morrer;
+			return;
+		}
+
 		if (distanceToStartBattle < 1.2f){
 			Oponente.GetComponent<PlayersDamangeHandler> ().HitPLayer (danoAtaqueComum);
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (4);
 		}
         state = FSMStates.Idle;
         return;
@@ -245,13 +276,16 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 7
     private void Morrer_State()
     {
-
+		Flowchart.BroadcastFungusMessage ("FimCave");
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
+		Destroy(gameObject, 4);
     }
     #endregion
     void SubirPedras()
     {
 		subindoPedras = true;
         CameraShake.Instance.Shake(amplitude, duration);
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (3);
         //Invoke("DescerPedras", 5f);
     }
     void DescerPedras()
@@ -273,14 +307,12 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     {
         if (dano)
         {
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (2);
             vida -= 5;
             dano = false;
         }
-        if(vida <= 0)
-        {
-			Flowchart.BroadcastFungusMessage ("FimCave");
-            Destroy(gameObject);
-        }
+        
+       
     }
 
     #region  ColliderEnter
@@ -288,7 +320,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     {
         if (hit.gameObject.tag == "Nabo")
         {
-
+			
             dano = true;
         }
     }

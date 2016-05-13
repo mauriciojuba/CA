@@ -28,18 +28,21 @@ public class DoorOpen : MonoBehaviour {
 			if (InputManager.YButton2 () && canOpen1) {
 				porta1.GetComponent<Animation> ().Play ();
 				porta2.GetComponent<Animation> ().Play ();
-				player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
+				if(InputManager.players == 1)
+					player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
 				canOpen1 = false;
 				open1 = true;
 				naboVidaEvento.SetActive (true);
 				texto.SetActive (false);
+				Destroy(GameObject.Find("BarreiraEvento"));
 				Destroy (this.gameObject);
 			}	
 		} else {
 			if (InputManager.YButton () && canOpen1) {
 				porta1.GetComponent<Animation> ().Play ();
 				porta2.GetComponent<Animation> ().Play ();
-				player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
+				if(InputManager.players == 1)
+					player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
 				canOpen1 = false;
 				open1 = true;
 				naboVidaEvento.SetActive (true);

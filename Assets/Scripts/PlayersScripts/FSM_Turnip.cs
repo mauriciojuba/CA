@@ -61,7 +61,7 @@ public class FSM_Turnip : MonoBehaviour {
 
 		m_Animator = GetComponent<Animator>();
         currentWaypoint = 0;
-        timer = 0;
+        timer = 1f;
         rb = GetComponent<Rigidbody>();
       
         follow = GameObject.FindWithTag("Player1").transform;
@@ -136,7 +136,8 @@ public class FSM_Turnip : MonoBehaviour {
             return;
         }
 		if (target != null) {
-			SortTargetByDistance ();
+			if(targets.Count > 1)
+				SortTargetByDistance ();
 			if (Vector3.Distance (target.transform.position, myTransform.position) > Vector3.Distance (targets [0].position, myTransform.position))
 				target = targets [0].gameObject;
 		}
@@ -196,13 +197,14 @@ public class FSM_Turnip : MonoBehaviour {
     {
 		m_Character.Attacking(m_Attack);
 		m_Attack = false;
-
+		m_Animator.SetFloat ("Forward", 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime * rotSpeed);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
         timer += Time.deltaTime;
 		if (target != null) {
 			if (timer >= hitTime && dir.magnitude <= distanceToHit) {
+				
 				timer = 0;
 				print ("hit");
 				m_Attack = true;
