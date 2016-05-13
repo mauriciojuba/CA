@@ -328,8 +328,11 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 
-		camponesa.GetComponent<ThirdPersonCharacter> ().enabled = false;
-		turnip.GetComponent<ThirdPersonCharacter> ().enabled = false;
+		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat ("Forward", 0);
+		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat ("Turn", 0);
+		turnip.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat ("Forward", 0);
+		turnip.GetComponent<ThirdPersonCharacter> ().m_Animator.SetFloat ("Turn", 0);
+
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;

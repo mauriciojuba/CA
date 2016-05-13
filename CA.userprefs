@@ -1,47 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FarmScripts\DoorOpen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs">
     <Files>
-      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="98" Column="1" />
-      <File FileName="Assets\Scripts\FarmScripts\DoorOpen.cs" Line="47" Column="48" />
+      <File FileName="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" Line="238" Column="41" />
+      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="335" Column="3" />
+      <File FileName="Assets\Scripts\FarmScripts\DoorOpen.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="188" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="213" Column="4" />
       <File FileName="Assets\Scripts\Utils\TurnTrans.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="36" Column="3" />
+      <File FileName="Assets\Scripts\PlayersScripts\SwitchPlayer.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="CA" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="AssetStore" expanded="True">
-                <Node name="Fungus" expanded="True">
-                  <Node name="Flowchart" expanded="True">
-                    <Node name="Scripts" expanded="True">
-                      <Node name="Commands" expanded="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="FarmScripts" expanded="True">
-                  <Node name="DoorOpen.cs" selected="True" />
-                </Node>
-                <Node name="PlayersScripts" expanded="True" />
-                <Node name="Utils" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="CA" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
