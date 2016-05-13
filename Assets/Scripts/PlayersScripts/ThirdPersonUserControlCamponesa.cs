@@ -24,7 +24,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public float naboForce;
 		public Transform muzzle;
 		public bool active;
-        
+        public float speedOnAir = 4;
+
         private void Start()
         {
 			active = true;
@@ -110,8 +111,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             // pass all parameters to the character control script
             m_Character.Move(m_Move, crouch, m_Jump);
-            m_Jump = false;
-            
+            if (!m_Character.m_IsGrounded) m_Jump = true;
+            else m_Jump = false;
+
+            if (m_Jump)
+            {
+                float step = speedOnAir * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, m_Move + transform.position, step);
+            }
+
         }
 
 		public void AddAllEnemies()
