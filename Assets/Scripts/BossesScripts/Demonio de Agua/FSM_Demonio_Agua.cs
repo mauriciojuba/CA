@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Fungus;
 
 public class FSM_Demonio_Agua : MonoBehaviour {
 
@@ -277,6 +278,7 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 	#region Morrer
 	private void Morrer_State(){
 
+		Flowchart.BroadcastFungusMessage ("BossFim");
 		Morto = true;
 		gameObject.GetComponentInChildren<AudioManager> ().PlaySound (16);
 		gameObject.SetActive (false);
@@ -302,5 +304,11 @@ public class FSM_Demonio_Agua : MonoBehaviour {
 			state = FSMStates.Dano;
 			return;
 		}
+	}
+
+	public void Ativar(){
+
+		Ativar_Demonio = true;
+
 	}
 }
