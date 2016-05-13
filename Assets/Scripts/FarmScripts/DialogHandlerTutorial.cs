@@ -35,7 +35,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-		InputManager.players = 2;
+	
 
 	}
 
