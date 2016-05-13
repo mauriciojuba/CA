@@ -273,7 +273,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     {
         if (dano)
         {
-            vida -= 25;
+            vida -= 5;
             dano = false;
         }
         if(vida <= 0)
