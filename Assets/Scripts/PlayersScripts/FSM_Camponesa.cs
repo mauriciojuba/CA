@@ -25,7 +25,7 @@ public class FSM_Camponesa : MonoBehaviour {
 	private bool m_Attack;
 	private ThirdPersonCharacter m_Character;
 	public List<Transform> targets;
-
+	public Transform ray1, ray2;
 	private float forward = 0.8f;
 	Animator m_Animator;
     #endregion
@@ -127,8 +127,6 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Follow State
     private void FollowState() {
-		
-
 
 
         //Debug.Log("Follow");
@@ -141,6 +139,8 @@ public class FSM_Camponesa : MonoBehaviour {
 			if (Vector3.Distance (target.transform.position, myTransform.position) > Vector3.Distance (targets [0].position, myTransform.position))
 				target = targets [0].gameObject;
 		}
+
+
         // Check if target is in range to chase
 		if (target != null) {
 			if (dir.magnitude <= distanceToStartChasing) {
@@ -148,7 +148,12 @@ public class FSM_Camponesa : MonoBehaviour {
 				return;
 			}
 		}
-		animacao ();
+
+		RaycastHit hit;
+		if (Physics.Linecast (ray1.position, ray2.position, out hit)) {
+			if(hit.collider.CompareTag("Player2"))
+				animacao ();
+		}
     }
     #endregion
 

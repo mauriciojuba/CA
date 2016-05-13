@@ -25,6 +25,8 @@ public class FSM_Turnip : MonoBehaviour {
 	private bool m_Attack;
 	private ThirdPersonCharacter m_Character;
 	public List<Transform> targets;
+	public Transform ray1, ray2;
+
 
 	private float forward = 0.8f;
 	Animator m_Animator;
@@ -89,6 +91,10 @@ public class FSM_Turnip : MonoBehaviour {
 
 	}
 
+	void Update(){
+		Debug.DrawLine (ray1.position, ray2.position, Color.blue);
+	}
+
     public void FixedUpdate()
     {
 		for (int i = 0; i <= (targets.Count - 1); i++) {
@@ -141,8 +147,11 @@ public class FSM_Turnip : MonoBehaviour {
 				return;
 			}
 		}
-		animacao ();
-        
+		RaycastHit hit;
+		if(Physics.Linecast(ray2.position, ray1.position, out hit)){
+			if(hit.collider.CompareTag("Player1"))
+				animacao ();
+		}
 
 
     }
