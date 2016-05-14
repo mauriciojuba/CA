@@ -257,6 +257,7 @@
      <Compile Include="Assets\Scripts\Utils\TransparentObject.cs" />
      <Compile Include="Assets\Scripts\Utils\TriggerBarreira.cs" />
      <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
+     <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
      <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

@@ -23,8 +23,8 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject backToMenuButton;
 	public GameObject nao;
 	public GameObject volumeSlider;
-	public Image camponesaLife;
-	public Image turnipLife;
+	public Image camponesaLife1, camponesaLife2;
+	public Image turnipLife1, turnipLife2;
 	public Image lifePause1;
 	public Image lifePause2;
 	public GameObject lifeHudTurnip, lifeHudCamponesa;
@@ -92,9 +92,13 @@ public class PauseMenu : MonoBehaviour {
 				evento.SetSelectedGameObject (musicButton);
 				//Pause tudo que for automatico no unit
 				Time.timeScale = 0;
-				lifePause1.fillAmount = camponesaLife.fillAmount;
-				lifePause2.fillAmount = turnipLife.fillAmount;
-
+				if (InputManager.players == 2) {
+					lifePause1.fillAmount = camponesaLife2.fillAmount;
+					lifePause2.fillAmount = turnipLife2.fillAmount;
+				} else {
+					lifePause1.fillAmount = camponesaLife1.fillAmount;
+					lifePause2.fillAmount = turnipLife1.fillAmount;
+				}
 				//Pause the other objects
 				//musicControl.SetActive(false);
 				//				fps.GetComponent<UserInput>().enabled = false;

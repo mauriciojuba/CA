@@ -18,9 +18,6 @@ public class SwitchPlayer : MonoBehaviour
 		player1 = GameObject.FindWithTag ("Player1");
 		player2 = GameObject.FindWithTag ("Player2");
 		controlling = "Player2";
-		if (InputManager.players == 2) {
-			this.enabled = false;
-		}
 	}
 
 	public void Update()

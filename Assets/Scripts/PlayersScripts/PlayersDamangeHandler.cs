@@ -6,14 +6,18 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class PlayersDamangeHandler : MonoBehaviour{
 
     public float HP, MaxHP;
-    public Image Bar;
+    public Image Bar1, Bar2;
     public float _damangeAmount;
 
     public bool hurted = false;
 
     void Update()
     {
-        Bar.fillAmount = (HP / MaxHP);
+		if (InputManager.players == 2) {
+			Bar2.fillAmount = (HP / MaxHP);
+		} else {
+			Bar1.fillAmount = (HP / MaxHP);
+		}
         if (HP <= 10 && !hurted)
         {
             NeedHelp.Instance.CreateHelpSign(this.gameObject);
@@ -44,13 +48,21 @@ public class PlayersDamangeHandler : MonoBehaviour{
     public void HitPLayer(float damangeAmount)
     {
         HP = HP - damangeAmount;
-        Bar.fillAmount = (HP / MaxHP);
+		if (InputManager.players == 2) {
+			Bar2.fillAmount = (HP / MaxHP);
+		} else {
+			Bar1.fillAmount = (HP / MaxHP);
+		}
 	}
 	//use essa função com para recuperar HP no personagem.
 	public void RecoveryPlayer(float recoveryAmount)
 	{
 		HP = HP + recoveryAmount;
-		Bar.fillAmount = (HP / MaxHP);
+		if (InputManager.players == 2) {
+			Bar2.fillAmount = (HP / MaxHP);
+		} else {
+			Bar1.fillAmount = (HP / MaxHP);
+		}
 	}
     
 }

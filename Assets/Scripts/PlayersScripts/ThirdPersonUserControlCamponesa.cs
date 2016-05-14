@@ -61,15 +61,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Attack = false;
 				dampTime += Time.deltaTime;
 
-				if (InputManager.RButton ()) {
-					TargetEnemy ();
+				for (int i = 0; i <= (targets.Count - 1); i++) {
+					if (targets [i] == null) {
+						targets.RemoveAt (i);
+					}
+				}
+
+				if (targets.Count > 0) {
+					SortTargetByDistance ();
+					if (Vector3.Distance (targets [0].position, myTransform.position) <= 6.0f) {
+						Debug.Log ("target");
+						TargetEnemy ();
+					} else if(selectedTarget != null) {
+						selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
+						selectedTarget = null;
+					}
 				}
 			}
-			for (int i = 0; i < (targets.Count - 1); i++) {
-				if (targets [i] == null) {
-					targets.RemoveAt (i);
-				}
-			}
+
 
         }
 
@@ -143,52 +152,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					SortTargetByDistance ();
 					selectedTarget = targets [0];
 					SelectTarget ();
-				} else {
-					selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
-					selectedTarget = null;
-					dampTime = 0;
-				}
+				} 
 			}
 
 
 			int index = targets.IndexOf(selectedTarget);
 			//Debug.Log ("index " + index);
 
-			if (InputManager.DPadHorizontal() > 0 && dampTime > 0.5f)
-			{
-				if (index < targets.Count - 1)
-				{
-					selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
-					index++;
-					dampTime = 0;
-				}
-				else
-				{
-					selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
-					index = 0;
-					dampTime = 0;
-				}
-			}
-			else if (InputManager.DPadHorizontal() < 0 && dampTime > 0.5f)
-			{
-				if (index > 0)
-				{
-					selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
-					index--;
-					dampTime = 0;
-				}
-				else
-				{
-					selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
-					index = targets.Count - 1;
-					dampTime = 0;
-				}
-			}
 
-			if (index > -1) {
-				selectedTarget = targets [index];
-				SelectTarget ();
-			}
 		}
 
 		public void SortTargetByDistance()
@@ -212,6 +183,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					transform.LookAt (selectedTarget.position);
 					transform.eulerAngles = new Vector3 (0, transform.eulerAngles.y, 0);
 				} else {
+					m_Attack = true;
 
 				}
             }
@@ -219,7 +191,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void ThrowNabo(){
 			Rigidbody b = GameObject.Instantiate(nabo, muzzle.position, muzzle.rotation) as Rigidbody;
-			muzzle.LookAt (selectedTarget.FindChild("Alvo").position);
+			if (selectedTarget != null) {
+				muzzle.LookAt (selectedTarget.FindChild ("Alvo").position);
+			} else {
+//				muzzle.transform.eulerAngles = new Vector3 (-25, muzzle.transform.rotation.y, muzzle.transform.rotation.z);
+			}
 			b.AddForce(muzzle.forward * naboForce);
 		}
 
