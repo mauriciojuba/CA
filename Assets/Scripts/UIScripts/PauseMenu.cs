@@ -27,7 +27,6 @@ public class PauseMenu : MonoBehaviour {
 	public Image turnipLife1, turnipLife2;
 	public Image lifePause1;
 	public Image lifePause2;
-	public GameObject lifeHudTurnip, lifeHudCamponesa;
 	private int graphicQuality;
 	public GameObject leftSelectN, leftSelectH;
 	public GameObject rightSelectN, rightSelectH;
