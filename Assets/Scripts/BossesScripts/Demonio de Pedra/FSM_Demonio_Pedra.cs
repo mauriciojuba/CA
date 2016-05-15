@@ -58,6 +58,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     void Start()
     {
+        //Deixa os 2 GameObjects Que cuidam do ataque desligados.
         ataquedePedras.SetActive(false);
         Eye.SetActive(false);
 
@@ -65,7 +66,10 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     }
 	void Update(){
+        //checa a vida
         lifeTime();
+
+        //se o ataque de pedras fr ativado ele vai subir as pedras usando o moveTowards
         if (subindoPedras) {
 			Pedras.transform.position = Vector3.MoveTowards (Pedras.transform.position, Up.transform.position, subirVel * Time.deltaTime);
 			if (Pedras.transform.position.y >= Up.transform.position.y) {
@@ -73,7 +77,9 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 				Invoke ("DescerPedras", 3f);
 				subindoPedras = false;
 			}
-		} else if (descendoPedras) {
+		}
+        //Depois de atacar ele vai descer as pedras com o MoveTowards
+        else if (descendoPedras) {
 			Pedras.transform.position = Vector3.MoveTowards(Pedras.transform.position, Down.transform.position, descerVel * Time.deltaTime);
 			if (Pedras.transform.position.y <= Down.transform.position.y) {
 				Invoke("EsconderPedras", 5f);
@@ -85,14 +91,14 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     public void FixedUpdate()
     {
-        
+        //Seta o personagem mais próximo como target e olha para ele
         EscolherOponente();
         transform.LookAt(OponentPoint);
 		OponentPoint = new Vector3 (Oponente.position.x, transform.position.y, Oponente.position.z);
         
 
 
-
+        //estados, sem novidade...
         switch (state)
         {
 
@@ -136,7 +142,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			state = FSMStates.Morrer;
 			return;
 		}
-
+        //se ele não estiver no meio de um ataque e o target entrou na area de alcance, o boss escolhe o ataque
         if (!isAttacking && distanceToStartBattle < 10)
         {
 			Invoke("EscolherAtaque", 5f);
@@ -145,6 +151,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
 
     #region EscolherOponente
+    //função que escolhe o oponente mais próximo como target
     void EscolherOponente()
     {
 		if (vida <= 0) {
@@ -179,6 +186,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
 		if (state == FSMStates.Idle && !isAttacking)
         {
+            //escolhe entre ataque comum e ataque criar pedras quando o target esta muito próximo
 			if (distanceToStartBattle < 2) {
 				float random = Random.Range (0.0f, 1.0f);
 				if (random <= 0.6f) {
@@ -187,6 +195,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 					state = FSMStates.Ataque_CriarPedra;
 				}
 			}
+            //escolhe entre raio laser ou Idle caso o target esteja muito longe
 			else if (distanceToStartBattle < 10)
 			{
 				float random = Random.Range(0.0f, 1.0f);
@@ -211,7 +220,6 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 3
     private void Dano_State()
     {
-
     }
     #endregion
 
@@ -222,14 +230,20 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			state = FSMStates.Morrer;
 			return;
 		}
+        //EXTREMAMENTE NECESSÁRIO VER O SCRIPT --- AtaqueLaser
 
+        //esta no meio de um ataque
         isAttacking = true;
+        //liga o gameObject que lida com o ataque do olho
         Eye.SetActive(true);
+        //vai chamar a função apagar o laser em 8 segundos
 		Invoke("ApagarLaser", 8f);
+        //toca o efeito(?)
 		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (1);
     }
     void ApagarLaser()
     {
+        //essa função desliga o gameObject do olho e diz que o boss não esta mais no meio de um ataque
         Eye.SetActive(false);
         isAttacking = false;
 		state = FSMStates.Idle;
@@ -245,11 +259,14 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			return;
 		}
 
+        //se ele não estiver no meio de um ataque
         if (!isAttacking)
         {
-			
+			//ativa o gameObject que lida com as pedras
             ataquedePedras.SetActive(true);
+            //chamara a fução subir pedras em 2 segundos... fiz isso pra que os jogadores tivessem uma indicação antes do ataque maior.
             Invoke("SubirPedras",2f);
+            //o boss está atacando agora
 			isAttacking = true;
             
         }
@@ -263,7 +280,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			state = FSMStates.Morrer;
 			return;
 		}
-
+        //ataque simples
 		if (distanceToStartBattle < 1.2f){
 			Oponente.GetComponent<PlayersDamangeHandler> ().HitPLayer (danoAtaqueComum);
 			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (4);
@@ -276,6 +293,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 7
     private void Morrer_State()
     {
+        //checar porque não está funcionando
 		Flowchart.BroadcastFungusMessage ("FimCave");
 		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
 		Destroy(gameObject, 4);
@@ -283,20 +301,22 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
     void SubirPedras()
     {
+        //sobe as pedras nesse momento elas causam dano
 		subindoPedras = true;
+        //balança a camera
         CameraShake.Instance.Shake(amplitude, duration);
 		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (3);
-        //Invoke("DescerPedras", 5f);
     }
     void DescerPedras()
     {
-		
+		//desc as pedras depois do ataque
 		descendoPedras = true;
+        //muda a Tag, para que não cause mais dano aos jogadores
         Pedras.tag = "Untagged";
     }
     void EsconderPedras()
     {
-        
+        //desativa o gameObject responsavel pelas pedras
         ataquedePedras.SetActive(false);
         isAttacking = false;
         

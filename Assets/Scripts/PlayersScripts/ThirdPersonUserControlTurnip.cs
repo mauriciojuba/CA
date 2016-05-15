@@ -18,7 +18,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         bool m_Attack;
 		public bool active;
         public float speedOnAir = 4;
-        
+        public LayerMask Sombra_ignorePlayer;
+        public GameObject Sombra;
+
         private void Start()
         {
 			active = true;
@@ -56,6 +58,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Character.Attacking (m_Attack);
 				m_Attack = false;
 			}
+            if (m_Jump) castShadowOnJump();
+            else Sombra.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.02f, this.transform.position.z);
         }
 
 
@@ -106,7 +110,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 float step = speedOnAir * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, m_Move + transform.position,step);
+                
             }
+            
 
 
         }
@@ -133,6 +139,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void EndAtk(){
 			atkCollider.GetComponent<BoxCollider> ().enabled = false;
 		}
-        
+        void castShadowOnJump()
+        {
+            Ray ray = new Ray(this.transform.position, Vector3.down);
+            RaycastHit hit;
+            if(Physics.Raycast(ray,out hit, 10f, Sombra_ignorePlayer))
+            {
+                Vector3 correctedPoint = new Vector3(hit.point.x, hit.point.y + 0.02f, hit.point.z);
+                Sombra.transform.position = correctedPoint;
+            }
+        }
     }
 }

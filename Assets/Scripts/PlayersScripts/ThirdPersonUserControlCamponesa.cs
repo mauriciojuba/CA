@@ -25,6 +25,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public Transform muzzle;
 		public bool active;
         public float speedOnAir = 4;
+        public LayerMask Sombra_ignorePlayer;
+        public GameObject Sombra;
 
         private void Start()
         {
@@ -78,6 +80,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					}
 				}
 			}
+            if (m_Jump) castShadowOnJump();
+            else Sombra.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.02f, this.transform.position.z);
 
 
         }
@@ -202,5 +206,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void EndAtk(){
 			
 		}
+        void castShadowOnJump()
+        {
+            Ray ray = new Ray(this.transform.position, Vector3.down);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 10f, Sombra_ignorePlayer))
+            {
+                Vector3 correctedPoint = new Vector3(hit.point.x, hit.point.y + 0.02f, hit.point.z);
+                Sombra.transform.position = correctedPoint;
+            }
+        }
     }
 }

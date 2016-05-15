@@ -27,6 +27,8 @@ public class AtaqueLaser : MonoBehaviour {
     }
     void OnEnable()
     {
+        //assim que o script do boss ligar o gameObject o laser vai aparecer, FINO ligado o olho ao Target
+        //depois de 4 segundos chama a função atirar.
         Invoke("Atirar", 4f);
     }
 
@@ -64,7 +66,7 @@ public class AtaqueLaser : MonoBehaviour {
     }
     void Atirar()
     {
-
+        //Deixa o Lase mais grosso
         LarguraInicial = 0.6f;
         LarguraFinal = 0.8f;
         LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
@@ -75,6 +77,7 @@ public class AtaqueLaser : MonoBehaviour {
     }
     void OnDisable()
     {
+        //Quando o script do boss desabilitar esse gameObject ele vai desligar o laser.
         luzColisao.SetActive(false);
         LarguraInicial = 0.1f;
         LarguraFinal = 0.2f;
