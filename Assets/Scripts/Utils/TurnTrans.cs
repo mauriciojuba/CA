@@ -6,6 +6,7 @@ public class TurnTrans : MonoBehaviour {
 	public Transform player1, player2;
 	public LayerMask ignorePlayer;
     public float separados = 12f;
+    float radiusSphere = 5f;
 	void Start () {
 	
 	}
@@ -17,7 +18,7 @@ public class TurnTrans : MonoBehaviour {
             Ray ray2 = new Ray(player2.transform.position, this.transform.position- player2.transform.position);
             Debug.DrawRay(player2.transform.position, this.transform.position - player2.transform.position);
             RaycastHit[] hits2;
-            hits2 = Physics.RaycastAll(ray2,this.transform.position.y, ignorePlayer);
+            hits2 = Physics.SphereCastAll(ray2, radiusSphere, this.transform.position.y, ignorePlayer);
             foreach (RaycastHit hit2 in hits2)
             {
                 //Debug.Log(hit2.collider);
@@ -39,9 +40,9 @@ public class TurnTrans : MonoBehaviour {
         else
         {
             Ray ray = new Ray(player1.transform.position, this.transform.position - player1.transform.position);
-            Debug.DrawRay(player1.transform.position, this.transform.position - player1.transform.position);
             RaycastHit[] hits;
-            hits = Physics.RaycastAll(ray, this.transform.position.y, ignorePlayer);
+            //hits = Physics.RaycastAll(ray, this.transform.position.y, ignorePlayer);
+            hits = Physics.SphereCastAll(ray, radiusSphere, this.transform.position.y, ignorePlayer);
             foreach (RaycastHit hit in hits)
             {
                 //Debug.Log(hit.collider);
@@ -64,7 +65,7 @@ public class TurnTrans : MonoBehaviour {
                 Ray ray3 = new Ray(player2.transform.position, this.transform.position - player2.transform.position);
                 Debug.DrawRay(player2.transform.position, this.transform.position - player2.transform.position);
                 RaycastHit[] hits3;
-                hits3 = Physics.RaycastAll(ray3, this.transform.position.y, ignorePlayer);
+                hits3 = Physics.SphereCastAll(ray3, radiusSphere, this.transform.position.y, ignorePlayer);
                 foreach (RaycastHit hit3 in hits3)
                 {
                     //Debug.Log(hit3.collider);
