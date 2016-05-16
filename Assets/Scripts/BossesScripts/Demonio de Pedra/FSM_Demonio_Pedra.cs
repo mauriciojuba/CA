@@ -14,7 +14,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
 
     
-
+	public float countVoz;
     #region AndarVariaveis
     #endregion
     #region EscolherAtaqueVariaveis
@@ -61,7 +61,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         //Deixa os 2 GameObjects Que cuidam do ataque desligados.
         ataquedePedras.SetActive(false);
         Eye.SetActive(false);
-
+		countVoz = 0;
 
 
     }
@@ -141,6 +141,12 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		if (vida <= 0) {
 			state = FSMStates.Morrer;
 			return;
+		}
+		countVoz += Time.deltaTime;
+		if (countVoz > 5) {
+			int num = Random.Range (7, 10);
+			this.gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (num);
+			countVoz = 0;
 		}
         //se ele não estiver no meio de um ataque e o target entrou na area de alcance, o boss escolhe o ataque
         if (!isAttacking && distanceToStartBattle < 10)
@@ -236,10 +242,11 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         isAttacking = true;
         //liga o gameObject que lida com o ataque do olho
         Eye.SetActive(true);
+		this.gameObject.GetComponentInChildren<AudioManagerDemonioPedra>().PlaySound(1);
         //vai chamar a função apagar o laser em 8 segundos
 		Invoke("ApagarLaser", 8f);
         //toca o efeito(?)
-		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (1);
+
     }
     void ApagarLaser()
     {
@@ -262,6 +269,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         //se ele não estiver no meio de um ataque
         if (!isAttacking)
         {
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (4);
 			//ativa o gameObject que lida com as pedras
             ataquedePedras.SetActive(true);
             //chamara a fução subir pedras em 2 segundos... fiz isso pra que os jogadores tivessem uma indicação antes do ataque maior.
@@ -283,7 +291,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         //ataque simples
 		if (distanceToStartBattle < 1.2f){
 			Oponente.GetComponent<PlayersDamangeHandler> ().HitPLayer (danoAtaqueComum);
-			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (4);
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
 		}
         state = FSMStates.Idle;
         return;
@@ -293,19 +301,23 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #region Estado 7
     private void Morrer_State()
     {
+		
+		if(!gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().audio.isPlaying)
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (6);
         //checar porque não está funcionando
 		Flowchart.BroadcastFungusMessage ("FimCave");
-		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
+
 		Destroy(gameObject, 4);
     }
     #endregion
     void SubirPedras()
     {
+		
         //sobe as pedras nesse momento elas causam dano
 		subindoPedras = true;
         //balança a camera
         CameraShake.Instance.Shake(amplitude, duration);
-		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (3);
+
     }
     void DescerPedras()
     {
@@ -327,7 +339,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     {
         if (dano)
         {
-			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (2);
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (3);
             vida -= 5;
             dano = false;
         }

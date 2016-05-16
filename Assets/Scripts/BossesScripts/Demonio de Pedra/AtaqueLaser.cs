@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class AtaqueLaser : MonoBehaviour {
+	public GameObject audioSource;
     public Color corLaser = Color.red;
     public int DistanciaDoLaser = 100;
     public float LarguraInicial = 0.02f, LarguraFinal = 0.1f;
@@ -29,6 +30,7 @@ public class AtaqueLaser : MonoBehaviour {
     {
         //assim que o script do boss ligar o gameObject o laser vai aparecer, FINO ligado o olho ao Target
         //depois de 4 segundos chama a função atirar.
+		audioSource.GetComponent<AudioManagerDemonioPedra>().PlaySound(1);
         Invoke("Atirar", 4f);
     }
 
@@ -73,7 +75,7 @@ public class AtaqueLaser : MonoBehaviour {
         lineRenderer.SetWidth(LarguraInicial, LarguraFinal);
         luzColisao.GetComponent<Light>().range = LarguraFinal;
         isAttacking = true;
-
+		audioSource.GetComponent<AudioManagerDemonioPedra>().PlaySound(2);
     }
     void OnDisable()
     {
@@ -84,6 +86,7 @@ public class AtaqueLaser : MonoBehaviour {
         isAttacking = false;
         LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
         lineRenderer.SetWidth(LarguraInicial, LarguraFinal);
+		audioSource.GetComponent<AudioManagerDemonioPedra>().audio.Stop();
     }
 
     
