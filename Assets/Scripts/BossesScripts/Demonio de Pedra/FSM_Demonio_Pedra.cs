@@ -144,7 +144,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		}
 		countVoz += Time.deltaTime;
 		if (countVoz > 5) {
-			int num = Random.Range (7, 10);
+			int num = Random.Range (8, 11);
 			this.gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (num);
 			countVoz = 0;
 		}
@@ -291,7 +291,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         //ataque simples
 		if (distanceToStartBattle < 1.2f){
 			Oponente.GetComponent<PlayersDamangeHandler> ().HitPLayer (danoAtaqueComum);
-			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
+			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (6);
 		}
         state = FSMStates.Idle;
         return;
@@ -303,7 +303,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     {
 		
 		if(!gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().audio.isPlaying)
-		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (6);
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (7);
         //checar porque não está funcionando
 		Flowchart.BroadcastFungusMessage ("FimCave");
 
@@ -312,7 +312,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
     void SubirPedras()
     {
-		
+		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
         //sobe as pedras nesse momento elas causam dano
 		subindoPedras = true;
         //balança a camera

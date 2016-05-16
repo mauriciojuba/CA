@@ -8,7 +8,7 @@ public class AudioManagerDemonioPedra : MonoBehaviour {
 	#region Sons Demonio de Pedra
 	public AudioClip laserCarregando, laserAtirando;
 	public AudioClip dano;
-	public AudioClip ataquePedras;
+	public AudioClip ataquePedrasCarregando, ataquePedrasAtirando;
 	public AudioClip ataqueNormal;
 	public AudioClip morte;
 	public AudioClip voz1, voz2, voz3;
@@ -33,17 +33,23 @@ public class AudioManagerDemonioPedra : MonoBehaviour {
 		}
 		if(sound == 3)
 			audio.PlayOneShot(dano);
-		if(sound == 4)
-			audio.PlayOneShot(ataquePedras);
-		if(sound == 5)
-			audio.PlayOneShot(ataqueNormal);
+		if(sound == 4){
+			audio.clip = ataquePedrasCarregando;
+			audio.Play();
+		}
+		if(sound == 5){
+			audio.clip = ataquePedrasAtirando;
+			audio.Play();
+		}
 		if(sound == 6)
-			audio.PlayOneShot(morte);
+			audio.PlayOneShot(ataqueNormal);
 		if(sound == 7)
-			audio.PlayOneShot(voz1);
+			audio.PlayOneShot(morte);
 		if(sound == 8)
-			audio.PlayOneShot(voz2);
+			audio.PlayOneShot(voz1);
 		if(sound == 9)
+			audio.PlayOneShot(voz2);
+		if(sound == 10)
 			audio.PlayOneShot(voz3);
 
   		#endregion
