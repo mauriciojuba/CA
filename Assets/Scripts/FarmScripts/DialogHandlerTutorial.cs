@@ -8,8 +8,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public string message;
     public bool canTalk;
-	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip;
-	public bool begin, change, aim, shoot, final;
+	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip;
+	public bool begin, change, aim, shoot, agarraTurnip, final;
 	public int count;
 	public static int countDaninha;
 	public GameObject camponesa, turnip, triggerCeleiro2;
@@ -75,7 +75,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		}
 
 		if (aim) {
-			if (InputManager.RButton () || Input.GetKeyDown (KeyCode.U)) {
+			if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 6.0f) {
 				aim = false;
 				shoot = true;
 				ChangeText ();
@@ -124,14 +124,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 			countDaninha = 0;
 		}
 
-		if (message == "começou") {
-			Flowchart.BroadcastFungusMessage (message);
-			canTalk = false;
-			message = "";
-		}
-
-
-        if (canTalk)
+		if (canTalk)
         {
 			
 				if (message == "Farm2Players1") {
@@ -316,6 +309,10 @@ public class DialogHandlerTutorial : MonoBehaviour {
 			} else {
 				atirarNabos.SetActive (false);
 			}
+
+//			if (agarraTurnip) {
+//				chegaPertoTurnip.SetActive (true);
+//			}
 		} else {
 			if (begin) {
 				girar.SetActive (true);
@@ -397,4 +394,5 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public void EndGame(){
 		SceneManager.LoadScene (3);
 	}
+		
 }
