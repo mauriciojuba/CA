@@ -3,15 +3,17 @@ using System.Collections;
 
 public class DoorOpen : MonoBehaviour {
 
-	public bool canOpen1, open1;
-	public bool canOpen2, open2;
+	public bool canOpen1;
+	public bool canOpen2;
+	public static bool open1;
+	public static bool open2;
 	public GameObject porta1;
 	public GameObject porta2;
 	public GameObject porta3;
 	public GameObject porta4;
 	public GameObject player;
 	public GameObject naboVidaEvento;
-	public GameObject texto;
+	public GameObject texto1, texto2;
 
 	// Use this for initialization
 	void Start () {
@@ -19,38 +21,21 @@ public class DoorOpen : MonoBehaviour {
 		canOpen2 = false;
 		open1 = false;
 		open2 = false;
-		texto.SetActive (false);
+		texto1.SetActive (false);
+		texto2.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (InputManager.players == 2) {
-			if (InputManager.YButton2 () && canOpen1) {
-				porta1.GetComponent<Animation> ().Play ();
-				porta2.GetComponent<Animation> ().Play ();
-				if(InputManager.players == 1)
-					player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
-				canOpen1 = false;
+		if (InputManager.YButton () && canOpen1) {
+			 	canOpen1 = false;
 				open1 = true;
 				naboVidaEvento.SetActive (true);
-				texto.SetActive (false);
-				Destroy(GameObject.Find("BarreiraEvento"));
-				Destroy (this.gameObject);
-			}	
-		} else {
-			if (InputManager.YButton () && canOpen1) {
-				porta1.GetComponent<Animation> ().Play ();
-				porta2.GetComponent<Animation> ().Play ();
-				if(InputManager.players == 1)
-					player.GetComponent<DialogHandlerTutorial> ().ActivateFollowCamponesa ();
-				canOpen1 = false;
-				open1 = true;
-				naboVidaEvento.SetActive (true);
-				texto.SetActive (false);
+				texto1.SetActive (false);
 				Destroy(GameObject.Find("BarreiraEvento"));
 				Destroy (this.gameObject);
 			}
-		}
+
 		if (InputManager.YButton() && canOpen2) {
 			porta3.GetComponent<Animation> ().Play ();
 			porta4.GetComponent<Animation> ().Play ();
@@ -58,7 +43,7 @@ public class DoorOpen : MonoBehaviour {
 			player.GetComponent<DialogHandlerTutorial> ().canTalk = true;
 			canOpen2 = false;
 			open2 = true;
-			texto.SetActive (false);
+			texto2.SetActive (false);
 			Destroy (this.gameObject);
 		}
 	}
@@ -67,13 +52,13 @@ public class DoorOpen : MonoBehaviour {
 		if (hit.tag == "Player2") {
 			if (!open1) {
 				canOpen1 = true;
-				texto.SetActive (true);
+				texto1.SetActive (true);
 			}
 		}
 		if (hit.tag == "Player1") {
-			if (!open2) {
+			if (!open2 && open1) {
 				canOpen2 = true;
-				texto.SetActive (true);
+				texto2.SetActive (true);
 			}
 		}
 	}
@@ -81,11 +66,11 @@ public class DoorOpen : MonoBehaviour {
 	void OnTriggerExit(Collider hit){
 		if (hit.tag == "Player2") {
 			canOpen1 = false;
-			texto.SetActive (false);
+			texto1.SetActive (false);
 		}
 		if (hit.tag == "Player1") {
 			canOpen2 = false;
-			texto.SetActive (false);
+			texto2.SetActive (false);
 		}
 	}
 }

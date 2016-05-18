@@ -72,7 +72,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (targets.Count > 0) {
 					SortTargetByDistance ();
 					if (Vector3.Distance (targets [0].position, myTransform.position) <= 6.0f) {
-						Debug.Log ("target");
 						TargetEnemy ();
 					} else if(selectedTarget != null) {
 						selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
