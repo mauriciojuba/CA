@@ -104,7 +104,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
 		if (targets.Count != 0) {
 			if (target == null) {
-				if(targets.Count > 1)
+				if (targets.Count > 1)
 					SortTargetByDistance ();
 				target = targets [0].gameObject;
 			}

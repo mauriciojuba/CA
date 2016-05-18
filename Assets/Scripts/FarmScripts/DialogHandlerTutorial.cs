@@ -9,13 +9,14 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public string message;
     public bool canTalk;
 	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip;
+	public GameObject montarTurnip, pegaNaboVida, agachar;
 	public bool begin, change, aim, shoot, agarraTurnip, final;
 	public int count;
 	public static int countDaninha;
 	public GameObject camponesa, turnip, triggerCeleiro2;
 	public float delayAtk, delayToTalk;
 	public bool toTalk;
-	public GameObject dialogCamp, dialogTurnip;
+
 
 	void Start () {
 		message = "começou";
@@ -35,16 +36,16 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-	
-
+		InputManager.players = 1;
+		montarTurnip.SetActive (false);
+		chegaPertoTurnip.SetActive (false);
+		pegaNaboVida.SetActive (false);
+		agachar.SetActive (false);
 	}
 
 	void Update () {
 		delayAtk += Time.deltaTime;
-//
-//		if (dialogCamp.activeSelf || dialogTurnip.activeSelf) {
-//			
-//		}
+
 
 		if (begin) {
 			DesativarPlayers ();
@@ -224,6 +225,17 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				}
 
         }
+
+		if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 1f && camponesa.GetComponent<SwitchPlayer>().controlling == "Player1") {
+			chegaPertoTurnip.SetActive (false);
+			montarTurnip.SetActive (true);
+		} else {
+			montarTurnip.SetActive (false);
+		}
+		if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 1f && InputManager.YButton ()) {
+			montarTurnip.SetActive (false);
+		}
+
 	}
 
     void OnTriggerEnter(Collider hit)
@@ -250,6 +262,9 @@ public class DialogHandlerTutorial : MonoBehaviour {
 					triggerCeleiro2.SetActive (true);
 				}
 			}
+			if (hit.tag == "PassarBuraco") {
+				agachar.SetActive (true);
+			}
 		} else {
 			if (hit.tag == "TriggerCeleiro1") {
 				canTalk = true;
@@ -272,12 +287,18 @@ public class DialogHandlerTutorial : MonoBehaviour {
 					triggerCeleiro2.SetActive (true);
 				}
 			}
+			if (hit.tag == "PassarBuraco") {
+				agachar.SetActive (true);
+			}
 		}
     }
 
     void OnTriggerExit(Collider hit)
     {
             canTalk = false;
+		if (hit.tag == "PassarBuraco") {
+			agachar.SetActive (false);
+		}
     }
 
 	public void TurnipRotate(){
@@ -310,9 +331,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				atirarNabos.SetActive (false);
 			}
 
-//			if (agarraTurnip) {
-//				chegaPertoTurnip.SetActive (true);
-//			}
+
 		} else {
 			if (begin) {
 				girar.SetActive (true);
@@ -393,6 +412,10 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void EndGame(){
 		SceneManager.LoadScene (3);
+	}
+
+	public void PegaNaboVida(){
+		pegaNaboVida.SetActive (true);
 	}
 		
 }
