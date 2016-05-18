@@ -15,7 +15,7 @@ public class NeedHelp : MonoBehaviour
     public float alturaPersonagens;
     Animator anim;
 
-
+	public GameObject Texto;
 
     void Initialize()
     {
@@ -91,11 +91,13 @@ public class NeedHelp : MonoBehaviour
     }
     void checkDistanceBetweenPlayers()
     {
-        if (Vector3.Distance(helper.transform.position, hurtChar.transform.position) <= 1.5f)
-        {
-            canSave = true;
-        }
-        else canSave = false;
+		if (Vector3.Distance (helper.transform.position, hurtChar.transform.position) <= 1.5f) {
+			canSave = true;
+			Texto.SetActive (true);
+		} else {
+			canSave = false;
+			Texto.SetActive (false);
+		}
     }
     void savingHurtedChar()
     {
@@ -108,6 +110,7 @@ public class NeedHelp : MonoBehaviour
         hurtChar.GetComponent<PlayersDamangeHandler>().HP = 50;
         anim.SetBool("Hurt", false);
         _particle.SetActive(false);
+		Texto.SetActive (false);
         hurtChar = null;
         helper = null;
         timeTry = 0;
