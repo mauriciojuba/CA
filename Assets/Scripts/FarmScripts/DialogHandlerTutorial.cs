@@ -10,7 +10,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
     public bool canTalk;
 	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip;
 	public GameObject montarTurnip, pegaNaboVida, agachar;
-	public bool begin, change, aim, shoot, agarraTurnip, final;
+	public static bool cutscene;
+	public bool beginGame, change, aim, shoot, agarraTurnip, final;
 	public int count;
 	public static int countDaninha;
 	public GameObject camponesa, turnip, triggerCeleiro2;
@@ -21,16 +22,17 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	void Start () {
 		message = "começou";
 		canTalk = false;
-		girar.SetActive (true);
+		girar.SetActive (false);
 		mirarTurnip.SetActive (false);
 		trocarPersonagem.SetActive (false);
 		atirarNabos.SetActive (false);
 		count = 0;
+		cutscene = true;
 		toTalk = false;
 		delayToTalk = 0;
 		countDaninha = 0;
 		delayAtk = 0;
-		begin = true;
+		beginGame = false;
 		change = false;
 		shoot = false;
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
@@ -45,21 +47,23 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	void Update () {
 		delayAtk += Time.deltaTime;
-
-
-		if (begin) {
+		if (cutscene) {
 			DesativarPlayers ();
+		}
+
+		if (beginGame) {
+			girar.SetActive (true);
 			if (InputManager.players == 2) {
 				if (InputManager.XButton2 () || Input.GetKeyDown (KeyCode.X)) {
 					TurnipRotate ();
-					begin = false;
+					beginGame = false;
 					aim = true;
 					ChangeText ();
 				}
 			} else {
 				if (InputManager.XButton () || Input.GetKeyDown (KeyCode.X)) {
 					TurnipRotate ();
-					begin = false;
+					beginGame = false;
 					change = true;
 					ChangeText ();
 				}
@@ -318,7 +322,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void ChangeText(){
 		if (InputManager.players == 2) {
-			if (begin) {
+			if (beginGame) {
 				girar.SetActive (true);
 			} else if (aim) {
 				mirarTurnip.SetActive (true);
@@ -333,7 +337,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 
 		} else {
-			if (begin) {
+			if (beginGame) {
 				girar.SetActive (true);
 			} else if (change) {
 				trocarPersonagem.SetActive (true);

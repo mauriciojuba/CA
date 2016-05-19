@@ -53,7 +53,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 
         private void Update()
-        {
+		{ 
+			
+			if (Camera.main != null) {
+				m_Cam = Camera.main.transform;
+			}
+
 			if (active) {
 				if (!m_Jump) {
 					m_Jump = InputManager.AButton ();
