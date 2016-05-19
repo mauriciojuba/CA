@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Cutscene : MonoBehaviour {
 
@@ -14,6 +15,7 @@ public class Cutscene : MonoBehaviour {
 		camera.transform.position = posicao.position;
 		camera.transform.rotation = posicao.rotation;
 		cameraPlayers.GetComponentInChildren<Camera>().enabled = false;
+		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", true);
 	}
 	
 	// Update is called once per frame
@@ -34,6 +36,7 @@ public class Cutscene : MonoBehaviour {
 			DialogHandlerTutorial.cutscene = false;
 			camponesa.GetComponent<DialogHandlerTutorial> ().beginGame = true;
 			turnip.GetComponent<DialogHandlerTutorial> ().beginGame = true;
+			camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
 			camera.gameObject.SetActive (false);
 			cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
 			Destroy (this.gameObject);
