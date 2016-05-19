@@ -213,7 +213,6 @@
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" />
-     <Compile Include="Assets\MusicsCave.cs" />
      <Compile Include="Assets\Scripts\BlobmanScripts\AtaqueBlobman.cs" />
      <Compile Include="Assets\Scripts\BlobmanScripts\FSM_Blobman.cs" />
      <Compile Include="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" />
@@ -255,12 +254,13 @@
      <Compile Include="Assets\Scripts\Utils\GameControl.cs" />
      <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
      <Compile Include="Assets\Scripts\Utils\MudaNome.cs" />
+     <Compile Include="Assets\Scripts\Utils\MusicsCave.cs" />
      <Compile Include="Assets\Scripts\Utils\TransparentObject.cs" />
      <Compile Include="Assets\Scripts\Utils\TriggerBarreira.cs" />
+     <Compile Include="Assets\Scripts\Utils\TriggerHelp.cs" />
      <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
      <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
      <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
-     <Compile Include="Assets\TriggerHelp.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
