@@ -58,6 +58,12 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -237,6 +243,7 @@
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" />
+    <Compile Include="Assets\MusicsCave.cs" />
     <Compile Include="Assets\Scripts\BlobmanScripts\AtaqueBlobman.cs" />
     <Compile Include="Assets\Scripts\BlobmanScripts\FSM_Blobman.cs" />
     <Compile Include="Assets\Scripts\BossesScripts\Demonio de Agua\FSM_Demonio_Agua.cs" />
@@ -283,6 +290,7 @@
     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
     <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
     <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
+    <Compile Include="Assets\TriggerHelp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Shaders\Splitscreen Mask.shader" />
