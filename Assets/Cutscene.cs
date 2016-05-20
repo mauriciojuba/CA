@@ -8,6 +8,7 @@ public class Cutscene : MonoBehaviour {
 	public Transform posicao, posicao1, posicao2, posicao3;
 	public GameObject cameraPlayers, camponesa, turnip;
 	public float count;
+	public bool skip;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,7 @@ public class Cutscene : MonoBehaviour {
 		camera.transform.rotation = posicao.rotation;
 		cameraPlayers.GetComponentInChildren<Camera>().enabled = false;
 		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", true);
+		skip = false;
 	}
 	
 	// Update is called once per frame
@@ -24,6 +26,7 @@ public class Cutscene : MonoBehaviour {
 		if (count > 7 && count <= 14) {
 			camera.transform.position = posicao1.position;
 			camera.transform.rotation = posicao1.rotation;
+
 		} else if (count > 14 && count <= 15) {
 			camera.transform.position = posicao2.position;
 			camera.transform.rotation = posicao2.rotation;
@@ -40,6 +43,20 @@ public class Cutscene : MonoBehaviour {
 			camera.gameObject.SetActive (false);
 			cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
 			Destroy (this.gameObject);
+		}
+
+		if (skip && count > 5) {
+			DialogHandlerTutorial.cutscene = false;
+			camponesa.GetComponent<DialogHandlerTutorial> ().beginGame = true;
+			turnip.GetComponent<DialogHandlerTutorial> ().beginGame = true;
+			camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
+			camera.gameObject.SetActive (false);
+			cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
+			Destroy (this.gameObject);
+		}
+
+		if (Input.anyKeyDown) {
+			skip = true;
 		}
 	}
 }

@@ -20,6 +20,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public float speedOnAir = 4;
         public LayerMask Sombra_ignorePlayer;
         public GameObject Sombra;
+		public bool onAir;
 
         private void Start()
         {
@@ -63,7 +64,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Character.Attacking (m_Attack);
 				m_Attack = false;
 			}
-            if (m_Jump) castShadowOnJump();
+			if (onAir) castShadowOnJump();
             else Sombra.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.02f, this.transform.position.z);
         }
 
@@ -108,10 +109,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // pass all parameters to the character control script
             m_Character.Move(m_Move, crouch, m_Jump);
             
-            if (!m_Character.m_IsGrounded) m_Jump = true;
-            else m_Jump = false;
-
-            if (m_Jump)
+            if (!m_Character.m_IsGrounded) onAir = true;
+			else onAir = false;
+			m_Jump = false;
+			if (onAir)
             {
                 float step = speedOnAir * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, m_Move + transform.position,step);

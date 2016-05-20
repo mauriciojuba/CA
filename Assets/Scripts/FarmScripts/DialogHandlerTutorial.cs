@@ -17,9 +17,11 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public GameObject camponesa, turnip, triggerCeleiro2;
 	public float delayAtk, delayToTalk;
 	public bool toTalk;
-
+	public bool canUp;
 
 	void Start () {
+		canUp = false;
+
 		message = "começou";
 		canTalk = false;
 		girar.SetActive (false);
@@ -38,7 +40,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
-		InputManager.players = 1;
+
 		montarTurnip.SetActive (false);
 		chegaPertoTurnip.SetActive (false);
 		pegaNaboVida.SetActive (false);
@@ -230,14 +232,17 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
         }
 
-		if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 1f && camponesa.GetComponent<SwitchPlayer>().controlling == "Player1") {
+
+		if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 1f && canUp) {
 			chegaPertoTurnip.SetActive (false);
 			montarTurnip.SetActive (true);
+
 		} else {
 			montarTurnip.SetActive (false);
 		}
 		if (Vector3.Distance (camponesa.transform.position, turnip.transform.position) <= 1f && InputManager.YButton ()) {
 			montarTurnip.SetActive (false);
+			canUp = false;
 		}
 
 	}

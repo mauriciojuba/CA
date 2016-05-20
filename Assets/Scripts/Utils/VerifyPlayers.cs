@@ -7,7 +7,7 @@ public class VerifyPlayers : MonoBehaviour {
 	public GameObject turnip, camponesa;
 	// Use this for initialization
 	void Start () {
-
+		InputManager.players = 2;
 		if (InputManager.players == 2) {
 			lifeTurnip1.SetActive (false);
 			lifeCamponesa1.SetActive (false);

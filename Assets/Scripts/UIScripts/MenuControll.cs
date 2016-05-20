@@ -33,6 +33,8 @@ public class MenuControll : MonoBehaviour {
 	private bool musicSelected;
 	private bool qualitySelected;
 	public Slider vol;
+	public GameObject leftSelectN, leftSelectH;
+	public GameObject rightSelectN, rightSelectH;
 
 
 	void Start(){
@@ -122,6 +124,10 @@ public class MenuControll : MonoBehaviour {
 		newGame.SetActive (false);
 		options.SetActive (true);
 		evento.SetSelectedGameObject (musicButton);
+		leftSelectH.SetActive (false);
+		leftSelectN.SetActive (true);
+		rightSelectH.SetActive (false);
+		rightSelectN.SetActive (true);
 		if (graphicQuality == 0) {
 			QualitySettings.SetQualityLevel (0);
 			lowButton.SetActive (true);
@@ -233,7 +239,10 @@ public class MenuControll : MonoBehaviour {
 				mediumButton.SetActive (true);
 				evento.SetSelectedGameObject (mediumButton);
 			}
-			dampTime = 0;
+			leftSelectH.SetActive (false);
+			leftSelectN.SetActive (true);
+			rightSelectH.SetActive (true);
+			rightSelectN.SetActive (false);
 		} else if (InputManager.RightMenuButton()) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
@@ -248,9 +257,12 @@ public class MenuControll : MonoBehaviour {
 				highButton.SetActive (true);
 				evento.SetSelectedGameObject (highButton);
 			}
-			dampTime = 0;
+			leftSelectH.SetActive (true);
+			leftSelectN.SetActive (false);
+			rightSelectH.SetActive (false);
+			rightSelectN.SetActive (true);
 		}
-		
+
 	}
 
 	public void HighQuality(){

@@ -19,5 +19,6 @@ public class EventTriggerCeleiro : MonoBehaviour {
 
 	public void ApareceTexto(){
 		texto.SetActive (true);
+		GameObject.FindWithTag ("Player1").GetComponent<DialogHandlerTutorial> ().canUp = true;
 	}
 }
