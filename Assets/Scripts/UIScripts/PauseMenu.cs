@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Fungus;
 
 public class PauseMenu : MonoBehaviour {
 	private float dampTime;
@@ -77,6 +78,8 @@ public class PauseMenu : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if(pause)
+			Flowchart.BroadcastFungusMessage ("pause");
 		dampTime += Time.deltaTime;
 		ButtonBack ();
 		if(qualitySelected)
