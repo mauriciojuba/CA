@@ -286,6 +286,7 @@
     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
     <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
     <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
+    <Compile Include="Assets\VidaBoss.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Shaders\Splitscreen Mask.shader" />
