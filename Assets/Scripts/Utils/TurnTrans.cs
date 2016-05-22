@@ -6,7 +6,7 @@ public class TurnTrans : MonoBehaviour {
 	public Transform player1, player2;
 	public LayerMask ignorePlayer;
     public float separados = 12f;
-    float radiusSphere = 5f;
+    public float radiusSphere = 5f;
 	void Start () {
 	
 	}
