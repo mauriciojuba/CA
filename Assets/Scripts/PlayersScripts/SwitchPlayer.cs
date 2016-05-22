@@ -4,6 +4,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class SwitchPlayer : MonoBehaviour
 {
+	[SerializeField]
 	GameObject player1, player2;
 	public string controlling;
 

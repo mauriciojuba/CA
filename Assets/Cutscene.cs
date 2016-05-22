@@ -54,8 +54,8 @@ public class Cutscene : MonoBehaviour {
 			cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
 			Destroy (this.gameObject);
 		}
-
-		if (Input.anyKeyDown) {
+		if(count > 5){
+		if (Input.anyKeyDown)
 			skip = true;
 		}
 	}

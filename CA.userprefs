@@ -1,10 +1,57 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\VidaBoss.cs">
-    <Files>
-      <File FileName="Assets\VidaBoss.cs" Line="10" Column="57" />
-      <File FileName="Assets\Scripts\BossesScripts\Demonio de Pedra\FSM_Demonio_Pedra.cs" Line="344" Column="26" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="AssetStore" expanded="True">
+                <Node name="Armoire Cannonball Utilities" expanded="True">
+                  <Node name="Magic Splitscreen" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
+                <Node name="Fungus" expanded="True">
+                  <Node name="Flowchart" expanded="True">
+                    <Node name="Scripts" expanded="True">
+                      <Node name="Commands" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="BlobmanScripts" expanded="True" />
+                <Node name="BossesScripts" expanded="True">
+                  <Node name="Demonio de Agua" expanded="True" />
+                  <Node name="Demonio de Pedra" expanded="True" />
+                </Node>
+                <Node name="FarmScripts" expanded="True" />
+                <Node name="PlayersScripts" expanded="True" />
+                <Node name="UIScripts" expanded="True">
+                  <Node name="PauseMenu.cs" selected="True" />
+                </Node>
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Assembly-CSharp-firstpass" expanded="True">
+              <Node name="Standard Assets" expanded="True">
+                <Node name="Characters" expanded="True">
+                  <Node name="ThirdPersonCharacter" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

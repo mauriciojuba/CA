@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject backToMenuButton;
 	public GameObject nao;
 	public GameObject volumeSlider;
+	public GameObject hudPlayers;
 	public Image camponesaLife1, camponesaLife2;
 	public Image turnipLife1, turnipLife2;
 	public Image lifePause1;
@@ -97,9 +98,11 @@ public class PauseMenu : MonoBehaviour {
 				if (InputManager.players == 2) {
 					lifePause1.fillAmount = camponesaLife2.fillAmount;
 					lifePause2.fillAmount = turnipLife2.fillAmount;
+					hudPlayers.SetActive (false);
 				} else {
 					lifePause1.fillAmount = camponesaLife1.fillAmount;
 					lifePause2.fillAmount = turnipLife1.fillAmount;
+					hudPlayers.SetActive (false);
 				}
 				//Pause the other objects
 				//musicControl.SetActive(false);
@@ -117,6 +120,7 @@ public class PauseMenu : MonoBehaviour {
 		pause = false;
 		Time.timeScale = 1;
 		Input.ResetInputAxes ();
+		hudPlayers.SetActive (true);
 		panelPause.SetActive (false);
 		//musicControl.SetActive (true);
 		//		fps.GetComponent <UserInput> ().enabled = true;

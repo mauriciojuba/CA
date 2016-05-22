@@ -64,6 +64,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 				}
 			} else {
 				if (InputManager.XButton () || Input.GetKeyDown (KeyCode.X)) {
+					Debug.Log ("GIRA PORRA!");
 					TurnipRotate ();
 					beginGame = false;
 					change = true;

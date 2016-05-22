@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Start()
         {
 			active = true;
-			//Debug.Log (InputManager.players);
+
             // get the transform of the main camera
             if (Camera.main != null)
             {
