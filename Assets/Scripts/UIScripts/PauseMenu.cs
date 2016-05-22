@@ -130,7 +130,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void ButtonBack(){
-		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+		if (Input.GetKeyDown (KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.L)) {
 			if (panelOptions.activeSelf) {
 				if (musicSelected) {
 					musicSelected = false;
@@ -205,7 +205,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void NavigateQualityButtons(){
-		if (InputManager.LeftMenuButton()) {
+		if (InputManager.LeftMenuButton() || Input.GetKeyDown(KeyCode.D)) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
 				lowButton.SetActive (true);
@@ -223,7 +223,7 @@ public class PauseMenu : MonoBehaviour {
 			leftSelectN.SetActive (true);
 			rightSelectH.SetActive (true);
 			rightSelectN.SetActive (false);
-		} else if (InputManager.RightMenuButton()) {
+		} else if (InputManager.RightMenuButton() || Input.GetKeyDown(KeyCode.A)) {
 			if (highButton.activeSelf) {
 				highButton.SetActive (false);
 				mediumButton.SetActive (true);
