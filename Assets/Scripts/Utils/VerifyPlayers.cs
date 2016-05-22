@@ -22,8 +22,8 @@ public class VerifyPlayers : MonoBehaviour {
 	}
 
 	void Update(){
-		if (turnip.GetComponent<SwitchPlayer> ().enabled && camponesa.GetComponent<SwitchPlayer> ().enabled) {
-			if (camponesa.GetComponent<SwitchPlayer> ().controlling == "Player2" || turnip.GetComponent<SwitchPlayer>().controlling == "Player2") {
+		if (camponesa.GetComponent<SwitchPlayer> ().enabled) {
+			if (camponesa.GetComponent<SwitchPlayer> ().controlling == "Player2") {
 				lifeTurnip1.SetActive (true);
 				lifeCamponesa1.SetActive (false);
 			} else {

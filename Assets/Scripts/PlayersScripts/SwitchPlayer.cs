@@ -52,12 +52,11 @@ public class SwitchPlayer : MonoBehaviour
 				player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
 
 			}
-			if (this.gameObject.tag == "Player1") {
-				if (this.gameObject.GetComponent<Unite> ().skill) {
+			if (player1.GetComponent<Unite> ().skill) {
 					controlling = "Player2";
-					this.gameObject.GetComponent<Unite> ().skill = false;
-				}
+					player1.GetComponent<Unite> ().skill = false;
 			}
+
             if (Input.GetKeyDown (KeyCode.JoystickButton4) || Input.GetKeyDown(KeyCode.E) )
 			{
 				if (Onground ) {

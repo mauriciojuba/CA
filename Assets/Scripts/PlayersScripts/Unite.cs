@@ -54,8 +54,8 @@ public class Unite : MonoBehaviour {
 				this.GetComponent<CapsuleCollider> ().enabled = true;
 				this.GetComponent<Animator> ().enabled = true;
 				this.GetComponent<Animator> ().SetBool ("OnGround", true);
-				this.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
-				this.GetComponent<ThirdPersonUserControlCamponesa> ().m_Jump = true;
+//				this.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
+//				this.GetComponent<ThirdPersonUserControlCamponesa> ().m_Jump = true;
 
 				attach = false;
 				count = 0;

@@ -38,7 +38,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		change = false;
 		shoot = false;
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
-		turnip.GetComponent<SwitchPlayer> ().enabled = false;
+//		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 		turnip.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 
 		montarTurnip.SetActive (false);
@@ -375,7 +375,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 		turnip.GetComponent<FSM_Turnip> ().enabled = false;
 		camponesa.GetComponent<FSM_Camponesa> ().enabled = false;
 		camponesa.GetComponent<SwitchPlayer> ().enabled = false;
-		turnip.GetComponent<SwitchPlayer> ().enabled = false;
+//		turnip.GetComponent<SwitchPlayer> ().enabled = false;
 	}
 
 	public void TurnipActivation(){
@@ -413,7 +413,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	public void SwitchActivation(){
 		camponesa.GetComponent<SwitchPlayer> ().enabled = true;
-		turnip.GetComponent<SwitchPlayer> ().enabled = true;
+//		turnip.GetComponent<SwitchPlayer> ().enabled = true;
 	}
 
 	public IEnumerator WaitAFrame(){
