@@ -209,7 +209,9 @@
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
+     <Compile Include="Assets\ControleCamponesaCutscene.cs" />
      <Compile Include="Assets\Cutscene.cs" />
+     <Compile Include="Assets\DialogHandlerCutsceneFinal.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\CustomizeText.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />

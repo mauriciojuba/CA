@@ -12,8 +12,8 @@ public class DialogHandlerCutscene : MonoBehaviour {
 
 	void Start () {
 		message = "Cena1";
-	
 	}
+
 	void Update () {
 		Debug.Log (message);
      		if (message == "Cena1") {
