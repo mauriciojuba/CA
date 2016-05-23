@@ -303,6 +303,7 @@
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\Editor\Editor.ReorderableList.xml" />
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\LICENSE.txt" />
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\README.txt" />
+    <None Include="Assets\Cinema Suite\Cinema Themes\ReadMe.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

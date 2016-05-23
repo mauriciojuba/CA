@@ -94,30 +94,6 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.EditorTestsRunner">
-      <HintPath>Library\UnityAssemblies\UnityEditor.EditorTestsRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.TreeEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Editor.ReorderableList">
       <HintPath>Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\Editor\Editor.ReorderableList.dll</HintPath>
     </Reference>
@@ -175,6 +151,10 @@
     <Compile Include="Assets\AssetStore\Fungus\UI\Editor\WriterAudioEditor.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\Editor\iTweenEventDataEditor.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\Editor\iTweenPathEditor.cs" />
+    <Compile Include="Assets\Cinema Suite\About\Editor\CinemaSuiteWelcome.cs" />
+    <Compile Include="Assets\Cinema Suite\About\Editor\ProductInfo.cs" />
+    <Compile Include="Assets\Cinema Suite\Cinema Themes\Editor\CinemaThemesProductInfo.cs" />
+    <Compile Include="Assets\Cinema Suite\Cinema Themes\Editor\CinemaThemesWindow.cs" />
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
     <Compile Include="Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\BloomAndFlaresEditor.cs" />
@@ -205,6 +185,7 @@
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\Editor\Editor.ReorderableList.xml" />
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\LICENSE.txt" />
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\README.txt" />
+    <None Include="Assets\Cinema Suite\Cinema Themes\ReadMe.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

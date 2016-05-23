@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: e3e6d0301c2b9fe408af903d0d420c3d
+timeCreated: 1463986875
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: prince_Bowtie
+    100004: Principe_Cabeca
+    100006: Principe_Cabelo1
+    100008: Principe_Calcas
+    100010: Principe_Chapeu
+    100012: Principe_Colete
+    100014: Principe_Maos
+    100016: Principe_Sapatos
+    400000: //RootNode
+    400002: prince_Bowtie
+    400004: Principe_Cabeca
+    400006: Principe_Cabelo1
+    400008: Principe_Calcas
+    400010: Principe_Chapeu
+    400012: Principe_Colete
+    400014: Principe_Maos
+    400016: Principe_Sapatos
+    2300000: //RootNode
+    2300002: prince_Bowtie
+    2300004: Principe_Cabeca
+    2300006: Principe_Cabelo1
+    2300008: Principe_Calcas
+    2300010: Principe_Chapeu
+    2300012: Principe_Colete
+    2300014: Principe_Maos
+    2300016: Principe_Sapatos
+    3300000: //RootNode
+    3300002: prince_Bowtie
+    3300004: Principe_Cabeca
+    3300006: Principe_Cabelo1
+    3300008: Principe_Calcas
+    3300010: Principe_Chapeu
+    3300012: Principe_Colete
+    3300014: Principe_Maos
+    3300016: Principe_Sapatos
+    4300000: Principe_Corpo
+    4300002: Principe_Cabelo1
+    4300004: Principe_Colete
+    4300006: Principe_Maos
+    4300008: Principe_Sapatos
+    4300010: Principe_Cabeca
+    4300012: Principe_Calcas
+    4300014: prince_Bowtie
+    4300016: Principe_Chapeu
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
