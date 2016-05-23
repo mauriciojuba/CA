@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 8afca978f562c544fa418e5eb20aafd3
+timeCreated: 1463993721
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: lpoly_rArm1
+    100004: lpoly_rArm11
+    100006: lpoly_rArm12
+    100008: lpoly_rArm13
+    100010: lpoly_rArm14
+    100012: lpoly_rArm15
+    100014: lpoly_rArm16
+    100016: lpoly_rArm2
+    100018: lpoly_rArm3
+    100020: lpoly_rArm4
+    100022: RockDaemon_Eye
+    100024: RockDaemon_Hat
+    100026: RockDaemon_lLeg
+    100028: RockDaemon_rLeg
+    400000: //RootNode
+    400002: lpoly_rArm1
+    400004: lpoly_rArm11
+    400006: lpoly_rArm12
+    400008: lpoly_rArm13
+    400010: lpoly_rArm14
+    400012: lpoly_rArm15
+    400014: lpoly_rArm16
+    400016: lpoly_rArm2
+    400018: lpoly_rArm3
+    400020: lpoly_rArm4
+    400022: RockDaemon_Eye
+    400024: RockDaemon_Hat
+    400026: RockDaemon_lLeg
+    400028: RockDaemon_rLeg
+    2300000: //RootNode
+    2300002: lpoly_rArm1
+    2300004: lpoly_rArm11
+    2300006: lpoly_rArm12
+    2300008: lpoly_rArm13
+    2300010: lpoly_rArm14
+    2300012: lpoly_rArm15
+    2300014: lpoly_rArm16
+    2300016: lpoly_rArm2
+    2300018: lpoly_rArm3
+    2300020: lpoly_rArm4
+    2300022: RockDaemon_Eye
+    2300024: RockDaemon_Hat
+    2300026: RockDaemon_lLeg
+    2300028: RockDaemon_rLeg
+    3300000: //RootNode
+    3300002: lpoly_rArm1
+    3300004: lpoly_rArm11
+    3300006: lpoly_rArm12
+    3300008: lpoly_rArm13
+    3300010: lpoly_rArm14
+    3300012: lpoly_rArm15
+    3300014: lpoly_rArm16
+    3300016: lpoly_rArm2
+    3300018: lpoly_rArm3
+    3300020: lpoly_rArm4
+    3300022: RockDaemon_Eye
+    3300024: RockDaemon_Hat
+    3300026: RockDaemon_lLeg
+    3300028: RockDaemon_rLeg
+    4300000: RockDaemon_Body
+    4300002: lpoly_rArm1
+    4300004: lpoly_rArm2
+    4300006: lpoly_rArm4
+    4300008: RockDaemon_Hat
+    4300010: RockDaemon_Eye
+    4300012: RockDaemon_lLeg
+    4300014: lpoly_rArm12
+    4300016: lpoly_rArm11
+    4300018: lpoly_rArm3
+    4300020: lpoly_rArm13
+    4300022: RockDaemon_rLeg
+    4300024: lpoly_rArm14
+    4300026: lpoly_rArm15
+    4300028: lpoly_rArm16
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
