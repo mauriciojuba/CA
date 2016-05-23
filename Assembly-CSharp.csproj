@@ -252,6 +252,7 @@
      <Compile Include="Assets\Scripts\Utils\AudioManagerTurnip.cs" />
      <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
+     <Compile Include="Assets\Scripts\Utils\DialogHandlerCutscene.cs" />
      <Compile Include="Assets\Scripts\Utils\GameControl.cs" />
      <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
      <Compile Include="Assets\Scripts\Utils\MudaNome.cs" />
