@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 76b076af3d8b48f46ad863c851aac732
+timeCreated: 1463973333
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: hat
+    100004: head
+    100006: joint1
+    100008: joint2
+    100010: l_elbow
+    100012: l_shoulder
+    100014: l_wrist
+    100016: neck
+    100018: r_elbow
+    100020: r_shoulder
+    100022: r_wrist
+    100024: spine_1
+    100026: spine_2
+    100028: spine_3
+    100030: spine_4
+    100032: turnip_Arms
+    100034: turnip_Body
+    100036: turnip_Bowtie
+    100038: turnip_Hat
+    100040: turnip_Head
+    100042: turnip_lHand
+    100044: turnip_Overcoat
+    100046: turnip_Pole
+    100048: turnip_rHand
+    100050: TurnipGeo
+    100052: TurnipSkeleton
+    400000: //RootNode
+    400002: hat
+    400004: head
+    400006: joint1
+    400008: joint2
+    400010: l_elbow
+    400012: l_shoulder
+    400014: l_wrist
+    400016: neck
+    400018: r_elbow
+    400020: r_shoulder
+    400022: r_wrist
+    400024: spine_1
+    400026: spine_2
+    400028: spine_3
+    400030: spine_4
+    400032: turnip_Arms
+    400034: turnip_Body
+    400036: turnip_Bowtie
+    400038: turnip_Hat
+    400040: turnip_Head
+    400042: turnip_lHand
+    400044: turnip_Overcoat
+    400046: turnip_Pole
+    400048: turnip_rHand
+    400050: TurnipGeo
+    400052: TurnipSkeleton
+    2300000: turnip_Arms
+    2300002: turnip_Body
+    2300004: turnip_Bowtie
+    2300006: turnip_Hat
+    2300008: turnip_Head
+    2300010: turnip_lHand
+    2300012: turnip_Overcoat
+    2300014: turnip_Pole
+    2300016: turnip_rHand
+    3300000: turnip_Arms
+    3300002: turnip_Body
+    3300004: turnip_Bowtie
+    3300006: turnip_Hat
+    3300008: turnip_Head
+    3300010: turnip_lHand
+    3300012: turnip_Overcoat
+    3300014: turnip_Pole
+    3300016: turnip_rHand
+    4300000: turnip_Pole
+    4300002: turnip_Bowtie
+    4300004: turnip_rHand
+    4300006: turnip_lHand
+    4300008: turnip_Hat
+    4300010: turnip_Head
+    4300012: turnip_Overcoat
+    4300014: turnip_Body
+    4300016: turnip_Arms
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
