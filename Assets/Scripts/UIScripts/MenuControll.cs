@@ -198,13 +198,13 @@ public class MenuControll : MonoBehaviour {
 	public void ButtonSinglePlayer(){
 		isOnMainMenu = false;
 		InputManager.players = 1;
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (6);
 	}
 
 	public void ButtonTwoPlayers(){
 		isOnMainMenu = false;
 		InputManager.players = 2;
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(6);
 	}
 
 	public void ButtonVolume(){

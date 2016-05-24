@@ -1,12 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utils\DialogHandlerCutscene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DialogHandlerCutsceneFinal.cs">
     <Files>
-      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="416" Column="4" />
-      <File FileName="Assets\Scripts\Utils\DialogHandlerCutscene.cs" Line="119" Column="25" />
-      <File FileName="Assets\Cutscene.cs" Line="19" Column="34" />
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="36" Column="42" />
+      <File FileName="Assets\Scripts\Utils\DialogHandlerCutscene.cs" Line="124" Column="30" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="114" Column="8" />
+      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="5" Column="1" />
+      <File FileName="Assets\Cutscene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="72" Column="25" />
       <File FileName="Assets\AssetStore\Fungus\Narrative\Scripts\SayDialog.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UIScripts\MenuControll.cs" Line="201" Column="28" />
+      <File FileName="Assets\Scripts\Utils\GameControl.cs" Line="4" Column="35" />
+      <File FileName="Assets\DialogHandlerCutsceneFinal.cs" Line="4" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -39,10 +43,9 @@
                 <Node name="FarmScripts" expanded="True" />
                 <Node name="PlayersScripts" expanded="True" />
                 <Node name="UIScripts" expanded="True" />
-                <Node name="Utils" expanded="True">
-                  <Node name="DialogHandlerCutscene.cs" selected="True" />
-                </Node>
+                <Node name="Utils" expanded="True" />
               </Node>
+              <Node name="DialogHandlerCutsceneFinal.cs" selected="True" />
             </Node>
             <Node name="Assembly-CSharp-firstpass" expanded="True">
               <Node name="Standard Assets" expanded="True">

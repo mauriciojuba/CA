@@ -61,6 +61,6 @@ public class GameControl : MonoBehaviour {
 	}
 
 	public void FimJogo(){
-		SceneManager.LoadScene (5);
+		SceneManager.LoadScene (7);
 	}
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class DialogHandlerCutscene : MonoBehaviour {
 
@@ -117,5 +118,9 @@ public class DialogHandlerCutscene : MonoBehaviour {
 	public void TransformaJustin(){
 		principe.GetComponent<Animator> ().SetBool ("AbrirBracos", true);
 		message = "CenaFinal";
+	}
+
+	public void End(){
+		SceneManager.LoadScene (1);
 	}
 }

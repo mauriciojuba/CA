@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fungus;
+using UnityEngine.SceneManagement;
 
 public class DialogHandlerCutsceneFinal : MonoBehaviour {
 
@@ -47,5 +48,9 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
 	public void Posicao7(){
 		camera.transform.position = posicao7.position;
 		camera.transform.rotation = posicao7.rotation;
+	}
+
+	public void End(){
+		SceneManager.LoadScene (5);
 	}
 }
