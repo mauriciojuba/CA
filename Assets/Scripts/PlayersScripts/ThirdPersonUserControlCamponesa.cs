@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public LayerMask Sombra_ignorePlayer;
         public GameObject Sombra;
 		public bool onAir;
+		public bool crouch = false;
 
         private void Start()
         {
@@ -99,17 +100,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			float h;
 			float v;
-			bool crouch;
+
             // read inputs
-			if (active) {
+//			if (active) {
 				h = InputManager.LeftStickHorizontal ();
 				v = InputManager.LeftStickVertical ();
-				crouch = InputManager.BButtonHold ();
-			} else {
-				h = 0;
-				v = 0;
-				crouch = false;
+			if (InputManager.BButton ()) {
+				if(crouch)
+					crouch = false;
+				else
+					crouch = true;
 			}
+//			} else {
+//				h = 0;
+//				v = 0;
+//				crouch = false;
+//			}
+			Debug.Log (active);
             // calculate move direction to pass to character
             if (m_Cam != null)
             {
