@@ -39,8 +39,8 @@ public class DoorOpen : MonoBehaviour {
 		if (InputManager.YButton() && canOpen2) {
 			porta3.GetComponent<Animation> ().Play ();
 			porta4.GetComponent<Animation> ().Play ();
-			player.GetComponent<DialogHandlerTutorial> ().message = "FIM";
 			player.GetComponent<DialogHandlerTutorial> ().canTalk = true;
+			player.GetComponent<DialogHandlerTutorial> ().message = "FIM";
 			canOpen2 = false;
 			open2 = true;
 			texto2.SetActive (false);

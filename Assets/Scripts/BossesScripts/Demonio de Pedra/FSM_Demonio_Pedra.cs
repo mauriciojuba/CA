@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fungus;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class FSM_Demonio_Pedra : MonoBehaviour
 {
@@ -306,8 +308,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (7);
         //checar porque não está funcionando
 		Flowchart.BroadcastFungusMessage ("FimCave");
+	
 
-		Destroy(gameObject, 4);
     }
     #endregion
     void SubirPedras()
@@ -368,6 +370,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     }
     #endregion
 
-
+	public void FimJogo(){
+		SceneManager.LoadScene (7);
+	}
 
 }
