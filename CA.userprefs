@@ -1,59 +1,37 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DialogHandlerCutsceneFinal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BossesScripts\Demonio de Pedra\FSM_Demonio_Pedra.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utils\DialogHandlerCutscene.cs" Line="124" Column="30" />
-      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="114" Column="8" />
-      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="231" Column="19" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" Line="143" Column="4" />
+      <File FileName="Assets\Scripts\PlayersScripts\PlayersDamangeHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UIScripts\PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utils\DialogHandlerCutscene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="1" Column="1" />
       <File FileName="Assets\Cutscene.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="72" Column="25" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="1" Column="1" />
       <File FileName="Assets\AssetStore\Fungus\Narrative\Scripts\SayDialog.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UIScripts\MenuControll.cs" Line="201" Column="28" />
-      <File FileName="Assets\Scripts\Utils\GameControl.cs" Line="4" Column="35" />
-      <File FileName="Assets\DialogHandlerCutsceneFinal.cs" Line="4" Column="35" />
+      <File FileName="Assets\Scripts\UIScripts\MenuControll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utils\GameControl.cs" Line="3" Column="1" />
+      <File FileName="Assets\DialogHandlerCutsceneFinal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FarmScripts\DoorOpen.cs" Line="43" Column="3" />
+      <File FileName="Assets\Scripts\BossesScripts\Demonio de Pedra\FSM_Demonio_Pedra.cs" Line="311" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CA" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
-              <Node name="AssetStore" expanded="True">
-                <Node name="Armoire Cannonball Utilities" expanded="True">
-                  <Node name="Magic Splitscreen" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
-                <Node name="Fungus" expanded="True">
-                  <Node name="Flowchart" expanded="True">
-                    <Node name="Scripts" expanded="True">
-                      <Node name="Commands" expanded="True" />
-                    </Node>
-                  </Node>
-                  <Node name="Narrative" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
-              </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="BlobmanScripts" expanded="True" />
                 <Node name="BossesScripts" expanded="True">
-                  <Node name="Demonio de Agua" expanded="True" />
-                  <Node name="Demonio de Pedra" expanded="True" />
+                  <Node name="Demonio de Pedra" expanded="True">
+                    <Node name="FSM_Demonio_Pedra.cs" selected="True" />
+                  </Node>
                 </Node>
                 <Node name="FarmScripts" expanded="True" />
                 <Node name="PlayersScripts" expanded="True" />
                 <Node name="UIScripts" expanded="True" />
                 <Node name="Utils" expanded="True" />
-              </Node>
-              <Node name="DialogHandlerCutsceneFinal.cs" selected="True" />
-            </Node>
-            <Node name="Assembly-CSharp-firstpass" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Characters" expanded="True">
-                  <Node name="ThirdPersonCharacter" expanded="True">
-                    <Node name="Scripts" expanded="True" />
-                  </Node>
-                </Node>
               </Node>
             </Node>
           </Node>
