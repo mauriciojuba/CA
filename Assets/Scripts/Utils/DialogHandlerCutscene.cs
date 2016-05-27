@@ -21,7 +21,7 @@ public class DialogHandlerCutscene : MonoBehaviour {
 
         if(count > 3)
         {
-            if (Input.anyKeyDown)
+            if (InputManager.StartButton() || Input.GetKeyDown(KeyCode.Escape))
                 SceneManager.LoadScene(2);
         }
 
@@ -130,6 +130,6 @@ public class DialogHandlerCutscene : MonoBehaviour {
 	}
 
 	public void End(){
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (2);
 	}
 }

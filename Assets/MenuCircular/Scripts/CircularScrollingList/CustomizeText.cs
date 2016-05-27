@@ -12,7 +12,7 @@ public class CustomizeText : MonoBehaviour {
 	public Text[] letras;
 	public int id;
 
-    public GameObject CameraPlayers, Menu, tutorialHandler;
+    public GameObject CameraPlayers, Menu, tutorialHandler1, tutorialHandler2;
 
 
 	public void Start() {
@@ -91,7 +91,8 @@ public class CustomizeText : MonoBehaviour {
     void OnDestroy()
     {
         CameraPlayers.SetActive(true);
-        tutorialHandler.GetComponent<DialogHandlerTutorial>().beginGame = true;
+        tutorialHandler1.GetComponent<DialogHandlerTutorial>().beginGame = true;
+        tutorialHandler2.GetComponent<DialogHandlerTutorial>().beginGame = true;
     }
 }
 

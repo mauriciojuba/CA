@@ -151,7 +151,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void ButtonBack(){
-		if (Input.GetKeyDown (KeyCode.JoystickButton1)) {
+		if (InputManager.BButton()) {
 			if (mainMenu.activeSelf) {
 				if (painelQuit.activeSelf) {
 					painelQuit.SetActive (false);

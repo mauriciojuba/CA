@@ -23,7 +23,7 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
 
         if (count > 3)
         {
-            if (Input.anyKeyDown)
+            if (InputManager.StartButton() || Input.GetKeyDown(KeyCode.Escape))
                 SceneManager.LoadScene(5);
         }
 
