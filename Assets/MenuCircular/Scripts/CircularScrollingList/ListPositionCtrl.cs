@@ -25,7 +25,7 @@ public class ListPositionCtrl : MonoBehaviour
 	public bool controlByButton = false;
 	public bool alignToCenter = false;
 	public bool controlByAxis = false;
-
+    public Camera cameradoMenu;
 	public ListBox[] listBoxes;
 	public float centerPosY;
 
@@ -102,11 +102,11 @@ public class ListPositionCtrl : MonoBehaviour
 	{
 		if ( Input.GetMouseButtonDown(0) )
 		{
-			lastInputWorldPos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+			lastInputWorldPos = cameradoMenu.ScreenToWorldPoint( Input.mousePosition );
 		}
 		else if ( Input.GetMouseButton(0) )
 		{
-			currentInputWorldPos = Camera.main.ScreenToWorldPoint( Input.mousePosition );
+			currentInputWorldPos = cameradoMenu.ScreenToWorldPoint( Input.mousePosition );
 			deltaInputWorldPos = new Vector3( 0.0f, currentInputWorldPos.y - lastInputWorldPos.y, 0.0f );
 			foreach ( ListBox listbox in listBoxes )
 				listbox.updatePosition( deltaInputWorldPos );
@@ -123,11 +123,11 @@ public class ListPositionCtrl : MonoBehaviour
 	{
 		if ( Input.GetTouch(0).phase == TouchPhase.Began )
 		{
-			lastInputWorldPos = Camera.main.ScreenToWorldPoint( Input.GetTouch(0).position );
+			lastInputWorldPos = cameradoMenu.ScreenToWorldPoint( Input.GetTouch(0).position );
 		}
 		else if ( Input.GetTouch(0).phase == TouchPhase.Moved )
 		{
-			currentInputWorldPos = Camera.main.ScreenToWorldPoint( Input.GetTouch(0).position );
+			currentInputWorldPos = cameradoMenu.ScreenToWorldPoint( Input.GetTouch(0).position );
 			deltaInputWorldPos = new Vector3( 0.0f, currentInputWorldPos.y - lastInputWorldPos.y, 0.0f );
 			foreach ( ListBox listbox in listBoxes )
 				listbox.updatePosition( deltaInputWorldPos );
