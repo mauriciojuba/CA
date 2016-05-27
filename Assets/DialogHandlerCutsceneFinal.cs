@@ -11,6 +11,7 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
 	public GameObject camponesa, principe, princesa;
 	private float forward = 0.8f;
 	private Rigidbody rb;
+    public float count;
 
 	void Start () {
 		message = "CenaInicial";
@@ -18,7 +19,16 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
 	}
 
 	void Update () {
-		Debug.Log (message);
+        count += Time.deltaTime;
+
+        if (count > 3)
+        {
+            if (Input.anyKeyDown)
+                SceneManager.LoadScene(5);
+        }
+
+
+        Debug.Log (message);
 		if (message == "CenaInicial") {
 			Flowchart.BroadcastFungusMessage (message);
 			message = "";
