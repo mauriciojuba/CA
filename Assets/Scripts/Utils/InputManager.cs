@@ -30,7 +30,6 @@ public static class InputManager
 		r += Input.GetAxis ("LEFT_JoystickHorizontal");
 		r += Input.GetAxis ("Horizontal1");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
-        KeyCode.
 	}
 
 	public static float LeftStickVertical(){
