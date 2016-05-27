@@ -28,14 +28,15 @@ public static class InputManager
 	public static float LeftStickHorizontal(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickHorizontal");
-		r += Input.GetAxis ("Horizontal");
+		r += Input.GetAxis ("Horizontal1");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
+        KeyCode.
 	}
 
 	public static float LeftStickVertical(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickVertical");
-		r += Input.GetAxis ("Vertical");
+		r += Input.GetAxis ("Vertical1");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
 	}
 
@@ -80,14 +81,14 @@ public static class InputManager
 	public static float LeftStickHorizontal2(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickHorizontal2");
-//		r += Input.GetAxis ("Horizontal");
+		r += Input.GetAxis ("Horizontal2");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
 	}
 
 	public static float LeftStickVertical2(){
 		float r = 0.0f;
 		r += Input.GetAxis ("LEFT_JoystickVertical2");
-//		r += Input.GetAxis ("Vertical");
+		r += Input.GetAxis ("Vertical2");
 		return Mathf.Clamp (r, -1.0f, 1.0f);
 	}
 
