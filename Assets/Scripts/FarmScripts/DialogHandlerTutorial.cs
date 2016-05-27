@@ -9,7 +9,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 	public string message;
     public bool canTalk;
 	public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip;
-	public GameObject montarTurnip, pegaNaboVida, agachar;
+	public GameObject montarTurnip, pegaNaboVida, agachar, hudPlayers;
 	public static bool cutscene;
 	public bool beginGame, change, aim, shoot, agarraTurnip, final;
 	public int count;
@@ -21,7 +21,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
 	void Start () {
 		canUp = false;
-
+        hudPlayers.SetActive(false);
 		message = "começou";
 		canTalk = false;
 		girar.SetActive (false);
