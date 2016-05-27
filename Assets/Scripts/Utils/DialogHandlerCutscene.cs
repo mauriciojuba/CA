@@ -10,12 +10,21 @@ public class DialogHandlerCutscene : MonoBehaviour {
 	public Camera camera;
 	public Transform posicao2, posicao3, posicao4, posicao5, posicao6;
 	public GameObject princesa, principe, suliman;
+    public float count;
 
 	void Start () {
 		message = "Cena1";
 	}
 
 	void Update () {
+        count += Time.deltaTime;
+
+        if(count > 3)
+        {
+            if (Input.anyKeyDown)
+                SceneManager.LoadScene(1);
+        }
+
 		Debug.Log (message);
      		if (message == "Cena1") {
 				Flowchart.BroadcastFungusMessage (message);
