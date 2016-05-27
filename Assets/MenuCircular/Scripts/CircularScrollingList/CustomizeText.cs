@@ -12,6 +12,8 @@ public class CustomizeText : MonoBehaviour {
 	public Text[] letras;
 	public int id;
 
+    public GameObject CameraPlayers, Menu, tutorialHandler;
+
 
 	public void Start() {
 		myText = GetComponent<Text> ();
@@ -53,7 +55,9 @@ public class CustomizeText : MonoBehaviour {
 			&& letras [id].text == "Enter") {
 
 			GameControl.control.CamponesaNome = myText.text;
-			SceneManager.LoadScene (2);
+            //SceneManager.LoadScene (2);
+            Destroy(Menu);
+            
 
 
 		}
@@ -83,5 +87,11 @@ public class CustomizeText : MonoBehaviour {
 	}
 
 	}
+
+    void OnDestroy()
+    {
+        CameraPlayers.SetActive(true);
+        tutorialHandler.GetComponent<DialogHandlerTutorial>().beginGame = true;
+    }
 }
 

@@ -10,12 +10,16 @@ public class Cutscene : MonoBehaviour {
 	public float count;
 	public bool skip;
 
+    void Awake()
+    {
+        cameraPlayers.SetActive(false);
+    }
 	// Use this for initialization
 	void Start () {
 		count = 0;
 		camera.transform.position = posicao.position;
 		camera.transform.rotation = posicao.rotation;
-		cameraPlayers.SetActive(false);
+		
         menuCircular.SetActive(false);
 		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", true);
 		skip = false;
@@ -54,7 +58,7 @@ public class Cutscene : MonoBehaviour {
 			camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
 			camera.gameObject.SetActive (false);
             //cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
-            menuCircular.SetActive(true);
+            
 			Destroy (this.gameObject);
 		}
 		if(count > 5){
@@ -62,4 +66,9 @@ public class Cutscene : MonoBehaviour {
 			skip = true;
 		}
 	}
+
+    void OnDestroy()
+    {
+        menuCircular.SetActive(true);
+    }
 }
