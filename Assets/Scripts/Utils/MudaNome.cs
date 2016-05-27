@@ -8,7 +8,7 @@ public class MudaNome : MonoBehaviour {
 	public GameObject fala;
 
 	// Use this for initialization
-	void Start () {
+	public void ChangeName () {
 
 		fala = GameObject.FindWithTag ("Flow");
 		gameObject.GetComponent<Text>().text = GameControl.control.CamponesaNome;
