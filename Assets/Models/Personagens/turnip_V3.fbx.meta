@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: c2ba7a0804992dd44ba1ce88a2f72d54
+timeCreated: 1464471584
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CA_OPE_TurnipV6:body_control
+    100002: CA_OPE_TurnipV6:hat
+    100004: CA_OPE_TurnipV6:hat_control
+    100006: CA_OPE_TurnipV6:head
+    100008: CA_OPE_TurnipV6:head_control
+    100010: CA_OPE_TurnipV6:l_elbow
+    100012: CA_OPE_TurnipV6:l_elbow_control
+    100014: CA_OPE_TurnipV6:l_hand
+    100016: CA_OPE_TurnipV6:l_shouldel_2
+    100018: CA_OPE_TurnipV6:l_shoulder
+    100020: CA_OPE_TurnipV6:l_shoulder2_control
+    100022: CA_OPE_TurnipV6:l_shoulder_control
+    100024: CA_OPE_TurnipV6:l_wrist
+    100026: CA_OPE_TurnipV6:l_wrist_control
+    100028: CA_OPE_TurnipV6:leg_1
+    100030: CA_OPE_TurnipV6:leg_1_control
+    100032: CA_OPE_TurnipV6:leg_2
+    100034: CA_OPE_TurnipV6:leg_2_control
+    100036: CA_OPE_TurnipV6:leg_3
+    100038: CA_OPE_TurnipV6:neck_base
+    100040: CA_OPE_TurnipV6:r_elbow
+    100042: CA_OPE_TurnipV6:r_elbow_control
+    100044: CA_OPE_TurnipV6:r_hand
+    100046: CA_OPE_TurnipV6:r_shoulder
+    100048: CA_OPE_TurnipV6:r_shoulder2_control
+    100050: CA_OPE_TurnipV6:r_shoulder_2
+    100052: CA_OPE_TurnipV6:r_shoulder_control
+    100054: CA_OPE_TurnipV6:r_wrist
+    100056: CA_OPE_TurnipV6:r_wrist_control
+    100058: CA_OPE_TurnipV6:root_control
+    100060: CA_OPE_TurnipV6:root_Joint
+    100062: CA_OPE_TurnipV6:shoulders_control
+    100064: CA_OPE_TurnipV6:spine1_control
+    100066: CA_OPE_TurnipV6:spine2_control
+    100068: CA_OPE_TurnipV6:spine_1
+    100070: CA_OPE_TurnipV6:spine_2
+    100072: CA_OPE_TurnipV6:spine_3
+    100074: CA_OPE_TurnipV6:spine_3_control
+    100076: CA_OPE_TurnipV6:turnip_Body
+    100078: CA_OPE_TurnipV6:turnip_Bowtie
+    100080: CA_OPE_TurnipV6:turnip_CONTROLS
+    100082: CA_OPE_TurnipV6:turnip_GEO
+    100084: CA_OPE_TurnipV6:turnip_Hat
+    100086: CA_OPE_TurnipV6:turnip_lHand
+    100088: CA_OPE_TurnipV6:turnip_Overcoat
+    100090: CA_OPE_TurnipV6:turnip_PoleAndHead
+    100092: CA_OPE_TurnipV6:turnip_rHand
+    100094: CA_OPE_TurnipV6:turnip_SKELETON
+    100096: Turnip
+    100098: //RootNode
+    400000: CA_OPE_TurnipV6:body_control
+    400002: CA_OPE_TurnipV6:hat
+    400004: CA_OPE_TurnipV6:hat_control
+    400006: CA_OPE_TurnipV6:head
+    400008: CA_OPE_TurnipV6:head_control
+    400010: CA_OPE_TurnipV6:l_elbow
+    400012: CA_OPE_TurnipV6:l_elbow_control
+    400014: CA_OPE_TurnipV6:l_hand
+    400016: CA_OPE_TurnipV6:l_shouldel_2
+    400018: CA_OPE_TurnipV6:l_shoulder
+    400020: CA_OPE_TurnipV6:l_shoulder2_control
+    400022: CA_OPE_TurnipV6:l_shoulder_control
+    400024: CA_OPE_TurnipV6:l_wrist
+    400026: CA_OPE_TurnipV6:l_wrist_control
+    400028: CA_OPE_TurnipV6:leg_1
+    400030: CA_OPE_TurnipV6:leg_1_control
+    400032: CA_OPE_TurnipV6:leg_2
+    400034: CA_OPE_TurnipV6:leg_2_control
+    400036: CA_OPE_TurnipV6:leg_3
+    400038: CA_OPE_TurnipV6:neck_base
+    400040: CA_OPE_TurnipV6:r_elbow
+    400042: CA_OPE_TurnipV6:r_elbow_control
+    400044: CA_OPE_TurnipV6:r_hand
+    400046: CA_OPE_TurnipV6:r_shoulder
+    400048: CA_OPE_TurnipV6:r_shoulder2_control
+    400050: CA_OPE_TurnipV6:r_shoulder_2
+    400052: CA_OPE_TurnipV6:r_shoulder_control
+    400054: CA_OPE_TurnipV6:r_wrist
+    400056: CA_OPE_TurnipV6:r_wrist_control
+    400058: CA_OPE_TurnipV6:root_control
+    400060: CA_OPE_TurnipV6:root_Joint
+    400062: CA_OPE_TurnipV6:shoulders_control
+    400064: CA_OPE_TurnipV6:spine1_control
+    400066: CA_OPE_TurnipV6:spine2_control
+    400068: CA_OPE_TurnipV6:spine_1
+    400070: CA_OPE_TurnipV6:spine_2
+    400072: CA_OPE_TurnipV6:spine_3
+    400074: CA_OPE_TurnipV6:spine_3_control
+    400076: CA_OPE_TurnipV6:turnip_Body
+    400078: CA_OPE_TurnipV6:turnip_Bowtie
+    400080: CA_OPE_TurnipV6:turnip_CONTROLS
+    400082: CA_OPE_TurnipV6:turnip_GEO
+    400084: CA_OPE_TurnipV6:turnip_Hat
+    400086: CA_OPE_TurnipV6:turnip_lHand
+    400088: CA_OPE_TurnipV6:turnip_Overcoat
+    400090: CA_OPE_TurnipV6:turnip_PoleAndHead
+    400092: CA_OPE_TurnipV6:turnip_rHand
+    400094: CA_OPE_TurnipV6:turnip_SKELETON
+    400096: Turnip
+    400098: //RootNode
+    4300000: CA_OPE_TurnipV6:turnip_Bowtie
+    4300002: CA_OPE_TurnipV6:turnip_Hat
+    4300004: CA_OPE_TurnipV6:turnip_Overcoat
+    4300006: CA_OPE_TurnipV6:turnip_PoleAndHead
+    4300008: CA_OPE_TurnipV6:turnip_lHand
+    4300010: CA_OPE_TurnipV6:turnip_rHand
+    7400000: Take 001
+    7400002: Take 001 //// Turniplocator
+    7400004: Take 001 //// CA_OPE_TurnipV6:root_control
+    7400006: Take 001 //// CA_OPE_TurnipV6:body_control
+    7400008: Take 001 //// CA_OPE_TurnipV6:spine1_control
+    7400010: Take 001 //// CA_OPE_TurnipV6:spine2_control
+    7400012: Take 001 //// CA_OPE_TurnipV6:spine_3_control
+    7400014: Take 001 //// CA_OPE_TurnipV6:shoulders_control
+    7400016: Take 001 //// CA_OPE_TurnipV6:r_shoulder_control
+    7400018: Take 001 //// CA_OPE_TurnipV6:r_shoulder2_control
+    7400020: Take 001 //// CA_OPE_TurnipV6:r_elbow_control
+    7400022: Take 001 //// CA_OPE_TurnipV6:r_wrist_control
+    7400024: Take 001 //// CA_OPE_TurnipV6:l_shoulder_control
+    7400026: Take 001 //// CA_OPE_TurnipV6:l_shoulder2_control
+    7400028: Take 001 //// CA_OPE_TurnipV6:l_elbow_control
+    7400030: Take 001 //// CA_OPE_TurnipV6:l_wrist_control
+    7400032: Take 001 //// CA_OPE_TurnipV6:head_control
+    7400034: Take 001 //// CA_OPE_TurnipV6:hat_control
+    7400036: Take 001 //// CA_OPE_TurnipV6:leg_2_control
+    7400038: Take 001 //// CA_OPE_TurnipV6:leg_1_control
+    9500000: //RootNode
+    11100000: //RootNode
+    11100002: CA_OPE_TurnipV6:body_control
+    11100004: CA_OPE_TurnipV6:hat
+    11100006: CA_OPE_TurnipV6:hat_control
+    11100008: CA_OPE_TurnipV6:head
+    11100010: CA_OPE_TurnipV6:head_control
+    11100012: CA_OPE_TurnipV6:l_elbow
+    11100014: CA_OPE_TurnipV6:l_elbow_control
+    11100016: CA_OPE_TurnipV6:l_hand
+    11100018: CA_OPE_TurnipV6:l_shouldel_2
+    11100020: CA_OPE_TurnipV6:l_shoulder
+    11100022: CA_OPE_TurnipV6:l_shoulder2_control
+    11100024: CA_OPE_TurnipV6:l_shoulder_control
+    11100026: CA_OPE_TurnipV6:l_wrist
+    11100028: CA_OPE_TurnipV6:l_wrist_control
+    11100030: CA_OPE_TurnipV6:leg_1
+    11100032: CA_OPE_TurnipV6:leg_1_control
+    11100034: CA_OPE_TurnipV6:leg_2
+    11100036: CA_OPE_TurnipV6:leg_2_control
+    11100038: CA_OPE_TurnipV6:leg_3
+    11100040: CA_OPE_TurnipV6:neck_base
+    11100042: CA_OPE_TurnipV6:r_elbow
+    11100044: CA_OPE_TurnipV6:r_elbow_control
+    11100046: CA_OPE_TurnipV6:r_hand
+    11100048: CA_OPE_TurnipV6:r_shoulder
+    11100050: CA_OPE_TurnipV6:r_shoulder2_control
+    11100052: CA_OPE_TurnipV6:r_shoulder_2
+    11100054: CA_OPE_TurnipV6:r_shoulder_control
+    11100056: CA_OPE_TurnipV6:r_wrist
+    11100058: CA_OPE_TurnipV6:r_wrist_control
+    11100060: CA_OPE_TurnipV6:root_control
+    11100062: CA_OPE_TurnipV6:root_Joint
+    11100064: CA_OPE_TurnipV6:shoulders_control
+    11100066: CA_OPE_TurnipV6:spine1_control
+    11100068: CA_OPE_TurnipV6:spine2_control
+    11100070: CA_OPE_TurnipV6:spine_1
+    11100072: CA_OPE_TurnipV6:spine_2
+    11100074: CA_OPE_TurnipV6:spine_3
+    11100076: CA_OPE_TurnipV6:spine_3_control
+    11100078: CA_OPE_TurnipV6:turnip_Body
+    11100080: CA_OPE_TurnipV6:turnip_Bowtie
+    11100082: CA_OPE_TurnipV6:turnip_CONTROLS
+    11100084: CA_OPE_TurnipV6:turnip_GEO
+    11100086: CA_OPE_TurnipV6:turnip_Hat
+    11100088: CA_OPE_TurnipV6:turnip_lHand
+    11100090: CA_OPE_TurnipV6:turnip_Overcoat
+    11100092: CA_OPE_TurnipV6:turnip_PoleAndHead
+    11100094: CA_OPE_TurnipV6:turnip_rHand
+    11100096: CA_OPE_TurnipV6:turnip_SKELETON
+    11100098: Turnip
+    13700000: CA_OPE_TurnipV6:turnip_Bowtie
+    13700002: CA_OPE_TurnipV6:turnip_Hat
+    13700004: CA_OPE_TurnipV6:turnip_lHand
+    13700006: CA_OPE_TurnipV6:turnip_Overcoat
+    13700008: CA_OPE_TurnipV6:turnip_PoleAndHead
+    13700010: CA_OPE_TurnipV6:turnip_rHand
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - Turnip
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

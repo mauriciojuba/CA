@@ -1,0 +1,1228 @@
+fileFormatVersion: 2
+guid: ebe07232faf5b6548a9063b1b36eee04
+timeCreated: 1464460681
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CA_OPE_TurnipV6:body_control
+    100002: CA_OPE_TurnipV6:hat
+    100004: CA_OPE_TurnipV6:hat_control
+    100006: CA_OPE_TurnipV6:head
+    100008: CA_OPE_TurnipV6:head_control
+    100010: CA_OPE_TurnipV6:l_elbow
+    100012: CA_OPE_TurnipV6:l_elbow_control
+    100014: CA_OPE_TurnipV6:l_hand
+    100016: CA_OPE_TurnipV6:l_shouldel_2
+    100018: CA_OPE_TurnipV6:l_shoulder
+    100020: CA_OPE_TurnipV6:l_shoulder2_control
+    100022: CA_OPE_TurnipV6:l_shoulder_control
+    100024: CA_OPE_TurnipV6:l_wrist
+    100026: CA_OPE_TurnipV6:l_wrist_control
+    100028: CA_OPE_TurnipV6:leg_1
+    100030: CA_OPE_TurnipV6:leg_1_control
+    100032: CA_OPE_TurnipV6:leg_2
+    100034: CA_OPE_TurnipV6:leg_2_control
+    100036: CA_OPE_TurnipV6:leg_3
+    100038: CA_OPE_TurnipV6:neck_base
+    100040: CA_OPE_TurnipV6:r_elbow
+    100042: CA_OPE_TurnipV6:r_elbow_control
+    100044: CA_OPE_TurnipV6:r_hand
+    100046: CA_OPE_TurnipV6:r_shoulder
+    100048: CA_OPE_TurnipV6:r_shoulder2_control
+    100050: CA_OPE_TurnipV6:r_shoulder_2
+    100052: CA_OPE_TurnipV6:r_shoulder_control
+    100054: CA_OPE_TurnipV6:r_wrist
+    100056: CA_OPE_TurnipV6:r_wrist_control
+    100058: CA_OPE_TurnipV6:root_control
+    100060: CA_OPE_TurnipV6:root_Joint
+    100062: CA_OPE_TurnipV6:shoulders_control
+    100064: CA_OPE_TurnipV6:spine1_control
+    100066: CA_OPE_TurnipV6:spine2_control
+    100068: CA_OPE_TurnipV6:spine_1
+    100070: CA_OPE_TurnipV6:spine_2
+    100072: CA_OPE_TurnipV6:spine_3
+    100074: CA_OPE_TurnipV6:spine_3_control
+    100076: CA_OPE_TurnipV6:turnip_Body
+    100078: CA_OPE_TurnipV6:turnip_Bowtie
+    100080: CA_OPE_TurnipV6:turnip_CONTROLS
+    100082: CA_OPE_TurnipV6:turnip_GEO
+    100084: CA_OPE_TurnipV6:turnip_Hat
+    100086: CA_OPE_TurnipV6:turnip_lHand
+    100088: CA_OPE_TurnipV6:turnip_Overcoat
+    100090: CA_OPE_TurnipV6:turnip_PoleAndHead
+    100092: CA_OPE_TurnipV6:turnip_rHand
+    100094: CA_OPE_TurnipV6:turnip_SKELETON
+    100096: Turnip
+    100098: //RootNode
+    400000: CA_OPE_TurnipV6:body_control
+    400002: CA_OPE_TurnipV6:hat
+    400004: CA_OPE_TurnipV6:hat_control
+    400006: CA_OPE_TurnipV6:head
+    400008: CA_OPE_TurnipV6:head_control
+    400010: CA_OPE_TurnipV6:l_elbow
+    400012: CA_OPE_TurnipV6:l_elbow_control
+    400014: CA_OPE_TurnipV6:l_hand
+    400016: CA_OPE_TurnipV6:l_shouldel_2
+    400018: CA_OPE_TurnipV6:l_shoulder
+    400020: CA_OPE_TurnipV6:l_shoulder2_control
+    400022: CA_OPE_TurnipV6:l_shoulder_control
+    400024: CA_OPE_TurnipV6:l_wrist
+    400026: CA_OPE_TurnipV6:l_wrist_control
+    400028: CA_OPE_TurnipV6:leg_1
+    400030: CA_OPE_TurnipV6:leg_1_control
+    400032: CA_OPE_TurnipV6:leg_2
+    400034: CA_OPE_TurnipV6:leg_2_control
+    400036: CA_OPE_TurnipV6:leg_3
+    400038: CA_OPE_TurnipV6:neck_base
+    400040: CA_OPE_TurnipV6:r_elbow
+    400042: CA_OPE_TurnipV6:r_elbow_control
+    400044: CA_OPE_TurnipV6:r_hand
+    400046: CA_OPE_TurnipV6:r_shoulder
+    400048: CA_OPE_TurnipV6:r_shoulder2_control
+    400050: CA_OPE_TurnipV6:r_shoulder_2
+    400052: CA_OPE_TurnipV6:r_shoulder_control
+    400054: CA_OPE_TurnipV6:r_wrist
+    400056: CA_OPE_TurnipV6:r_wrist_control
+    400058: CA_OPE_TurnipV6:root_control
+    400060: CA_OPE_TurnipV6:root_Joint
+    400062: CA_OPE_TurnipV6:shoulders_control
+    400064: CA_OPE_TurnipV6:spine1_control
+    400066: CA_OPE_TurnipV6:spine2_control
+    400068: CA_OPE_TurnipV6:spine_1
+    400070: CA_OPE_TurnipV6:spine_2
+    400072: CA_OPE_TurnipV6:spine_3
+    400074: CA_OPE_TurnipV6:spine_3_control
+    400076: CA_OPE_TurnipV6:turnip_Body
+    400078: CA_OPE_TurnipV6:turnip_Bowtie
+    400080: CA_OPE_TurnipV6:turnip_CONTROLS
+    400082: CA_OPE_TurnipV6:turnip_GEO
+    400084: CA_OPE_TurnipV6:turnip_Hat
+    400086: CA_OPE_TurnipV6:turnip_lHand
+    400088: CA_OPE_TurnipV6:turnip_Overcoat
+    400090: CA_OPE_TurnipV6:turnip_PoleAndHead
+    400092: CA_OPE_TurnipV6:turnip_rHand
+    400094: CA_OPE_TurnipV6:turnip_SKELETON
+    400096: Turnip
+    400098: //RootNode
+    2300000: CA_OPE_TurnipV6:turnip_Bowtie
+    2300002: CA_OPE_TurnipV6:turnip_Hat
+    2300004: CA_OPE_TurnipV6:turnip_lHand
+    2300006: CA_OPE_TurnipV6:turnip_Overcoat
+    2300008: CA_OPE_TurnipV6:turnip_PoleAndHead
+    2300010: CA_OPE_TurnipV6:turnip_rHand
+    3300000: CA_OPE_TurnipV6:turnip_Bowtie
+    3300002: CA_OPE_TurnipV6:turnip_Hat
+    3300004: CA_OPE_TurnipV6:turnip_lHand
+    3300006: CA_OPE_TurnipV6:turnip_Overcoat
+    3300008: CA_OPE_TurnipV6:turnip_PoleAndHead
+    3300010: CA_OPE_TurnipV6:turnip_rHand
+    4300000: CA_OPE_TurnipV6:turnip_Bowtie
+    4300002: CA_OPE_TurnipV6:turnip_Hat
+    4300004: CA_OPE_TurnipV6:turnip_Overcoat
+    4300006: CA_OPE_TurnipV6:turnip_PoleAndHead
+    4300008: CA_OPE_TurnipV6:turnip_lHand
+    4300010: CA_OPE_TurnipV6:turnip_rHand
+    7400000: Take 001
+    7400002: Turnip_Idle
+    7400004: Turnip_Run
+    7400006: Turnip_Atk
+    7400008: Turnip_Jump
+    7400010: Turnip_Take_Damage
+    7400012: Turnip_Dye
+    7400014: Turnip_Recover
+    9500000: //RootNode
+    13700000: CA_OPE_TurnipV6:turnip_Bowtie
+    13700002: CA_OPE_TurnipV6:turnip_Hat
+    13700004: CA_OPE_TurnipV6:turnip_lHand
+    13700006: CA_OPE_TurnipV6:turnip_Overcoat
+    13700008: CA_OPE_TurnipV6:turnip_PoleAndHead
+    13700010: CA_OPE_TurnipV6:turnip_rHand
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 196
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Turnip_Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Run
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Atk
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Jump
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 95
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Take_Damage
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Dye
+      takeName: Take 001
+      firstFrame: 155
+      lastFrame: 170
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    - serializedVersion: 16
+      name: Turnip_Recover
+      takeName: Take 001
+      firstFrame: 175
+      lastFrame: 195
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Turnip
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:head_control/CA_OPE_TurnipV6:hat_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:l_shoulder_control/CA_OPE_TurnipV6:l_shoulder2_control/CA_OPE_TurnipV6:l_elbow_control/CA_OPE_TurnipV6:l_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:body_control/CA_OPE_TurnipV6:spine1_control/CA_OPE_TurnipV6:spine2_control/CA_OPE_TurnipV6:spine_3_control/CA_OPE_TurnipV6:shoulders_control/CA_OPE_TurnipV6:r_shoulder_control/CA_OPE_TurnipV6:r_shoulder2_control/CA_OPE_TurnipV6:r_elbow_control/CA_OPE_TurnipV6:r_wrist_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_1_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_CONTROLS/CA_OPE_TurnipV6:root_control/CA_OPE_TurnipV6:leg_2_control
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Body
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Bowtie
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_Overcoat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_lHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_GEO/CA_OPE_TurnipV6:turnip_PoleAndHead/CA_OPE_TurnipV6:turnip_rHand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:leg_1/CA_OPE_TurnipV6:leg_2/CA_OPE_TurnipV6:leg_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:l_shoulder/CA_OPE_TurnipV6:l_shouldel_2/CA_OPE_TurnipV6:l_elbow/CA_OPE_TurnipV6:l_wrist/CA_OPE_TurnipV6:l_hand
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:neck_base/CA_OPE_TurnipV6:head/CA_OPE_TurnipV6:hat
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist
+        weight: 1
+      - path: Turnip/CA_OPE_TurnipV6:turnip_SKELETON/CA_OPE_TurnipV6:root_Joint/CA_OPE_TurnipV6:spine_1/CA_OPE_TurnipV6:spine_2/CA_OPE_TurnipV6:spine_3/CA_OPE_TurnipV6:r_shoulder/CA_OPE_TurnipV6:r_shoulder_2/CA_OPE_TurnipV6:r_elbow/CA_OPE_TurnipV6:r_wrist/CA_OPE_TurnipV6:r_hand
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.96
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: CA_OPE_TurnipV6:root_control
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
