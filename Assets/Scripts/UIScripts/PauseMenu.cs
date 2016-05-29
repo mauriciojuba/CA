@@ -286,5 +286,7 @@ public class PauseMenu : MonoBehaviour {
 		evento.SetSelectedGameObject (qualityButton);
 	}
 
+    
+
 
 }
