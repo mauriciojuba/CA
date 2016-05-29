@@ -10,9 +10,12 @@ public class FootstepAudio : MonoBehaviour {
 	public AudioClip grassSound;
 	public AudioSource audio;
 	private string colliderType;
-	
-	
-	void Start () {
+    public GameObject particle;
+    public Transform collisionPlace1;
+    public Transform collisionPlace2;
+
+
+    void Start () {
 		audio = GameObject.Find ("Sound Control").GetComponent<AudioSource>();
 	}
 	
@@ -29,8 +32,9 @@ public class FootstepAudio : MonoBehaviour {
 		if(col.gameObject.GetComponent<AudioColliderType>()){
 			
 			colliderType = col.gameObject.GetComponent<AudioColliderType>().GetTerrainType();
-		}
-	}
+           
+        }
+    }
 	
 	
 	void OnCollisionEnter (Collision col){
@@ -38,6 +42,7 @@ public class FootstepAudio : MonoBehaviour {
 		if(col.gameObject.GetComponent<AudioColliderType>()){
 			
 			colliderType = col.gameObject.GetComponent<AudioColliderType>().GetTerrainType();
+            
 		}
 	}
 	
@@ -50,13 +55,17 @@ public class FootstepAudio : MonoBehaviour {
 			break;
 		case "Earth":
 			audio.PlayOneShot(earthSound);
+            GameObject place = GameObject.Instantiate(particle, collisionPlace1.position, collisionPlace1.rotation) as GameObject;
+            Destroy(place, 3);
 			break;
 		case "Wood":
 			audio.PlayOneShot(woodSound);
 			break;
 		case "Grass":
 			audio.PlayOneShot(grassSound);
-			break;	
+            GameObject place1 = GameObject.Instantiate(particle, collisionPlace2.position, collisionPlace2.rotation) as GameObject;
+            Destroy(place1, 3);
+                break;	
 		}
 		
 	}

@@ -209,9 +209,6 @@
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
-     <Compile Include="Assets\ControleCamponesaCutscene.cs" />
-     <Compile Include="Assets\Cutscene.cs" />
-     <Compile Include="Assets\DialogHandlerCutsceneFinal.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\CustomizeText.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
@@ -223,6 +220,7 @@
      <Compile Include="Assets\Scripts\BossesScripts\Demonio de Pedra\AtaqueLaser.cs" />
      <Compile Include="Assets\Scripts\BossesScripts\Demonio de Pedra\AtaqueSubirPedras.cs" />
      <Compile Include="Assets\Scripts\BossesScripts\Demonio de Pedra\FSM_Demonio_Pedra.cs" />
+     <Compile Include="Assets\Scripts\BossesScripts\VidaBoss.cs" />
      <Compile Include="Assets\Scripts\FarmScripts\DestroyNabo.cs" />
      <Compile Include="Assets\Scripts\FarmScripts\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" />
@@ -231,6 +229,7 @@
      <Compile Include="Assets\Scripts\FarmScripts\EventTriggerCeleiro.cs" />
      <Compile Include="Assets\Scripts\FarmScripts\NaboMagica.cs" />
      <Compile Include="Assets\Scripts\FarmScripts\TacarNabos.cs" />
+     <Compile Include="Assets\Scripts\PlayersScripts\ControleCamponesaCutscene.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\FSM_Turnip.cs" />
      <Compile Include="Assets\Scripts\PlayersScripts\FootstepAudio.cs" />
@@ -253,8 +252,10 @@
      <Compile Include="Assets\Scripts\Utils\AudioManagerDemonioPedra.cs" />
      <Compile Include="Assets\Scripts\Utils\AudioManagerTurnip.cs" />
      <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Utils\Cutscene.cs" />
      <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
      <Compile Include="Assets\Scripts\Utils\DialogHandlerCutscene.cs" />
+     <Compile Include="Assets\Scripts\Utils\DialogHandlerCutsceneFinal.cs" />
      <Compile Include="Assets\Scripts\Utils\GameControl.cs" />
      <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
      <Compile Include="Assets\Scripts\Utils\MudaNome.cs" />
@@ -265,7 +266,6 @@
      <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
      <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
      <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
-     <Compile Include="Assets\VidaBoss.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

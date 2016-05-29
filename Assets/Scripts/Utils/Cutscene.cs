@@ -9,6 +9,7 @@ public class Cutscene : MonoBehaviour {
 	public GameObject cameraPlayers, camponesa, turnip, menuCircular;
 	public float count;
 	public bool skip;
+    public GameObject particles;
 
     void Awake()
     {
@@ -19,7 +20,7 @@ public class Cutscene : MonoBehaviour {
 		count = 0;
 		camera.transform.position = posicao.position;
 		camera.transform.rotation = posicao.rotation;
-		
+        particles.SetActive(false);
         menuCircular.SetActive(false);
 		camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", true);
 		skip = false;
@@ -35,11 +36,13 @@ public class Cutscene : MonoBehaviour {
 		} else if (count > 14 && count <= 15) {
 			camera.transform.position = posicao2.position;
 			camera.transform.rotation = posicao2.rotation;
+            particles.SetActive(true);
 		} else if (count > 15 && count <= 18) {
 			float tempo = 7 * Time.deltaTime;
 			camera.transform.position = Vector3.Slerp (camera.transform.position, posicao3.position, tempo);
+            Destroy(particles, 5);
 		} else if (count > 18 && count <= 22) {
-			camera.fieldOfView = 17;
+			camera.fieldOfView = 20;
 		} else if(count > 23){
 			DialogHandlerTutorial.cutscene = false;
 			//camponesa.GetComponent<DialogHandlerTutorial> ().beginGame = true;
