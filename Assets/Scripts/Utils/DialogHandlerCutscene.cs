@@ -9,11 +9,13 @@ public class DialogHandlerCutscene : MonoBehaviour {
 	public string message;
 	public Camera camera;
 	public Transform posicao2, posicao3, posicao4, posicao5, posicao6;
-	public GameObject princesa, principe, suliman;
+	public GameObject princesa, principe, suliman, particulaSuliman, particulaJustin;
     public float count;
+   
 
 	void Start () {
 		message = "Cena1";
+      
 	}
 
 	void Update () {
@@ -110,22 +112,26 @@ public class DialogHandlerCutscene : MonoBehaviour {
 		camera.transform.position = posicao5.position;
 		camera.transform.rotation = posicao5.rotation;
 		suliman.GetComponent<Animator> ().SetBool ("Levantar", true);
+        
 	}
 
 	public void LancarMagia(){
 		suliman.GetComponent<Animator> ().SetBool ("Magia", true);
-		message = "Cena6";
+        particulaSuliman.SetActive(true);
+        message = "Cena6";
 	}
 
 	public void PosicaoCamera(){
 		camera.transform.position = posicao6.position;
 		camera.transform.rotation = posicao6.rotation;
 		princesa.GetComponent<Animator> ().SetBool ("Fugir", true);
-		message = "Cena7";
+        particulaJustin.SetActive(true);
+        message = "Cena7";
 	}
 
 	public void TransformaJustin(){
 		principe.GetComponent<Animator> ().SetBool ("AbrirBracos", true);
+       
 		message = "CenaFinal";
 	}
 
