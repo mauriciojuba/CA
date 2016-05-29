@@ -31,7 +31,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
     #region Ataque_CriarPedraVariaveis
     public GameObject ataquedePedras;
-    public GameObject Pedras;
+    public GameObject Pedras, particle, particulaDano;
     public Transform Down,Up;
     Vector3 initialPosRock;
 	Vector3 OponentPoint;
@@ -269,15 +269,17 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         //se ele não estiver no meio de um ataque
         if (!isAttacking)
         {
-			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (4);
-			//ativa o gameObject que lida com as pedras
+            gameObject.GetComponentInChildren<AudioManagerDemonioPedra>().PlaySound(4);
+
+            //ativa o gameObject que lida com as pedras
             ataquedePedras.SetActive(true);
             //chamara a fução subir pedras em 2 segundos... fiz isso pra que os jogadores tivessem uma indicação antes do ataque maior.
-            Invoke("SubirPedras",2f);
+            Invoke("SubirPedras", 2f);
             //o boss está atacando agora
-			isAttacking = true;
-            
+            isAttacking = true;
+
         }
+       
     }
     #endregion
 
@@ -312,12 +314,15 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
     void SubirPedras()
     {
-		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
+        gameObject.GetComponentInChildren<AudioManagerDemonioPedra>().audio.Stop();
+        gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (5);
         //sobe as pedras nesse momento elas causam dano
 		subindoPedras = true;
         //balança a camera
         CameraShake.Instance.Shake(amplitude, duration);
-
+        Vector3 posicaoParticula = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.position.z);
+        GameObject pedras = GameObject.Instantiate(particle, posicaoParticula, Quaternion.Euler(0, 0, 0)) as GameObject;
+        Destroy(pedras, 4);
     }
     void DescerPedras()
     {
@@ -364,6 +369,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         if (hit.tag == "TurnipAtk")
         {
             dano = true;
+            GameObject particleDmg = GameObject.Instantiate(particulaDano, hit.transform.position, hit.transform.rotation) as GameObject;
+            Destroy(particulaDano, 3);
         }
     }
     #endregion

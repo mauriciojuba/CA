@@ -38,8 +38,7 @@ public class AudioManagerDemonioPedra : MonoBehaviour {
 			audio.Play();
 		}
 		if(sound == 5){
-			audio.clip = ataquePedrasAtirando;
-			audio.Play();
+            audio.PlayOneShot(ataquePedrasAtirando);
 		}
 		if(sound == 6)
 			audio.PlayOneShot(ataqueNormal);

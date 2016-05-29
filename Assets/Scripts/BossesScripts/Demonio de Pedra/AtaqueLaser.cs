@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class AtaqueLaser : MonoBehaviour {
-	public GameObject audioSource;
+	public GameObject audioSource, particle;
     public Color corLaser = Color.red;
     public int DistanciaDoLaser = 100;
     public float LarguraInicial = 0.02f, LarguraFinal = 0.1f;
@@ -12,6 +12,7 @@ public class AtaqueLaser : MonoBehaviour {
     float cont = 0;
     void Start()
     {
+        particle.SetActive(false);
         isAttacking = false;
         luzColisao = new GameObject();
         luzColisao.AddComponent<Light>();
@@ -44,6 +45,7 @@ public class AtaqueLaser : MonoBehaviour {
             GetComponent<LineRenderer>().SetPosition(1, PontoDeColisao.point);
             float distancia = Vector3.Distance(transform.position, PontoDeColisao.point) - 0.03f;
             luzColisao.transform.position = transform.position + transform.forward * distancia;
+            particle.transform.position = PontoDeColisao.point;
         }
         else
         {
@@ -76,6 +78,7 @@ public class AtaqueLaser : MonoBehaviour {
         luzColisao.GetComponent<Light>().range = LarguraFinal;
         isAttacking = true;
 		audioSource.GetComponent<AudioManagerDemonioPedra>().PlaySound(2);
+        particle.SetActive(true);
     }
     void OnDisable()
     {
@@ -87,6 +90,7 @@ public class AtaqueLaser : MonoBehaviour {
         LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
         lineRenderer.SetWidth(LarguraInicial, LarguraFinal);
 		audioSource.GetComponent<AudioManagerDemonioPedra>().audio.Stop();
+        particle.SetActive(false);
     }
 
     

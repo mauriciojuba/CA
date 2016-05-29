@@ -20,7 +20,7 @@ public class FSM_Blobman : MonoBehaviour {
 	private float timer;
 	private Vector3 direcao;
 	private Rigidbody rb;
-
+    public GameObject particula;
 
 	public GameObject Ataque;
 	public float contToAtaque;
@@ -260,6 +260,8 @@ public class FSM_Blobman : MonoBehaviour {
 		if (morrer) {
 			
 			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
+            GameObject particulaMorte = GameObject.Instantiate(particula, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
+            Destroy(particulaMorte, 3);
 			Destroy (this.gameObject, 1f);
 			print ("morreu");
 			morrer = false;
