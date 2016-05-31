@@ -51,7 +51,7 @@ public class FSM_Blobman : MonoBehaviour {
 	#region Unity Functions
 
 	void Start () {
-
+		
 		target = GameObject.FindWithTag ("Player1");
 
 		camponesa = GameObject.FindWithTag ("Player1");
@@ -260,9 +260,9 @@ public class FSM_Blobman : MonoBehaviour {
 		if (morrer) {
 			
 			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
-            GameObject particulaMorte = GameObject.Instantiate(particula, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
-            Destroy(particulaMorte, 3);
-			Destroy (this.gameObject, 1f);
+			particula.SetActive (true);
+            
+			Destroy (this.gameObject, 2f);
 			print ("morreu");
 			morrer = false;
 		}

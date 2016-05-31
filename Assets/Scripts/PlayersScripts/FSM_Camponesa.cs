@@ -64,7 +64,7 @@ public class FSM_Camponesa : MonoBehaviour {
     public void Start() {
 		m_Animator = GetComponent<Animator>();
         currentWaypoint = 0;
-        timer = 0;
+		timer = hitTime;
         rb = GetComponent<Rigidbody>();
      
         follow = GameObject.FindWithTag("Player2").transform;
@@ -272,9 +272,7 @@ public class FSM_Camponesa : MonoBehaviour {
 
     #region Die State
     private void DieState() {
-
-        Debug.Log("Die");
-        Destroy(gameObject, 3);
+		
     }
     #endregion
 
