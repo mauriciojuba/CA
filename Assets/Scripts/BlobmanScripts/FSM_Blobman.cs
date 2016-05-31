@@ -263,7 +263,6 @@ public class FSM_Blobman : MonoBehaviour {
 			particula.SetActive (true);
             
 			Destroy (this.gameObject, 2f);
-			print ("morreu");
 			morrer = false;
 		}
 

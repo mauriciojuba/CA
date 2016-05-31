@@ -28,7 +28,7 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
         }
 
 
-        Debug.Log (message);
+       
 		if (message == "CenaInicial") {
 			Flowchart.BroadcastFungusMessage (message);
 			message = "";

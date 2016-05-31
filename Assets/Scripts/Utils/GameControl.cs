@@ -60,7 +60,5 @@ public class GameControl : MonoBehaviour {
 			this.gameObject.GetComponent<AudioSource> ().Play ();
 	}
 
-	public void FimJogo(){
-		SceneManager.LoadScene (7);
-	}
+
 }

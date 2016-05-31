@@ -206,7 +206,6 @@ public class FSM_Turnip : MonoBehaviour {
 			if (timer >= hitTime && dir.magnitude <= distanceToHit) {
 				
 				timer = 0;
-				print ("hit");
 				m_Attack = true;
 			} else if (dir.magnitude > distanceToHit && dir.magnitude <= distanceToReturnChase) {
 				state = FSMStates.Chasing;
@@ -273,14 +272,14 @@ public class FSM_Turnip : MonoBehaviour {
 		Vector3 followDir = follow.position - transform.position;
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followDir), Time.deltaTime * rotSpeed);
 		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		if(followDir.magnitude < 2 || followDir.y > 1)
+		if(followDir.magnitude < 3 /*|| followDir.y > 1*/)
 		{
 			forward = Mathf.Lerp (forward, 0f, Time.deltaTime * speed * 5);
 			rb.velocity = Vector3.zero;
 		}
-		else if (followDir.magnitude < 3)
-			forward = Mathf.Lerp (forward, 0.4f, Time.deltaTime * speed);
 		else if (followDir.magnitude < 4)
+			forward = Mathf.Lerp (forward, 0.4f, Time.deltaTime * speed);
+		else if (followDir.magnitude < 5)
 			forward = Mathf.Lerp (forward, 0.6f, Time.deltaTime * speed);
 		else // (followDir.magnitude > 5)
 			forward = Mathf.Lerp (forward, 1f, Time.deltaTime * speed);

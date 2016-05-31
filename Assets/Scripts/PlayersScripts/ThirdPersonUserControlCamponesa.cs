@@ -78,7 +78,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				if (targets.Count > 0) {
 					SortTargetByDistance ();
-					if (Vector3.Distance (targets [0].position, myTransform.position) <= 6.0f) {
+					if (Vector3.Distance (targets [0].position, myTransform.position) <= 7.0f) {
 						TargetEnemy ();
 					} else if(selectedTarget != null) {
 						selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
@@ -116,7 +116,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //				v = 0;
 //				crouch = false;
 //			}
-			Debug.Log (active);
             // calculate move direction to pass to character
             if (m_Cam != null)
             {

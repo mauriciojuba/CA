@@ -67,7 +67,7 @@ public class Unite : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (Vector3.Distance(Turnip.position, this.transform.position) <= 1f) closeEnough = true;
+        if (Vector3.Distance(Turnip.position, this.transform.position) <= 2f) closeEnough = true;
         else closeEnough = false;
     }
     

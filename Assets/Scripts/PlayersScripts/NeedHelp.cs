@@ -73,7 +73,10 @@ public class NeedHelp : MonoBehaviour
             hurtChar = _hurted;
             anim = hurtChar.GetComponent<Animator>();
             anim.SetBool("Hurt", true);
-            //PAROLI ===>  hurtChar tem que perder o controle(não conseguir se mexer)
+			if (hurtChar.tag == "Player1")
+				hurtChar.GetComponent<FSM_Camponesa> ().enabled = false;
+			else if (hurtChar.tag == "Player2")
+				hurtChar.GetComponent<FSM_Turnip> ().enabled = false;
         }
         defineHurtedAndHelper();
     }

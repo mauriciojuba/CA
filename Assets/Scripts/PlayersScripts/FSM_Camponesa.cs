@@ -316,7 +316,7 @@ public class FSM_Camponesa : MonoBehaviour {
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(followDir), Time.deltaTime * rotSpeed);
 		transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
-			if (followDir.magnitude < 2 || followDir.y > 1) {
+			if (followDir.magnitude < 2 /*|| followDir.y > 1*/) {
 				forward = Mathf.Lerp (forward, 0f, Time.deltaTime * speed * 5);
 				rb.velocity = Vector3.zero;
 			} else if (followDir.magnitude < 3)

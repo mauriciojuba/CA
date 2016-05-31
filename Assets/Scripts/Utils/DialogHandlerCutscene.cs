@@ -27,7 +27,6 @@ public class DialogHandlerCutscene : MonoBehaviour {
                 SceneManager.LoadScene(2);
         }
 
-		Debug.Log (message);
      		if (message == "Cena1") {
 				Flowchart.BroadcastFungusMessage (message);
 				message = "";

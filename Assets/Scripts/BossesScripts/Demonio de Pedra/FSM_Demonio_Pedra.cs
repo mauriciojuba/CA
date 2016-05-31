@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fungus;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class FSM_Demonio_Pedra : MonoBehaviour
 {
@@ -193,11 +195,11 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		if (state == FSMStates.Idle && !isAttacking)
         {
             //escolhe entre ataque comum e ataque criar pedras quando o target esta muito próximo
-			if (distanceToStartBattle < 2) {
+			if (distanceToStartBattle < 4) {
 				float random = Random.Range (0.0f, 1.0f);
-				if (random <= 0.6f) {
+				if (random <= 0.4f) {
 					state = FSMStates.Ataque_Comum;
-				} else if (random > 0.6f) {
+				} else if (random > 0.4f) {
 					state = FSMStates.Ataque_CriarPedra;
 				}
 			}
@@ -291,7 +293,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			return;
 		}
         //ataque simples
-		if (distanceToStartBattle < 1.2f){
+		if (distanceToStartBattle < 2f){
 			Oponente.GetComponent<PlayersDamangeHandler> ().HitPLayer (danoAtaqueComum);
 			gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (6);
 		}
@@ -306,10 +308,10 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		
 		if(!gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().audio.isPlaying)
 		gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (7);
+		gameObject.GetComponent<Animator> ().SetBool ("Death", true);
         //checar porque não está funcionando
 		Flowchart.BroadcastFungusMessage ("FimCave");
 
-		Destroy(gameObject, 4);
     }
     #endregion
     void SubirPedras()
@@ -320,7 +322,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		subindoPedras = true;
         //balança a camera
         CameraShake.Instance.Shake(amplitude, duration);
-        Vector3 posicaoParticula = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.position.z);
+        Vector3 posicaoParticula = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
         GameObject pedras = GameObject.Instantiate(particle, posicaoParticula, Quaternion.Euler(0, 0, 0)) as GameObject;
         Destroy(pedras, 4);
     }
@@ -370,11 +372,13 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         {
             dano = true;
             GameObject particleDmg = GameObject.Instantiate(particulaDano, hit.transform.position, hit.transform.rotation) as GameObject;
-            Destroy(particulaDano, 3);
+			Destroy(particleDmg, 1);
         }
     }
     #endregion
 
-
+	public void FimJogo(){
+		SceneManager.LoadScene (7);
+	}
 
 }
