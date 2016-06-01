@@ -215,8 +215,7 @@ public class ListPositionCtrl : MonoBehaviour
 			string[] newContents = {
 				"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Bksp", "Clear", "Enter"
 			};
-
-			print ("Caps!");
+				
 			ListBank.Instance.setListContent (newContents);
 
 			updateListBoxes ();

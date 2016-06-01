@@ -35,9 +35,12 @@ public class MenuControll : MonoBehaviour {
 	public Slider vol;
 	public GameObject leftSelectN, leftSelectH;
 	public GameObject rightSelectN, rightSelectH;
-
+	Camera mainCam;
+	Animator camAnim;
 
 	void Start(){
+		mainCam = Camera.main;
+		camAnim = mainCam.GetComponent<Animator>();
 		countPressAny = 0;
 		dampTime = 0;
 		painelQuit.SetActive (false);
@@ -107,6 +110,8 @@ public class MenuControll : MonoBehaviour {
 
 		if (canPressAny) {
 			if (Input.anyKeyDown) {
+				camAnim.Rebind();
+				camAnim.Play("cameraMovement",-1,0f);
 				pressAny.SetActive (false);
 				mainMenu.SetActive (true);
 				pressA.SetActive (true);
