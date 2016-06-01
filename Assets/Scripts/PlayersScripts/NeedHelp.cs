@@ -10,7 +10,8 @@ public class NeedHelp : MonoBehaviour
     public static NeedHelp Instance;
     GameObject canvas, hurtChar,helper;
     HelpVisuals instance;
-    bool canSave, saving;
+    bool canSave;
+    public bool saving;
     float timeToSave = 2f,timeTry = 0f;
     public float alturaPersonagens;
     Animator anim;
