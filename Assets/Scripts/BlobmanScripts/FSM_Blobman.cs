@@ -46,6 +46,8 @@ public class FSM_Blobman : MonoBehaviour {
 	private bool morrer = true;
     bool targetMachucado;
 
+    Animator anim;
+
 	#endregion
 
 	#region Unity Functions
@@ -63,6 +65,7 @@ public class FSM_Blobman : MonoBehaviour {
 
 		setCont = contToAtaque;
 		dano = false;
+        anim = GetComponent<Animator>();
 
 	}
 
@@ -113,8 +116,7 @@ public class FSM_Blobman : MonoBehaviour {
 
     #region Andar
     private void Andar_State(){
-
-
+        
         if (!turnip.GetComponent<PlayersDamangeHandler>().hurted)
         {
             target = turnip;
@@ -127,22 +129,28 @@ public class FSM_Blobman : MonoBehaviour {
 
 
             if (direcao.magnitude <= distanceToStartChasing) {
-			state = FSMStates.Perseguir;
-			return;
+            state = FSMStates.Perseguir;
+            
+            return;
 		}
 		Vector3 wpDir         = waypoints[currentWaypoint].position - transform.position;
         Vector3 heightCorrectedPoint2 = new Vector3(wpDir.x, transform.position.y, wpDir.z);
         transform.LookAt(heightCorrectedPoint2);
         //transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(wpDir), Time.deltaTime * rotSpeed);
-		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		if (wpDir.magnitude <= distanceToChangeWaypoint) {
-			currentWaypoint++;
-			if (currentWaypoint >= waypoints.Length)
-				currentWaypoint = 0;
-		} else
-			rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+        //transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+        if (wpDir.magnitude <= distanceToChangeWaypoint)
+        {
+            currentWaypoint++;
+            if (currentWaypoint >= waypoints.Length)
+                currentWaypoint = 0;
+        }
+        else
+        {
+            rb.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+            anim.SetBool("Walk", true);
+        }
 
-		if (dano) {
+        if (dano) {
 			state = FSMStates.Dano; return;
 		}
 
@@ -153,7 +161,6 @@ public class FSM_Blobman : MonoBehaviour {
 
 	#region Perseguir
 	private void Perseguir_State(){
-
         //constrains
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
@@ -171,12 +178,13 @@ public class FSM_Blobman : MonoBehaviour {
 		}
 		if (direcao.magnitude > distanceToStopChasing && !target.GetComponent<PlayersDamangeHandler>().hurted) {
 			state = FSMStates.Andar;
-			return;
+            return;
 		}
 
 		if (direcao.magnitude <= distanceToAtaque && !target.GetComponent<PlayersDamangeHandler>().hurted) {
-
-			state = FSMStates.Bater; return;
+            
+            state = FSMStates.Bater;
+            return;
 		}
 		//transform.rotation    = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcao), Time.deltaTime * rotSpeed);
 		//transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
@@ -196,8 +204,8 @@ public class FSM_Blobman : MonoBehaviour {
 
 		Ataque.SetActive (false);
 
-
-		contToAtaque -= Time.deltaTime;
+        anim.SetBool("Walk", false);
+        contToAtaque -= Time.deltaTime;
 
 		if (direcao.magnitude <= distanceToAtaque && contToAtaque <= 0 ) {
 
@@ -205,7 +213,8 @@ public class FSM_Blobman : MonoBehaviour {
 
             gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
 			Ataque.SetActive (true);
-			contToAtaque = setCont;
+            anim.SetBool("Attack", true);
+            contToAtaque = setCont;
 
 		} 
 		else if(contToAtaque <= 0) {
@@ -258,8 +267,8 @@ public class FSM_Blobman : MonoBehaviour {
 	private void Morrer_State(){
 
 		if (morrer) {
-			
-			gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
+            anim.SetBool("Die", false);
+            gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
 			particula.SetActive (true);
             
 			Destroy (this.gameObject, 2f);
