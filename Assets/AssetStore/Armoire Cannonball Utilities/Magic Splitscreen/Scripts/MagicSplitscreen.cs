@@ -420,6 +420,7 @@ public class MagicSplitscreen : MonoBehaviour
         this.secondaryCamera = GameObject.Instantiate(this.primaryCamera) as Camera;
         this.secondaryCamera.GetComponent<BloomOptimized>().enabled = false;
         this.secondaryCamera.GetComponent<VignetteAndChromaticAberration>().enabled = false;
+        
         this.secondaryCamera.transform.parent = this.transform;
         this.secondaryCamera.clearFlags = CameraClearFlags.Depth;
 
@@ -536,6 +537,7 @@ public class MagicSplitscreen : MonoBehaviour
 
         // Turn off culling of the splitscreen mask layer for the main camera
         this.primaryCamera.cullingMask &= ~(1 << this.maskLayer);
+        this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = false;
 
         this.IsSplitscreenOn = true;
     }
@@ -550,6 +552,7 @@ public class MagicSplitscreen : MonoBehaviour
         this.secondaryCamera.gameObject.SetActive(false);
         this.maskTransform.gameObject.SetActive(false);
         this.separatorRenderer.enabled = false;
+        this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = true;
     }
     #endregion
 }
