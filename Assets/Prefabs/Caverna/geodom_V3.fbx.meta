@@ -185,6 +185,9 @@ ModelImporter:
     7400000: Take 001
     7400002: Geo_Idle
     7400004: Geo_Death
+    7400006: Geo_LaserAttack
+    7400008: Geo_LaserAttacking
+    7400010: Geo_HeavyAttack
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -376,7 +379,7 @@ ModelImporter:
       name: Geo_Idle
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 70
+      lastFrame: 73
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -541,7 +544,502 @@ ModelImporter:
       name: Geo_Death
       takeName: Take 001
       firstFrame: 215
-      lastFrame: 260
+      lastFrame: 262
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CA_OPE_EarthDaemonV6RNannotation
+        weight: 1
+      - path: Geodom
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Body
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:l_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:r_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:l_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:RockDaemon_lLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:r_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:RockDaemon_rLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hat_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:l_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:r_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Geo_LaserAttack
+      takeName: Take 001
+      firstFrame: 75
+      lastFrame: 173
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CA_OPE_EarthDaemonV6RNannotation
+        weight: 1
+      - path: Geodom
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Body
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:l_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:r_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:l_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:RockDaemon_lLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:r_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:RockDaemon_rLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hat_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:l_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:r_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Geo_LaserAttacking
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 173
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CA_OPE_EarthDaemonV6RNannotation
+        weight: 1
+      - path: Geodom
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Body
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_GEO/CA_OPE_EarthDaemonV6:RockDaemon_Hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:eye
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:hat
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:l_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:l_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:l_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:l_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:l_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:l_clavicle/CA_OPE_EarthDaemonV6:l_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:lpoly_rArm1
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:lpoly_rArm2
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:lpoly_rArm3
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:lpoly_rArm4
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:lpoly_rArm11
+          1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:chest/CA_OPE_EarthDaemonV6:r_clavicle/CA_OPE_EarthDaemonV6:r_arm_1/CA_OPE_EarthDaemonV6:r_arm_2/CA_OPE_EarthDaemonV6:r_arm_3/CA_OPE_EarthDaemonV6:r_arm_4/CA_OPE_EarthDaemonV6:r_arm_5/CA_OPE_EarthDaemonV6:r_arm_6
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:l_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:l_leg/CA_OPE_EarthDaemonV6:RockDaemon_lLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:r_foot
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:EarthDaemon_SKELETON/CA_OPE_EarthDaemonV6:hip/CA_OPE_EarthDaemonV6:r_leg/CA_OPE_EarthDaemonV6:RockDaemon_rLeg
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hat_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:l_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:CLUSTERs/CA_OPE_EarthDaemonV6:r_arm_cluster_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:l_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:r_leg_CTRL
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:l_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_curve
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:hip_CTRL/CA_OPE_EarthDaemonV6:SPLINE_IKs/CA_OPE_EarthDaemonV6:r_arm_spline_handle
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:l_arm_CTRL_3
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_1
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_2
+        weight: 1
+      - path: Geodom/CA_OPE_EarthDaemonV6:EarthDaemon/CA_OPE_EarthDaemonV6:master_CTRL/CA_OPE_EarthDaemonV6:r_arm_CTRL_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Geo_HeavyAttack
+      takeName: Take 001
+      firstFrame: 265
+      lastFrame: 334
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

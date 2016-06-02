@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class NeedHelp : MonoBehaviour
 {
@@ -67,7 +69,7 @@ public class NeedHelp : MonoBehaviour
         //KeepButtonsOnHurtedChar();
         if (hurtChar != null)
         {
-            //gameover
+			StartCoroutine (CallGameOver ());
         }
         else
         {
@@ -119,4 +121,11 @@ public class NeedHelp : MonoBehaviour
         helper = null;
         timeTry = 0;
     }
+
+	IEnumerator CallGameOver(){
+
+		yield return new WaitForSeconds (4);
+		SceneManager.LoadScene (9);
+
+	}
 }

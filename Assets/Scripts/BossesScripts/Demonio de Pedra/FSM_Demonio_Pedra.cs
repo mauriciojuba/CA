@@ -378,7 +378,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
 
 	public void FimJogo(){
-		SceneManager.LoadScene (7);
+//		SceneManager.LoadScene (7);
+		LoadingScreenManager.LoadScene(7);
 	}
 
 }

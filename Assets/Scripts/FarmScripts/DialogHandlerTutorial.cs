@@ -420,7 +420,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
     }
 
     public void EndGame() {
-        SceneManager.LoadScene(3);
+//        SceneManager.LoadScene(3);
+		LoadingScreenManager.LoadScene(3);
     }
 
     public void PegaNaboVida() {
