@@ -1,15 +1,52 @@
 fileFormatVersion: 2
-guid: f8041be287b642848bc7de5ffb08c4f9
-timeCreated: 1464378352
+guid: 8f63b4b6ec1b77a45b3d812656b4d781
+timeCreated: 1464836873
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: barrel_1
+    100000: curve1
+    100002: extrudedSurface1
+    100004: nurbsCircle1
+    100006: pCone1
+    100008: pCone2
+    100010: pCone3
+    100012: pCone4
+    100014: pCone5
+    100016: pCone6
+    100018: //RootNode
+    400000: curve1
+    400002: extrudedSurface1
+    400004: nurbsCircle1
+    400006: pCone1
+    400008: pCone2
+    400010: pCone3
+    400012: pCone4
+    400014: pCone5
+    400016: pCone6
+    400018: //RootNode
+    2300000: extrudedSurface1
+    2300002: pCone1
+    2300004: pCone2
+    2300006: pCone3
+    2300008: pCone4
+    2300010: pCone5
+    2300012: pCone6
+    3300000: extrudedSurface1
+    3300002: pCone1
+    3300004: pCone2
+    3300006: pCone3
+    3300008: pCone4
+    3300010: pCone5
+    3300012: pCone6
+    4300000: extrudedSurface1
+    4300002: pCone6
+    4300004: pCone5
+    4300006: pCone4
+    4300008: pCone3
+    4300010: pCone2
+    4300012: pCone1
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,7 +72,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 0.8
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -54,7 +91,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
@@ -69,7 +106,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

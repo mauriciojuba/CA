@@ -1,15 +1,45 @@
 fileFormatVersion: 2
-guid: f8041be287b642848bc7de5ffb08c4f9
-timeCreated: 1464378352
+guid: 830c2892ed346e04085923d5cbd35508
+timeCreated: 1464836824
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: barrel_1
+    100000: pCone1
+    100002: pCone2
+    100004: pCone3
+    100006: pCone4
+    100008: pCone5
+    100010: pCone6
+    100012: //RootNode
+    400000: pCone1
+    400002: pCone2
+    400004: pCone3
+    400006: pCone4
+    400008: pCone5
+    400010: pCone6
+    400012: //RootNode
+    2300000: pCone1
+    2300002: pCone2
+    2300004: pCone3
+    2300006: pCone4
+    2300008: pCone5
+    2300010: pCone6
+    2300012: //RootNode
+    3300000: pCone1
+    3300002: pCone2
+    3300004: pCone3
+    3300006: pCone4
+    3300008: pCone5
+    3300010: pCone6
+    3300012: //RootNode
+    4300000: extrudedSurface1
+    4300002: pCone6
+    4300004: pCone5
+    4300006: pCone4
+    4300008: pCone3
+    4300010: pCone2
+    4300012: pCone1
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -54,7 +84,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     human: []
@@ -69,7 +99,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
