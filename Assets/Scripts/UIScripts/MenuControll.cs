@@ -100,8 +100,8 @@ public class MenuControll : MonoBehaviour {
 
 		if (!isOnMainMenu) {
 			countPressAny += Time.deltaTime;
-			if (countPressAny > 5) {
-				canPressAny = true;
+			if (countPressAny > 2) {
+				StartCoroutine(PressAnyFade());
 				pressAny.SetActive (true);
 				isOnMainMenu = true;
 				countPressAny = 0;
@@ -112,17 +112,14 @@ public class MenuControll : MonoBehaviour {
 			if (Input.anyKeyDown) {
 				camAnim.Rebind();
 				camAnim.Play("cameraMovement",-1,0f);
-				pressAny.SetActive (false);
-				mainMenu.SetActive (true);
-				pressA.SetActive (true);
-				pressB.SetActive (true);
-				canPressAny = false;
-				evento.SetSelectedGameObject (newGameButton);
+				StartCoroutine(MenuFade());
+
 			}
 		}
 	}
 
 
+		
 	//
 	public void ButtonOptions(){
 		mainMenu.SetActive (false);
@@ -304,6 +301,70 @@ public class MenuControll : MonoBehaviour {
 
 	public void VolumeChange(){
 		GameObject.Find("GameControl").GetComponent<AudioSource> ().volume = vol.value;
+	}
+
+	IEnumerator PressAnyFade(){
+		float counter = 0;
+		float timeToFade = 1.0f;
+
+		Image pressAnyImg = pressAny.GetComponent<Image>(); 
+
+		Color startColor = Color.white;
+		Color endColor = Color.white;
+		Color currentColor = startColor;
+
+		startColor.a = 0;
+
+		pressAny.SetActive (true);
+
+
+		while(counter<timeToFade){
+			counter+=Time.deltaTime;
+			currentColor = Color.Lerp(startColor,endColor,counter);
+			pressAnyImg.color = currentColor;
+
+			yield return null;
+		}
+		canPressAny = true;
+
+		yield return null;
+	}
+
+	IEnumerator MenuFade(){
+		float counter = 0;
+		float timeToFade = 1.0f;
+
+		Image pressAnyImg = pressAny.GetComponent<Image>(); 
+		Image mainMenuImg = mainMenu.GetComponent<Image>();
+		Image pressAImg = pressA.GetComponent<Image>();
+		Image pressBImg = pressB.GetComponent<Image>();
+
+		Color startColor = Color.white;
+		Color endColor = Color.white;
+		Color currentColor = startColor;
+		Color invertedColor = endColor;
+
+		startColor.a = 0;
+
+		mainMenu.SetActive (true);
+		pressA.SetActive (true);
+		pressB.SetActive (true);
+
+		while(counter<timeToFade){
+			counter+=Time.deltaTime;
+			currentColor = Color.Lerp(startColor,endColor,counter);
+			invertedColor = Color.Lerp(endColor,startColor,counter);
+			mainMenuImg.color = currentColor;
+			pressAnyImg.color = invertedColor;
+			pressAImg.color = currentColor;
+			pressBImg.color = currentColor;
+
+			yield return null;
+		}
+		canPressAny = false;
+		evento.SetSelectedGameObject (newGameButton);
+		pressAny.SetActive(false);
+		yield return null;
 	}
 
 
