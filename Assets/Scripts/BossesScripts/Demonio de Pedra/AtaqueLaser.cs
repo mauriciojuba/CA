@@ -9,6 +9,7 @@ public class AtaqueLaser : MonoBehaviour {
     public PlayersDamangeHandler Turnip, Camponesa;
     private GameObject luzColisao;
     public bool isAttacking;
+	public Animator geodomAnimator;
     float cont = 0;
     void Start()
     {
@@ -29,6 +30,7 @@ public class AtaqueLaser : MonoBehaviour {
     }
     void OnEnable()
     {
+		geodomAnimator.SetBool ("LaserAttack", true);
         //assim que o script do boss ligar o gameObject o laser vai aparecer, FINO ligado o olho ao Target
         //depois de 4 segundos chama a função atirar.
 		audioSource.GetComponent<AudioManagerDemonioPedra>().PlaySound(1);
@@ -91,6 +93,7 @@ public class AtaqueLaser : MonoBehaviour {
         lineRenderer.SetWidth(LarguraInicial, LarguraFinal);
 		audioSource.GetComponent<AudioManagerDemonioPedra>().audio.Stop();
         particle.SetActive(false);
+		geodomAnimator.SetBool ("LaserAttack", false);
     }
 
     

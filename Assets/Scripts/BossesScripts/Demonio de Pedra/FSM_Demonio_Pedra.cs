@@ -14,8 +14,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     public enum FSMStates { Idle, Ataque_Comum, Ataque_CriarPedra, Dano, Ataque_Laser, Morrer }; // Estados
     public FSMStates state = FSMStates.Idle;
     #endregion
-
-    
+	public bool active;
+	public Animator geodomAnimator;
 	public float countVoz;
     #region AndarVariaveis
     #endregion
@@ -64,7 +64,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         ataquedePedras.SetActive(false);
         Eye.SetActive(false);
 		countVoz = 0;
-
+		active = false;
 
     }
 	void Update(){
@@ -140,21 +140,22 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     #region Andar
     private void Idle_State() {
-		if (vida <= 0) {
-			state = FSMStates.Morrer;
-			return;
+		if (active) {
+			if (vida <= 0) {
+				state = FSMStates.Morrer;
+				return;
+			}
+			countVoz += Time.deltaTime;
+			if (countVoz > 5) {
+				int num = Random.Range (8, 11);
+				this.gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (num);
+				countVoz = 0;
+			}
+			//se ele não estiver no meio de um ataque e o target entrou na area de alcance, o boss escolhe o ataque
+			if (!isAttacking && distanceToStartBattle < 10) {
+				Invoke ("EscolherAtaque", 5f);
+			}
 		}
-		countVoz += Time.deltaTime;
-		if (countVoz > 5) {
-			int num = Random.Range (8, 11);
-			this.gameObject.GetComponentInChildren<AudioManagerDemonioPedra> ().PlaySound (num);
-			countVoz = 0;
-		}
-        //se ele não estiver no meio de um ataque e o target entrou na area de alcance, o boss escolhe o ataque
-        if (!isAttacking && distanceToStartBattle < 10)
-        {
-			Invoke("EscolherAtaque", 5f);
-        }
     }
     #endregion
 
@@ -272,7 +273,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         if (!isAttacking)
         {
             gameObject.GetComponentInChildren<AudioManagerDemonioPedra>().PlaySound(4);
-
+			geodomAnimator.SetBool ("HeavyAttack", true);
             //ativa o gameObject que lida com as pedras
             ataquedePedras.SetActive(true);
             //chamara a fução subir pedras em 2 segundos... fiz isso pra que os jogadores tivessem uma indicação antes do ataque maior.
@@ -332,6 +333,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		descendoPedras = true;
         //muda a Tag, para que não cause mais dano aos jogadores
         Pedras.tag = "Untagged";
+		geodomAnimator.SetBool ("HeavyAttack", false);
     }
     void EsconderPedras()
     {
@@ -380,6 +382,10 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 	public void FimJogo(){
 //		SceneManager.LoadScene (7);
 		LoadingScreenManager.LoadScene(7);
+	}
+
+	public void ActivateBoss(){
+		active = true;
 	}
 
 }
