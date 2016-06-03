@@ -14,7 +14,7 @@ public class Nabo : MonoBehaviour {
                 hit.GetComponent<PlayersDamangeHandler>().RecoveryPlayer(40f);
                 hit.gameObject.GetComponentInChildren<AudioManager>().PlaySound(1);
 				hit.gameObject.GetComponent<DialogHandlerTutorial> ().pegaNaboVida.SetActive (false);
-				GameObject part = GameObject.Instantiate (particula, hit.transform.position, hit.transform.rotation) as GameObject;
+				GameObject part = GameObject.Instantiate (particula, this.transform.position, this.transform.rotation) as GameObject;
 				Destroy (part, 3);
                 Destroy(gameObject);
             }
