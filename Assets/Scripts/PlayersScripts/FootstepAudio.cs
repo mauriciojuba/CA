@@ -8,6 +8,8 @@ public class FootstepAudio : MonoBehaviour {
 	public AudioClip earthSound;
 	public AudioClip woodSound;
 	public AudioClip grassSound;
+	public AudioClip casteloSoundCamp;
+	public AudioClip casteloSoundTurnip;
 	public AudioSource audio;
 	private string colliderType;
     public GameObject particle;
@@ -65,7 +67,10 @@ public class FootstepAudio : MonoBehaviour {
 			audio.PlayOneShot(grassSound);
             GameObject place1 = GameObject.Instantiate(particle, collisionPlace2.position, collisionPlace2.rotation) as GameObject;
             Destroy(place1, 3);
-                break;	
+            break;	
+		case "Castle":
+			audio.PlayOneShot(casteloSoundTurnip);
+			break;
 		}
 		
 	}

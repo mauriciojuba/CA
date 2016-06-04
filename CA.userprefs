@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayersScripts\FootstepAudio.cs">
     <Files>
       <File FileName="Assets\MenuCircular\Scripts\CircularScrollingList\ListPositionCtrl.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayersScripts\Nabo.cs" Line="1" Column="1" />
@@ -10,7 +10,31 @@
       <File FileName="Assets\Scripts\PlayersScripts\FSM_Camponesa.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FarmScripts\DestroyNabo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FarmScripts\DialogHandlerTutorial.cs" Line="367" Column="1" />
+      <File FileName="Assets\Scripts\Utils\GameControl.cs" Line="68" Column="57" />
+      <File FileName="Assets\Scripts\PlayersScripts\FootstepAudio.cs" Line="16" Column="38" />
+      <File FileName="Assets\Scripts\Utils\AudioColliderType.cs" Line="54" Column="24" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayersScripts" expanded="True">
+                  <Node name="FootstepAudio.cs" selected="True" />
+                </Node>
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

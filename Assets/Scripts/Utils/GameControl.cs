@@ -33,6 +33,14 @@ public class GameControl : MonoBehaviour {
 			this.gameObject.GetComponent<AudioSource> ().clip = forest;
 		} else if (SceneManager.GetActiveScene ().buildIndex == 5) {
 			this.gameObject.GetComponent<AudioSource> ().clip = credits;
+		}  else if (SceneManager.GetActiveScene ().buildIndex == 6) {
+			this.gameObject.GetComponent<AudioSource> ().clip = credits;
+		}  else if (SceneManager.GetActiveScene ().buildIndex == 7) {
+			this.gameObject.GetComponent<AudioSource> ().clip = credits;
+		}  else if (SceneManager.GetActiveScene ().buildIndex == 8) {
+			this.gameObject.GetComponent<AudioSource> ().clip = credits;
+		}  else if (SceneManager.GetActiveScene ().buildIndex == 9) {
+			this.gameObject.GetComponent<AudioSource> ().clip = credits;
 		}
 		this.gameObject.GetComponent<AudioSource> ().Play ();
 	}
@@ -55,6 +63,18 @@ public class GameControl : MonoBehaviour {
 		}
 		else if (SceneManager.GetActiveScene ().buildIndex == 5 && this.gameObject.GetComponent<AudioSource> ().clip != credits) {
 			this.gameObject.GetComponent<AudioSource> ().clip = credits;
+		} 
+		else if (SceneManager.GetActiveScene ().buildIndex == 6) {
+			this.gameObject.GetComponent<AudioSource> ().Stop ();
+		}
+		else if (SceneManager.GetActiveScene ().buildIndex == 7) {
+			this.gameObject.GetComponent<AudioSource> ().Stop ();
+		}
+		else if (SceneManager.GetActiveScene ().buildIndex == 8) {
+			this.gameObject.GetComponent<AudioSource> ().Stop ();
+		}
+		else if (SceneManager.GetActiveScene ().buildIndex == 9) {
+			this.gameObject.GetComponent<AudioSource> ().Stop ();
 		}
 		if(!this.gameObject.GetComponent<AudioSource> ().isPlaying)
 			this.gameObject.GetComponent<AudioSource> ().Play ();

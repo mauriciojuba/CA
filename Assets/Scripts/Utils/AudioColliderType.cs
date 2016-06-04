@@ -15,7 +15,7 @@ using System.Collections;
 public class AudioColliderType : MonoBehaviour {
 
 //Enumerate the drop down list in the Inspe
-public enum Mode {Water, Earth, Wood, Grass}
+public enum Mode {Water, Earth, Wood, Grass, Castle}
 public Mode terrainType;
 
 	// Use this for initialization
@@ -49,6 +49,9 @@ public Mode terrainType;
 			break;
 		case Mode.Grass:
 			typeString = "Grass";
+			break;
+		case Mode.Castle:
+			typeString = "Castle";
 			break;
 		default:
 			typeString = "";
