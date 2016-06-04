@@ -25,7 +25,9 @@ public class DialogHandlerCutscene : MonoBehaviour {
         {
             if (InputManager.StartButton() || Input.GetKeyDown(KeyCode.Escape))
 //                SceneManager.LoadScene(2);
-				LoadingScreenManager.LoadScene(2);
+				message = "Corte";
+
+				
         }
 
      		if (message == "Cena1") {
@@ -64,6 +66,11 @@ public class DialogHandlerCutscene : MonoBehaviour {
 			}
 
 			if (message == "CenaFinal") {
+				Flowchart.BroadcastFungusMessage (message);
+				message = "";
+			}
+
+			if (message == "Corte") {
 				Flowchart.BroadcastFungusMessage (message);
 				message = "";
 			}
