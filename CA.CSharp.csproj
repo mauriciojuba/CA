@@ -267,6 +267,8 @@
     <Compile Include="Assets\Scripts\PlayersScripts\Unite.cs" />
     <Compile Include="Assets\Scripts\UIScripts\CreditScreenGUI.cs" />
     <Compile Include="Assets\Scripts\UIScripts\FadeUIelements.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\GameOverControl.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\LoadingScreenManager.cs" />
     <Compile Include="Assets\Scripts\UIScripts\MenuControll.cs" />
     <Compile Include="Assets\Scripts\UIScripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Utils\AudioColliderType.cs" />
