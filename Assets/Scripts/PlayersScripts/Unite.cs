@@ -4,7 +4,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Unite : MonoBehaviour {
 
-    public Transform CampSpawner,OriginalObj;
+    public Transform CampSpawner, CampDump;
     public Transform Turnip;
     bool closeEnough, everybodyOk;
     public bool attach,skill;
@@ -46,7 +46,8 @@ public class Unite : MonoBehaviour {
 			Vector3 heightCorrectedPoint = new Vector3 (Turnip.transform.position.x, this.transform.position.y, Turnip.transform.position.z);
 			this.transform.LookAt (heightCorrectedPoint);
 			if (InputManager.YButton () && count >= 3f) {
-				//transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
+                //transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
+                this.transform.position = CampDump.position;
 				this.GetComponent<CapsuleCollider> ().enabled = true;
                 this.GetComponent<Animator>().SetBool("Unite", false);
                 //				this.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = true;
