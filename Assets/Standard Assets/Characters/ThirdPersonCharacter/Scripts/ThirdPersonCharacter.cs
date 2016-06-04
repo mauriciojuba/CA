@@ -22,18 +22,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		float m_OrigGroundCheckDistance;
 		const float k_Half = 0.5f;
 		float m_TurnAmount;
-		float m_ForwardAmount;
+		public float m_ForwardAmount;
 		Vector3 m_GroundNormal;
 		float m_CapsuleHeight;
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
         float preventCrashOnJump;
+        public bool attacking;
 
 
 		void Start()
 		{
-			m_Animator = GetComponent<Animator>();
+			m_Animator = this.GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Capsule = GetComponent<CapsuleCollider>();
 			m_CapsuleHeight = m_Capsule.height;

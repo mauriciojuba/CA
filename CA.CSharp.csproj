@@ -265,6 +265,7 @@
     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\ThirdPersonUserControlTurnip.cs" />
     <Compile Include="Assets\Scripts\PlayersScripts\Unite.cs" />
+    <Compile Include="Assets\Scripts\PlayersScripts\animControlTurnip.cs" />
     <Compile Include="Assets\Scripts\UIScripts\CreditScreenGUI.cs" />
     <Compile Include="Assets\Scripts\UIScripts\FadeUIelements.cs" />
     <Compile Include="Assets\Scripts\UIScripts\GameOverControl.cs" />

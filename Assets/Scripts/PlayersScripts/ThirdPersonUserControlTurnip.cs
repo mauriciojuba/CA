@@ -39,7 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
 
             // get the third person character ( this should never be null due to require component )
-            m_Character = GetComponent<ThirdPersonCharacter>();
+            m_Character = this.GetComponent<ThirdPersonCharacter>();
         }
 
 
@@ -64,8 +64,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				m_Character.Attacking (m_Attack);
 				m_Attack = false;
 			}
-			if (onAir) castShadowOnJump();
-            else Sombra.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.02f, this.transform.position.z);
+            castShadowOnJump();
         }
 
 
