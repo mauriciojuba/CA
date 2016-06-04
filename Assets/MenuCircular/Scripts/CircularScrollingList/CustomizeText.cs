@@ -19,6 +19,7 @@ public class CustomizeText : MonoBehaviour {
 		myText = GetComponent<Text> ();
 		myText.text = null;
 		id = 2;
+//		CameraPlayers.GetComponent<Camera> ().enabled = false;
 	}
 
 	public void Update(){
@@ -90,7 +91,8 @@ public class CustomizeText : MonoBehaviour {
 
     void OnDestroy()
     {
-        CameraPlayers.SetActive(true);
+//        CameraPlayers.SetActive(true);
+		CameraPlayers.GetComponent<Camera>().enabled = true;
         tutorialHandler1.GetComponent<DialogHandlerTutorial>().beginGame = true;
         tutorialHandler2.GetComponent<DialogHandlerTutorial>().beginGame = true;
         changeName.GetComponent<MudaNome>().ChangeName();

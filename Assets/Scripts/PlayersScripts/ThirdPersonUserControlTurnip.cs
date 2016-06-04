@@ -138,6 +138,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
 
 		public void ThrowNabo(){
+			this.gameObject.GetComponentInChildren<AudioManager> ().PlaySound (6);
 			atkCollider.GetComponent<BoxCollider> ().enabled = true;
 		}
 

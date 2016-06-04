@@ -214,8 +214,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			b.AddForce(muzzle.forward * naboForce);
 		}
 
-		public void EndAtk(){
-			
+		public void AtkNoise(){
+			this.gameObject.GetComponentInChildren<AudioManager> ().PlaySound (7);
 		}
         void castShadowOnJump()
         {

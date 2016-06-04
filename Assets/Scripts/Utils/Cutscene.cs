@@ -13,7 +13,7 @@ public class Cutscene : MonoBehaviour {
 
     void Awake()
     {
-        cameraPlayers.SetActive(false);
+		cameraPlayers.GetComponent<Camera> ().enabled = false;
     }
 	// Use this for initialization
 	void Start () {
