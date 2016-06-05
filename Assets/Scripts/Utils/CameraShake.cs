@@ -31,6 +31,10 @@ public class CameraShake : MonoBehaviour {
         {
             transform.localPosition = initialPosition + Random.insideUnitSphere * _amplitude;
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Shake(0.2f,0.5f);
+        }
 	
 	}
 }

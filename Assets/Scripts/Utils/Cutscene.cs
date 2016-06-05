@@ -17,7 +17,8 @@ public class Cutscene : MonoBehaviour {
     }
 	// Use this for initialization
 	void Start () {
-		count = 0;
+        turnip.GetComponent<Animator>().enabled = false;
+        count = 0;
 		camera.transform.position = posicao.position;
 		camera.transform.rotation = posicao.rotation;
         particles.SetActive(false);
@@ -45,9 +46,9 @@ public class Cutscene : MonoBehaviour {
 			camera.fieldOfView = 20;
 		} else if(count > 23){
 			DialogHandlerTutorial.cutscene = false;
-			//camponesa.GetComponent<DialogHandlerTutorial> ().beginGame = true;
-			//turnip.GetComponent<DialogHandlerTutorial> ().beginGame = true;
-			camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
+            //camponesa.GetComponent<DialogHandlerTutorial> ().beginGame = true;
+            turnip.GetComponent<Animator>().enabled = true;
+            camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
 			camera.gameObject.SetActive (false);
             //cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
             menuCircular.SetActive(true);
@@ -60,9 +61,10 @@ public class Cutscene : MonoBehaviour {
 			//turnip.GetComponent<DialogHandlerTutorial> ().beginGame = true;
 			camponesa.GetComponent<ThirdPersonCharacter> ().m_Animator.SetBool ("CutsceneTutorial", false);
 			camera.gameObject.SetActive (false);
+            turnip.GetComponent<Animator>().enabled = true;
             //cameraPlayers.GetComponentInChildren<Camera>().enabled = true;
-            
-			Destroy (this.gameObject);
+
+            Destroy (this.gameObject);
 		}
 		if(count > 5){
 		if (Input.anyKeyDown)
