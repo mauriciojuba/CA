@@ -130,44 +130,46 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void ButtonBack(){
-		if (Input.GetKeyDown (KeyCode.JoystickButton1) || Input.GetKeyDown(KeyCode.L)) {
-			if (panelOptions.activeSelf) {
-				if (musicSelected) {
-					musicSelected = false;
-					volume = vol.value;
-					PlayerPrefs.SetFloat ("volume", volume);
-					evento.SetSelectedGameObject (musicButton);
-				} else if (qualitySelected) {
-					qualitySelected = false;
-					evento.SetSelectedGameObject (qualityButton);
-					leftSelectH.SetActive (false);
-					leftSelectN.SetActive (true);
-					rightSelectH.SetActive (false);
-					rightSelectN.SetActive (true);
-					if (graphicQuality == 0) {
-						QualitySettings.SetQualityLevel (0);
-						lowButton.SetActive (true);
-						mediumButton.SetActive (false);
-						highButton.SetActive (false);
-					} else if (graphicQuality == 1) {
-						QualitySettings.SetQualityLevel (1);
-						lowButton.SetActive (false);
-						mediumButton.SetActive (true);
-						highButton.SetActive (false);
-					} else if (graphicQuality == 2) {
-						QualitySettings.SetQualityLevel (2);
-						lowButton.SetActive (false);
-						mediumButton.SetActive (false);
-						highButton.SetActive (true);
+		if (InputManager.BButton ()) {
+			if (panelPause.activeSelf) {
+				if (panelOptions.activeSelf) {
+					if (musicSelected) {
+						musicSelected = false;
+						volume = vol.value;
+						PlayerPrefs.SetFloat ("volume", volume);
+						evento.SetSelectedGameObject (musicButton);
+					} else if (qualitySelected) {
+						qualitySelected = false;
+						evento.SetSelectedGameObject (qualityButton);
+						leftSelectH.SetActive (false);
+						leftSelectN.SetActive (true);
+						rightSelectH.SetActive (false);
+						rightSelectN.SetActive (true);
+						if (graphicQuality == 0) {
+							QualitySettings.SetQualityLevel (0);
+							lowButton.SetActive (true);
+							mediumButton.SetActive (false);
+							highButton.SetActive (false);
+						} else if (graphicQuality == 1) {
+							QualitySettings.SetQualityLevel (1);
+							lowButton.SetActive (false);
+							mediumButton.SetActive (true);
+							highButton.SetActive (false);
+						} else if (graphicQuality == 2) {
+							QualitySettings.SetQualityLevel (2);
+							lowButton.SetActive (false);
+							mediumButton.SetActive (false);
+							highButton.SetActive (true);
+						}
+					} else {
+						Resume ();
 					}
-				} else {
-					Resume ();
 				}
-			}
-			if (painelSure.activeSelf) {
-				painelSure.SetActive (false);
-				panelOptions.SetActive (true);
-				evento.SetSelectedGameObject (backToMenuButton);
+				if (painelSure.activeSelf) {
+					painelSure.SetActive (false);
+					panelOptions.SetActive (true);
+					evento.SetSelectedGameObject (backToMenuButton);
+				}
 			}
 		}
 	}
