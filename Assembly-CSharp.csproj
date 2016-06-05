@@ -209,6 +209,7 @@
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
      <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
+     <Compile Include="Assets\CutsceneInicialMusica.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\CustomizeText.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
      <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
