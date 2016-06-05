@@ -38,8 +38,8 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     Vector3 initialPosRock;
 	Vector3 OponentPoint;
     public float danoAtaqueParedePedras;
-    float amplitude = 0.1f;
-    float duration = 0.1f;
+    float amplitude = 0.2f;
+    float duration = 0.5f;
 	float subirVel = 10f;
 	float descerVel = 2f;
 	float posPedras;

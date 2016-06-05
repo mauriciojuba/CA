@@ -48,6 +48,7 @@ public class Unite : MonoBehaviour {
                 this.transform.position = CampDump.position;
 				this.GetComponent<CapsuleCollider> ().enabled = true;
                 this.GetComponent<Animator>().SetBool("Unite", false);
+                this.GetComponent<ThirdPersonUserControlCamponesa>().dettach();
 
                 attach = false;
 				count = 0;

@@ -227,5 +227,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 Sombra.transform.position = correctedPoint;
             }
         }
+        public void dettach()
+        {
+            m_Character.m_IsGrounded = true;
+        }
     }
 }
