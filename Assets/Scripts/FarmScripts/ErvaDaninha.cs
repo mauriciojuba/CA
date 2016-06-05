@@ -4,11 +4,14 @@ using Fungus;
 
 public class ErvaDaninha : MonoBehaviour {
 	public GameObject player;
+	public GameObject particle;
 
 	void OnTriggerEnter(Collider hit){
 		if(hit.CompareTag("TurnipAtk")){
 			player.GetComponentInChildren<AudioManager> ().PlaySound (2);
+			GameObject particula = GameObject.Instantiate (particle, this.transform.position, hit.transform.rotation) as GameObject;
 			DialogHandlerTutorial.countDaninha++;
+			Destroy (particula, 3);
 			Destroy (gameObject);
 		}
 	}

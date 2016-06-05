@@ -312,7 +312,7 @@ public class MenuControll : MonoBehaviour {
 	}
 
 	public void VolumeChange(){
-		GameObject.Find("GameControl").GetComponent<AudioSource> ().volume = vol.value;
+		GameObject.Find("Musica").GetComponent<AudioSource> ().volume = vol.value;
 	}
 
 	IEnumerator PressAnyFade(){

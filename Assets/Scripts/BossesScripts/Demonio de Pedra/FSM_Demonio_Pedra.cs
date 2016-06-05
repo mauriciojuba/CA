@@ -17,6 +17,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 	public bool active;
 	public Animator geodomAnimator;
 	public float countVoz;
+
     #region AndarVariaveis
     #endregion
     #region EscolherAtaqueVariaveis
@@ -33,6 +34,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
     #endregion
     #region Ataque_CriarPedraVariaveis
     public GameObject ataquedePedras;
+	public GameObject pedrasCol;
     public GameObject Pedras, particle, particulaDano;
     public Transform Down,Up;
     Vector3 initialPosRock;
@@ -75,8 +77,9 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         if (subindoPedras) {
 			Pedras.transform.position = Vector3.MoveTowards (Pedras.transform.position, Up.transform.position, subirVel * Time.deltaTime);
 			if (Pedras.transform.position.y >= Up.transform.position.y) {
+				pedrasCol.GetComponent<BoxCollider> ().enabled = false;
 				Pedras.tag = "AtaqueSubirPedra";
-				Invoke ("DescerPedras", 3f);
+				Invoke ("DescerPedras", 1.5f);
 				subindoPedras = false;
 			}
 		}
@@ -84,7 +87,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
         else if (descendoPedras) {
 			Pedras.transform.position = Vector3.MoveTowards(Pedras.transform.position, Down.transform.position, descerVel * Time.deltaTime);
 			if (Pedras.transform.position.y <= Down.transform.position.y) {
-				Invoke("EsconderPedras", 5f);
+				Invoke("EsconderPedras", 1.5f);
 				descendoPedras = false;
 			}
 		}
@@ -153,7 +156,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			}
 			//se ele não estiver no meio de um ataque e o target entrou na area de alcance, o boss escolhe o ataque
 			if (!isAttacking && distanceToStartBattle < 10) {
-				Invoke ("EscolherAtaque", 5f);
+				Invoke ("EscolherAtaque", 4f);
 			}
 		}
     }
@@ -171,7 +174,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 		turnipDistance = Vector3.Distance(transform.position, Turnip.position);
         camponesaDistance = Vector3.Distance(transform.position, Camponesa.position);
 
-        if (turnipDistance < camponesaDistance)
+		if (turnipDistance < camponesaDistance )
         {
             Oponente= Turnip;
         }
@@ -276,8 +279,9 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 			geodomAnimator.SetBool ("HeavyAttack", true);
             //ativa o gameObject que lida com as pedras
             ataquedePedras.SetActive(true);
+			pedrasCol.GetComponent<BoxCollider> ().enabled = true;
             //chamara a fução subir pedras em 2 segundos... fiz isso pra que os jogadores tivessem uma indicação antes do ataque maior.
-            Invoke("SubirPedras", 2f);
+            Invoke("SubirPedras", 3f);
             //o boss está atacando agora
             isAttacking = true;
 
@@ -315,6 +319,7 @@ public class FSM_Demonio_Pedra : MonoBehaviour
 
     }
     #endregion
+
     void SubirPedras()
     {
         gameObject.GetComponentInChildren<AudioManagerDemonioPedra>().audio.Stop();

@@ -17,7 +17,7 @@ public class NeedHelp : MonoBehaviour
     float timeToSave = 2f,timeTry = 0f;
     public float alturaPersonagens;
     Animator anim;
-
+	public GameObject fade;
 	public GameObject Texto;
 
     void Initialize()
@@ -39,12 +39,15 @@ public class NeedHelp : MonoBehaviour
         }
 		if (InputManager.players == 2) {
 			if (helper.tag == "Player2") {
+				
+			
 				if ((Input.GetKeyDown (KeyCode.Joystick2Button3) || Input.GetKeyDown (KeyCode.Keypad8)) && canSave)
 					saving = true;
 				if ((Input.GetKeyUp (KeyCode.Joystick2Button3) || Input.GetKeyUp (KeyCode.Keypad8)) || !canSave)
 					saving = false;
 			}
 		} else {
+			
 			if ((Input.GetKeyDown(KeyCode.Joystick1Button3)  || Input.GetKeyDown (KeyCode.I)) && canSave)
 				saving = true;
 			if ((Input.GetKeyUp (KeyCode.Joystick1Button3) || Input.GetKeyUp (KeyCode.I)) || !canSave)
@@ -97,7 +100,7 @@ public class NeedHelp : MonoBehaviour
     }
     void checkDistanceBetweenPlayers()
     {
-		if (Vector3.Distance (helper.transform.position, hurtChar.transform.position) <= 1.5f) {
+		if (Vector3.Distance (helper.transform.position, hurtChar.transform.position) <= 3f) {
 			canSave = true;
 			Texto.SetActive (true);
 		} else {
@@ -124,7 +127,8 @@ public class NeedHelp : MonoBehaviour
 
 	IEnumerator CallGameOver(){
 
-		yield return new WaitForSeconds (4);
+		yield return new WaitForSeconds (7);
+
 		SceneManager.LoadScene (9);
 
 	}
