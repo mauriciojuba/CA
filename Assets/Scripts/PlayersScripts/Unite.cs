@@ -6,14 +6,19 @@ public class Unite : MonoBehaviour {
 
     public Transform CampSpawner, CampDump;
     public Transform Turnip;
-    bool closeEnough, everybodyOk;
+    bool closeEnough, everybodyOk,alturaChecked;
     public bool attach,skill;
-    float count = 0;
+    float count = 0,alturaInicial;
 
+    void Start()
+    {
+        Invoke("getStartedPosY", 3f);
+    }
 
     void Update()
     {
-		if (InputManager.players == 2) {
+        preventLimbo();
+        if (InputManager.players == 2) {
 			if (InputManager.YButton () && closeEnough && everybodyOk && !attach) {
 				skill = true;
 				this.GetComponent<Animator> ().SetBool ("Unite", true);
@@ -67,6 +72,19 @@ public class Unite : MonoBehaviour {
         else
         {
             everybodyOk = true;
+        }
+    }
+    void getStartedPosY()
+    {
+        alturaInicial = transform.position.y - 5f;
+        alturaChecked = true;
+
+    }
+    void preventLimbo()
+    {
+        if(alturaChecked == true && this.transform.position.y<= alturaInicial)
+        {
+            transform.position = CampSpawner.position;
         }
     }
 }
