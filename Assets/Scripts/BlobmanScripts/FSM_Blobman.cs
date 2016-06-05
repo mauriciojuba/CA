@@ -153,10 +153,9 @@ public class FSM_Blobman : MonoBehaviour {
         if (dano) {
 			state = FSMStates.Dano; return;
 		}
-
-		// if (........)
-		//state = FSMStates.Estado_2;
-	}
+        // if (........)
+        //state = FSMStates.Estado_2;
+    }
 	#endregion
 
 	#region Perseguir
@@ -195,8 +194,9 @@ public class FSM_Blobman : MonoBehaviour {
 		if (dano) {
 			state = FSMStates.Dano; return;
 		}
+        anim.SetBool("Walk", true);
 
-	}
+    }
 	#endregion
 
 	#region Bater
@@ -267,15 +267,16 @@ public class FSM_Blobman : MonoBehaviour {
 	private void Morrer_State(){
 
 		if (morrer) {
-            anim.SetBool("Die", false);
+            anim.SetBool("Die", true);
             gameObject.GetComponentInChildren<AudioManagerBlobman> ().PlaySound (3);
 			particula.SetActive (true);
             
-			Destroy (this.gameObject, 2f);
+			Destroy (this.gameObject, 3f);
 			morrer = false;
 		}
+        anim.SetBool("Die", true);
 
-	}
+    }
 	#endregion
 
 	#region  ColliderEnter

@@ -9,7 +9,7 @@ public class MenuControll : MonoBehaviour {
 
 	private float dampTime;
 	public bool isOnMainMenu;
-	private float volume;
+	private float volume = 0.5f;
 	private int graphicQuality;
 	public GameObject mainMenu, options, newGame;
 	public GameObject painelQuit;
@@ -60,13 +60,19 @@ public class MenuControll : MonoBehaviour {
 				//volume
 		if (PlayerPrefs.HasKey ("volume")) {
 			volume = PlayerPrefs.GetFloat ("volume");
-			vol.value = volume;
-		} else {
+            PlayerPrefs.SetFloat("volume", volume);
+            vol.value = volume;
+            VolumeChange();
+        } else {
 			PlayerPrefs.SetFloat("volume", volume);
-		}
+            vol.value = volume;
+            VolumeChange();
+        }
+        vol.value = 0.5f;
+        VolumeChange();
 
-				//qualidades graficas
-		if (PlayerPrefs.HasKey ("graphicQuality")) {
+        //qualidades graficas
+        if (PlayerPrefs.HasKey ("graphicQuality")) {
 			graphicQuality = PlayerPrefs.GetInt ("graphicQuality");
 		} else {
 			PlayerPrefs.SetInt("graphicQuality", graphicQuality);
