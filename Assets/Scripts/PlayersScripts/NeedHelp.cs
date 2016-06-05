@@ -17,8 +17,6 @@ public class NeedHelp : MonoBehaviour
     float timeToSave = 2f,timeTry = 0f;
     public float alturaPersonagens;
     Animator anim;
-	public GameObject fade;
-	public GameObject Texto;
 
     void Initialize()
     {
@@ -36,23 +34,29 @@ public class NeedHelp : MonoBehaviour
         {
             KeepButtonsOnHurtedChar();
             savingHurtedChar();
+            bothDead();
         }
-		if (InputManager.players == 2) {
-			if (helper.tag == "Player2") {
-				
-			
-				if ((Input.GetKeyDown (KeyCode.Joystick2Button3) || Input.GetKeyDown (KeyCode.Keypad8)) && canSave)
-					saving = true;
-				if ((Input.GetKeyUp (KeyCode.Joystick2Button3) || Input.GetKeyUp (KeyCode.Keypad8)) || !canSave)
-					saving = false;
-			}
-		} else {
-			
-			if ((Input.GetKeyDown(KeyCode.Joystick1Button3)  || Input.GetKeyDown (KeyCode.I)) && canSave)
-				saving = true;
-			if ((Input.GetKeyUp (KeyCode.Joystick1Button3) || Input.GetKeyUp (KeyCode.I)) || !canSave)
-				saving = false;
-		}
+        if (InputManager.players == 2)
+        {
+            if (helper != null)
+            {
+                if (helper.tag == "Player2")
+                {
+                    if ((Input.GetKeyDown(KeyCode.Joystick2Button3) || Input.GetKeyDown(KeyCode.Keypad8)) && canSave)
+                        saving = true;
+                    if ((Input.GetKeyUp(KeyCode.Joystick2Button3) || Input.GetKeyUp(KeyCode.Keypad8)) || !canSave)
+                        saving = false;
+                }
+            }
+            else
+            {
+
+                if ((Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.I)) && canSave)
+                    saving = true;
+                if ((Input.GetKeyUp(KeyCode.Joystick1Button3) || Input.GetKeyUp(KeyCode.I)) || !canSave)
+                    saving = false;
+            }
+        }
     }
     void FixedUpdate()
     {
@@ -69,21 +73,11 @@ public class NeedHelp : MonoBehaviour
         instance.transform.SetParent(canvas.transform, false);
         instance.transform.position = screenPosition;
         _particle.SetActive(true);
-        //KeepButtonsOnHurtedChar();
-        if (hurtChar != null)
-        {
-			StartCoroutine (CallGameOver ());
-        }
-        else
-        {
-            hurtChar = _hurted;
-            anim = hurtChar.GetComponent<Animator>();
-            anim.SetBool("Hurt", true);
-			if (hurtChar.tag == "Player1")
-				hurtChar.GetComponent<FSM_Camponesa> ().enabled = false;
-			else if (hurtChar.tag == "Player2")
-				hurtChar.GetComponent<FSM_Turnip> ().enabled = false;
-        }
+        hurtChar = _hurted;
+        anim = hurtChar.GetComponent<Animator>();
+        anim.SetBool("Hurt", true);
+        if (hurtChar.tag == "Player1") hurtChar.GetComponent<FSM_Camponesa> ().enabled = false;
+        else if (hurtChar.tag == "Player2") hurtChar.GetComponent<FSM_Turnip> ().enabled = false;
         defineHurtedAndHelper();
     }
     void KeepButtonsOnHurtedChar()
@@ -102,10 +96,8 @@ public class NeedHelp : MonoBehaviour
     {
 		if (Vector3.Distance (helper.transform.position, hurtChar.transform.position) <= 3f) {
 			canSave = true;
-			Texto.SetActive (true);
 		} else {
 			canSave = false;
-			Texto.SetActive (false);
 		}
     }
     void savingHurtedChar()
@@ -119,7 +111,6 @@ public class NeedHelp : MonoBehaviour
         hurtChar.GetComponent<PlayersDamangeHandler>().HP = 50;
         anim.SetBool("Hurt", false);
         _particle.SetActive(false);
-		Texto.SetActive (false);
         hurtChar = null;
         helper = null;
         timeTry = 0;
@@ -127,9 +118,17 @@ public class NeedHelp : MonoBehaviour
 
 	IEnumerator CallGameOver(){
 
-		yield return new WaitForSeconds (7);
+		yield return new WaitForSeconds (5);
 
 		SceneManager.LoadScene (9);
 
 	}
+    void bothDead()
+    {
+        if(helper.GetComponent<PlayersDamangeHandler>().HP <= 10)
+        {
+            StartCoroutine("CallGameOver");
+        }
+
+    }
 }
