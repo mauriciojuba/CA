@@ -100,7 +100,7 @@ public class MenuControll : MonoBehaviour {
 
 		if (!isOnMainMenu) {
 			countPressAny += Time.deltaTime;
-			if (countPressAny > 2) {
+			if (countPressAny > 1) {
 				StartCoroutine(PressAnyFade());
 				pressAny.SetActive (true);
 				isOnMainMenu = true;
@@ -111,6 +111,7 @@ public class MenuControll : MonoBehaviour {
 		if (canPressAny) {
 			if (Input.anyKeyDown) {
 				camAnim.Rebind();
+				camAnim.speed=1;
 				camAnim.Play("cameraMovement",-1,0f);
 				StartCoroutine(MenuFade());
 
@@ -159,10 +160,13 @@ public class MenuControll : MonoBehaviour {
 					painelQuit.SetActive (false);
 					evento.SetSelectedGameObject (quitButton);
 				} else {
+					camAnim.Rebind();
+					camAnim.Play("cameraReverse",-1,0f);
 					isOnMainMenu = false;
 					mainMenu.SetActive (false);
 					pressA.SetActive (false);
 					pressB.SetActive (false);
+
 				}
 			}
 
