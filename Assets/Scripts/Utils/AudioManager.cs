@@ -23,10 +23,13 @@ public class AudioManager : MonoBehaviour {
 
 	#region Sons Camponesa
 	public AudioClip tacarNabos;
+	public AudioClip pegarNabos;
 	#endregion
 
 	#region Sons Turnip
 	public AudioClip ataqueTurnip;
+	public AudioClip turnipSurgindo;
+	public AudioClip danoTurnip;
 	#endregion
 
 	#region Sons Blobman
@@ -97,11 +100,22 @@ public class AudioManager : MonoBehaviour {
 		if (sound == 6) {
 			audio.PlayOneShot(ataqueTurnip);
 		}
+
+		if (sound == 24) {
+			audio.PlayOneShot(turnipSurgindo);
+		}
+
+		if (sound == 25) {
+			audio.PlayOneShot(danoTurnip);
+		}
 		#endregion
 
 		#region SONS DE INTERAÇÃO DA CAMPONESA
 		if (sound == 7) {
 			audio.PlayOneShot(tacarNabos);
+		}
+		if(sound == 23) {
+			audio.PlayOneShot(pegarNabos);
 		}
 		#endregion
 
@@ -145,6 +159,7 @@ public class AudioManager : MonoBehaviour {
 			audio.PlayOneShot(Demonio_Agua_Mob_Morte);
 		#endregion
 	}
-	
+
+
 }
 

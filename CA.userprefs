@@ -1,9 +1,41 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIScripts\MenuControll.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FarmScripts\DestroyNabo.cs">
     <Files>
+      <File FileName="Assets\Scripts\Utils\VerifyPlayers.cs" Line="26" Column="75" />
       <File FileName="Assets\Scripts\UIScripts\MenuControll.cs" Line="152" Column="30" />
+      <File FileName="Assets\Scripts\UIScripts\PauseMenu.cs" Line="206" Column="26" />
+      <File FileName="Assets\Scripts\PlayersScripts\ThirdPersonUserControlCamponesa.cs" Line="236" Column="73" />
+      <File FileName="Assets\Scripts\Utils\AudioManager.cs" Line="109" Column="32" />
+      <File FileName="Assets\Scripts\PlayersScripts\FootstepAudio.cs" Line="13" Column="27" />
+      <File FileName="Assets\Scripts\Utils\Cutscene.cs" Line="41" Column="5" />
+      <File FileName="Assets\Scripts\BlobmanScripts\FSM_Blobman.cs" Line="240" Column="76" />
+      <File FileName="Assets\Scripts\FarmScripts\DestroyNabo.cs" Line="10" Column="83" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True">
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BlobmanScripts" expanded="True" />
+                <Node name="FarmScripts" expanded="True">
+                  <Node name="DestroyNabo.cs" selected="True" />
+                </Node>
+                <Node name="PlayersScripts" expanded="True" />
+                <Node name="UIScripts" expanded="True" />
+                <Node name="Utils" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State name="__root__">
+          <Node name="CA" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

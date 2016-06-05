@@ -231,5 +231,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             m_Character.m_IsGrounded = true;
         }
+
+		public void PegarNabosSound(){
+			this.gameObject.GetComponentInChildren<AudioManager> ().PlaySound (23);
+		}
     }
 }

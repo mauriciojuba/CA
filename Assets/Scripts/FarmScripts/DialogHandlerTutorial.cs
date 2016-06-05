@@ -8,7 +8,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
 
     public string message;
     public bool canTalk;
-    public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip;
+    public GameObject girar, trocarPersonagem, atirarNabos, mirarTurnip, chegaPertoTurnip, descerTurnip;
     public GameObject montarTurnip, pegaNaboVida, agachar, hudPlayers;
     public static bool cutscene;
     public bool beginGame, change, aim, shoot, agarraTurnip, final;
@@ -28,6 +28,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
         mirarTurnip.SetActive(false);
         trocarPersonagem.SetActive(false);
         atirarNabos.SetActive(false);
+		descerTurnip.SetActive (false);
         count = 0;
         cutscene = true;
         toTalk = false;
@@ -233,14 +234,14 @@ public class DialogHandlerTutorial : MonoBehaviour {
         }
 
 
-        if (Vector3.Distance(camponesa.transform.position, turnip.transform.position) <= 1f && canUp) {
+        if (Vector3.Distance(camponesa.transform.position, turnip.transform.position) <= 2f && canUp) {
             chegaPertoTurnip.SetActive(false);
             montarTurnip.SetActive(true);
 
         } else {
             montarTurnip.SetActive(false);
         }
-        if (Vector3.Distance(camponesa.transform.position, turnip.transform.position) <= 1f && InputManager.YButton()) {
+        if (Vector3.Distance(camponesa.transform.position, turnip.transform.position) <= 2f && InputManager.YButton()) {
             montarTurnip.SetActive(false);
             canUp = false;
         }

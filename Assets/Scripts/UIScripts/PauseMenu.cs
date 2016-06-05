@@ -203,7 +203,7 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	public void VolumeChange(){
-		GameObject.Find("GameControl").GetComponent<AudioSource> ().volume = vol.value;
+		GameObject.Find("Musica").GetComponent<AudioSource> ().volume = vol.value;
 	}
 
 	public void NavigateQualityButtons(){

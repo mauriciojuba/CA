@@ -10,6 +10,7 @@ public class Cutscene : MonoBehaviour {
 	public float count;
 	public bool skip;
     public GameObject particles;
+	public AudioManager audio;
 
     void Awake()
     {
@@ -35,6 +36,9 @@ public class Cutscene : MonoBehaviour {
 			camera.transform.rotation = posicao1.rotation;
 
 		} else if (count > 14 && count <= 15) {
+			if (!audio.audio.isPlaying)  {
+				audio.PlaySound (24);
+			}
 			camera.transform.position = posicao2.position;
 			camera.transform.rotation = posicao2.rotation;
             particles.SetActive(true);
