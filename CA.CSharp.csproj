@@ -233,7 +233,6 @@
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransform.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\Helper Classes\Vector3OrTransformArray.cs" />
     <Compile Include="Assets\AssetStore\iTweenEditor\iTweenEvent.cs" />
-    <Compile Include="Assets\CutsceneInicialMusica.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\CustomizeText.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBank.cs" />
     <Compile Include="Assets\MenuCircular\Scripts\CircularScrollingList\ListBox.cs" />
@@ -282,6 +281,7 @@
     <Compile Include="Assets\Scripts\Utils\AudioManagerTurnip.cs" />
     <Compile Include="Assets\Scripts\Utils\CameraShake.cs" />
     <Compile Include="Assets\Scripts\Utils\Cutscene.cs" />
+    <Compile Include="Assets\Scripts\Utils\CutsceneInicialMusica.cs" />
     <Compile Include="Assets\Scripts\Utils\DialogHandler.cs" />
     <Compile Include="Assets\Scripts\Utils\DialogHandlerCutscene.cs" />
     <Compile Include="Assets\Scripts\Utils\DialogHandlerCutsceneFinal.cs" />
@@ -296,6 +296,7 @@
     <Compile Include="Assets\Scripts\Utils\TurnTrans.cs" />
     <Compile Include="Assets\Scripts\Utils\VerifyPlayers.cs" />
     <Compile Include="Assets\Scripts\Utils\WaypointControl.cs" />
+    <Compile Include="Assets\Scripts\Utils\preventLimbo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AssetStore\Armoire Cannonball Utilities\Magic Splitscreen\Shaders\Splitscreen Mask.shader" />
@@ -312,6 +313,10 @@
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\LICENSE.txt" />
     <None Include="Assets\AssetStore\Fungus\Thirdparty\Reorderable List Field\README.txt" />
     <None Include="Assets\Cinema Suite\Cinema Themes\ReadMe.txt" />
+    <None Include="Assets\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
+    <None Include="Assets\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
+    <None Include="Assets\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
+    <None Include="Assets\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
