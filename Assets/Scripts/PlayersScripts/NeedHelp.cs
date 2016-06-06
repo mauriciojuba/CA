@@ -16,7 +16,7 @@ public class NeedHelp : MonoBehaviour
     public bool saving;
     float timeToSave = 2f,timeTry = 0f;
     public float alturaPersonagens;
-    Animator anim;
+    Animator animTurnip,animCamp;
 
     void Initialize()
     {
@@ -35,12 +35,9 @@ public class NeedHelp : MonoBehaviour
             KeepButtonsOnHurtedChar();
             savingHurtedChar();
             bothDead();
-        }
-        if (InputManager.players == 2)
-        {
-            if (helper != null)
+            if (InputManager.players == 2)
             {
-                if (helper.tag == "Player2")
+                if (helper.CompareTag("Player2"))
                 {
                     if ((Input.GetKeyDown(KeyCode.Joystick2Button3) || Input.GetKeyDown(KeyCode.Keypad8)) && canSave)
                         saving = true;
@@ -50,13 +47,17 @@ public class NeedHelp : MonoBehaviour
             }
             else
             {
-
                 if ((Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.I)) && canSave)
                     saving = true;
                 if ((Input.GetKeyUp(KeyCode.Joystick1Button3) || Input.GetKeyUp(KeyCode.I)) || !canSave)
                     saving = false;
             }
         }
+        else
+        {
+            saving = false;
+        }
+            
     }
     void FixedUpdate()
     {
@@ -74,8 +75,18 @@ public class NeedHelp : MonoBehaviour
         instance.transform.position = screenPosition;
         _particle.SetActive(true);
         hurtChar = _hurted;
-        anim = hurtChar.GetComponent<Animator>();
-        anim.SetBool("Hurt", true);
+        if (hurtChar.tag == "Player1")
+        {
+            animCamp = hurtChar.GetComponent<Animator>();
+            animCamp.SetBool("Hurt", true);
+        }
+        else if (hurtChar.tag == "Player2")
+        {
+            animTurnip = hurtChar.GetComponent<Animator>();
+            animTurnip.SetBool("Hurt", true);
+        }
+
+
         if (hurtChar.tag == "Player1") hurtChar.GetComponent<FSM_Camponesa> ().enabled = false;
         else if (hurtChar.tag == "Player2") hurtChar.GetComponent<FSM_Turnip> ().enabled = false;
         defineHurtedAndHelper();
@@ -109,7 +120,14 @@ public class NeedHelp : MonoBehaviour
     public void CharSaved()
     {
         hurtChar.GetComponent<PlayersDamangeHandler>().HP = 50;
-        anim.SetBool("Hurt", false);
+        if (hurtChar.tag == "Player1")
+        {
+            animCamp.SetBool("Hurt", false);
+        }
+        else if (hurtChar.tag == "Player2")
+        {
+            animTurnip.SetBool("Hurt", false);
+        }
         _particle.SetActive(false);
         hurtChar = null;
         helper = null;
