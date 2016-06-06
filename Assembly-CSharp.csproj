@@ -265,6 +265,7 @@
      <Compile Include="Assets\Scripts\Utils\InputManager.cs" />
      <Compile Include="Assets\Scripts\Utils\MudaNome.cs" />
      <Compile Include="Assets\Scripts\Utils\MusicsCave.cs" />
+     <Compile Include="Assets\Scripts\Utils\SignPlayersCave.cs" />
      <Compile Include="Assets\Scripts\Utils\TransparentObject.cs" />
      <Compile Include="Assets\Scripts\Utils\TriggerBarreira.cs" />
      <Compile Include="Assets\Scripts\Utils\TriggerHelp.cs" />
