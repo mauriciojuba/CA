@@ -19,7 +19,9 @@ public class ErvaDaninha : MonoBehaviour {
 	void OnCollisionEnter(Collision hit){
 		if(hit.gameObject.CompareTag("Nabo")){
 			player.GetComponentInChildren<AudioManager> ().PlaySound (2);
+			GameObject particula = GameObject.Instantiate (particle, this.transform.position, hit.transform.rotation) as GameObject;
 			DialogHandlerTutorial.countDaninha++;
+			Destroy (particula, 3);
 			Destroy (gameObject);
 		}
 	}
