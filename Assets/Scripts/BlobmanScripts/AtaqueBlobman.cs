@@ -8,7 +8,7 @@ public class AtaqueBlobman : MonoBehaviour {
     {
         if(hit.gameObject.GetComponent<PlayersDamangeHandler>() != null)
         {
-            hit.gameObject.GetComponent<PlayersDamangeHandler>().HitPLayer(3f);
+            hit.gameObject.GetComponent<PlayersDamangeHandler>().HitPLayer(5f);
         }
     }
 }

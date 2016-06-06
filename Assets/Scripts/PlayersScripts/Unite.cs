@@ -77,7 +77,7 @@ public class Unite : MonoBehaviour {
     }
     void getStartedPosY()
     {
-        alturaInicial = transform.position.y - 2f;
+        alturaInicial = transform.position.y - 5f;
         alturaChecked = true;
 
     }

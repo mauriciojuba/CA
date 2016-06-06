@@ -14,10 +14,11 @@ public class Cutscene : MonoBehaviour {
 
     void Awake()
     {
-		cameraPlayers.GetComponent<Camera> ().enabled = false;
+        cameraPlayers.GetComponent<Camera>().enabled = false;
     }
 	// Use this for initialization
 	void Start () {
+        
         turnip.GetComponent<Animator>().enabled = false;
         count = 0;
 		camera.transform.position = posicao.position;

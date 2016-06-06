@@ -6,6 +6,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 using UnityStandardAssets.ImageEffects;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controller class for two player Magic Splitscreen camera(s)
@@ -225,6 +226,18 @@ public class MagicSplitscreen : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        if(SceneManager.GetActiveScene().name == "Cave")
+        {
+            this.Initialize();
+
+        if (!this.IsInitialized)
+        {
+            Debug.LogError("MagicSplitscreen: There were problems initializing. This class will not run.");
+        }
+        }
+    }
+    public void farmIssue()
+    {
         this.Initialize();
 
         if (!this.IsInitialized)
@@ -279,7 +292,7 @@ public class MagicSplitscreen : MonoBehaviour
             this.cameraTarget2 = this.player2.position - this.cameraDisplacement2d;
 			this.MoveCamera(this.primaryCamera, this.cameraTarget1);
 			this.MoveCamera(this.secondaryCamera, this.cameraTarget2);
-
+            this.secondaryCamera.enabled = true;
             // Position the splitscreen mask in front of the second camera
             this.PositionSplitscreenMask(this.secondaryCamera, this.player2.position, this.player2.position + this.cameraDisplacement2d);
             this.separatorRenderer.enabled = this.isSeparatorUsable && this.showSeparator;

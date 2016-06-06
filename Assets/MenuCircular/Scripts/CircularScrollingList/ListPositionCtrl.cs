@@ -26,6 +26,7 @@ public class ListPositionCtrl : MonoBehaviour
 	public bool alignToCenter = false;
 	public bool controlByAxis = false;
     public Camera cameradoMenu;
+    public GameObject magicSplit;
 	public ListBox[] listBoxes;
 	public float centerPosY;
 
@@ -226,7 +227,7 @@ public class ListPositionCtrl : MonoBehaviour
 			};
 
 			ListBank.Instance.setListContent(newContents);
-
+            
 			updateListBoxes ();
 		}
 	}
@@ -239,4 +240,8 @@ public class ListPositionCtrl : MonoBehaviour
 
 		}
 	}
+    void OnDestroy()
+    {
+        magicSplit.GetComponent<MagicSplitscreen>().farmIssue();
+    }
 }

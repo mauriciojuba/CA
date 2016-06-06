@@ -53,7 +53,8 @@ public class DialogHandlerCutsceneFinal : MonoBehaviour {
 	public void Posicao6(){
 		camera.transform.position = posicao6.position;
 		camera.transform.rotation = posicao6.rotation;
-	}
+        camera.transform.position = posicao6.position;
+    }
 
 	public void Posicao7(){
 		camera.transform.position = posicao7.position;
