@@ -44,6 +44,13 @@ public class NeedHelp : MonoBehaviour
                     if ((Input.GetKeyUp(KeyCode.Joystick2Button3) || Input.GetKeyUp(KeyCode.Keypad8)) || !canSave)
                         saving = false;
                 }
+                else
+                {
+                    if ((Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.I)) && canSave)
+                        saving = true;
+                    if ((Input.GetKeyUp(KeyCode.Joystick1Button3) || Input.GetKeyUp(KeyCode.I)) || !canSave)
+                        saving = false;
+                }
             }
             else
             {
