@@ -103,7 +103,7 @@ public class DialogHandlerTutorial : MonoBehaviour {
                 shoot = false;
                 ChangeText();
 
-                camponesa.GetComponent<ThirdPersonUserControlCamponesa>().selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = false;
+				camponesa.GetComponent<ThirdPersonUserControlCamponesa>().selectedTarget.Find("SelectedPoint").GetComponentInChildren<ParticleSystem>().enableEmission = false;
                 camponesa.GetComponent<ThirdPersonUserControlCamponesa>().selectedTarget = null;
                 camponesa.GetComponent<ThirdPersonUserControlCamponesa>().targets.Clear();
                 camponesa.GetComponent<ThirdPersonUserControlCamponesa>().AddAllEnemies();
@@ -383,8 +383,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
         camponesa.GetComponent<ThirdPersonUserControlCamponesa>().enabled = false;
         turnip.GetComponent<ThirdPersonCharacter>().enabled = true;
         turnip.GetComponent<ThirdPersonUserControlTurnip>().enabled = true;
-        camponesa.transform.FindChild("SelectedPlayer").GetComponent<MeshRenderer>().enabled = false;
-        turnip.transform.FindChild("SelectedPlayer").GetComponent<MeshRenderer>().enabled = true;
+		camponesa.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Stop();
+		turnip.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
     }
 
     public void CamponesaActivation() {
@@ -392,8 +392,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
         camponesa.GetComponent<ThirdPersonUserControlCamponesa>().enabled = true;
         turnip.GetComponent<ThirdPersonCharacter>().enabled = true;
         turnip.GetComponent<ThirdPersonUserControlTurnip>().enabled = false;
-        camponesa.transform.FindChild("SelectedPlayer").GetComponent<MeshRenderer>().enabled = true;
-        turnip.transform.FindChild("SelectedPlayer").GetComponent<MeshRenderer>().enabled = false;
+		camponesa.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
+		turnip.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Stop();
     }
 
     public void TwoPlayersActivation() {
@@ -401,6 +401,8 @@ public class DialogHandlerTutorial : MonoBehaviour {
         turnip.GetComponent<ThirdPersonUserControlTurnip>().enabled = true;
         camponesa.GetComponent<ThirdPersonCharacter>().enabled = true;
         turnip.GetComponent<ThirdPersonCharacter>().enabled = true;
+		camponesa.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
+		turnip.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
     }
 
     public void ActivateFollowTurnip() {

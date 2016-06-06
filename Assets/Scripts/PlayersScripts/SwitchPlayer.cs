@@ -39,17 +39,17 @@ public class SwitchPlayer : MonoBehaviour
 				player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = false;
 				player1.GetComponent<FSM_Camponesa> ().enabled = false;
 				player2.GetComponent<FSM_Turnip> ().enabled = true;
-				player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
-				player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
 
+				player1.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
+				player2.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Stop ();
 			} else if (controlling == "Player2") {
 				
 				player2.GetComponent<ThirdPersonUserControlTurnip> ().enabled = true;
 				player1.GetComponent<ThirdPersonUserControlCamponesa> ().enabled = false;
 				player1.GetComponent<FSM_Camponesa> ().enabled = true;
 				player2.GetComponent<FSM_Turnip> ().enabled = false;
-				player1.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = false;
-				player2.transform.FindChild ("SelectedPlayer").GetComponent<MeshRenderer> ().enabled = true;
+				player1.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Stop();
+				player2.transform.Find("SelectedPlayer").GetComponentInChildren<ParticleSystem> ().Play();
 
 			}
 			if (player1.GetComponent<Unite> ().skill) {

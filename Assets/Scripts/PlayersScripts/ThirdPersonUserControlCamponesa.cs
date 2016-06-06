@@ -81,7 +81,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					if (Vector3.Distance (targets [0].position, myTransform.position) <= 7.0f) {
 						TargetEnemy ();
 					} else if(selectedTarget != null) {
-						selectedTarget.FindChild ("SelectedPoint").GetComponent<MeshRenderer> ().enabled = false;
+						selectedTarget.Find("SelectedPoint").GetComponentInChildren<ParticleSystem> ().Play();
 						selectedTarget = null;
 					}
 				}
@@ -186,7 +186,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		private void SelectTarget()
 		{
 			if(selectedTarget != null)
-			selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = true;
+//			selectedTarget.FindChild("SelectedPoint").GetComponent<MeshRenderer>().enabled = true;
+				selectedTarget.Find("SelectedPoint").GetComponentInChildren<ParticleSystem> ().Play();
 		}
 
         void Attack()
