@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using Fungus;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour {
 	private float dampTime;
@@ -13,17 +14,22 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject panelOptions, painelSure;
 	private int level;
 	private float volume;
+	private float volumeSfx;
 	public Slider vol;
+	public Slider volSfx;
 	private bool musicSelected;
+	private bool sfxSelected;
 	private bool qualitySelected;
 	public GameObject highButton;
 	public GameObject mediumButton;
 	public GameObject lowButton;
 	public GameObject qualityButton;
 	public GameObject musicButton;
+	public GameObject sfxButton;
 	public GameObject backToMenuButton;
 	public GameObject nao;
 	public GameObject volumeSlider;
+	public GameObject volumeSfxSlider;
 	public GameObject hudPlayers;
 	public Image camponesaLife1, camponesaLife2;
 	public Image turnipLife1, turnipLife2;
@@ -32,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
 	private int graphicQuality;
 	public GameObject leftSelectN, leftSelectH;
 	public GameObject rightSelectN, rightSelectH;
+	public AudioMixer masterMixer;
 
 	// Use this for initialization
 	void Start () {
@@ -45,12 +52,18 @@ public class PauseMenu : MonoBehaviour {
 		Time.timeScale = 1;
 		rightSelectH.SetActive (false);
 		leftSelectH.SetActive (false);
-	
+
 		if (PlayerPrefs.HasKey ("volume")) {
 			volume = PlayerPrefs.GetFloat ("volume");
 			vol.value = volume;
 		} else {
 			PlayerPrefs.SetFloat("volume", volume);
+		}
+		if (PlayerPrefs.HasKey ("volumeSfx")) {
+			volumeSfx = PlayerPrefs.GetFloat ("volumeSfx");
+			volSfx.value = volumeSfx;
+		} else {
+			PlayerPrefs.SetFloat("volumeSfx", volumeSfx);
 		}
 
 		if (PlayerPrefs.HasKey ("graphicQuality")) {
@@ -89,7 +102,7 @@ public class PauseMenu : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7)) {
 			pause = !pause;
-			
+
 			if (pause == true) {
 				panelPause.SetActive (true);
 				evento.SetSelectedGameObject (musicButton);
@@ -138,6 +151,11 @@ public class PauseMenu : MonoBehaviour {
 						volume = vol.value;
 						PlayerPrefs.SetFloat ("volume", volume);
 						evento.SetSelectedGameObject (musicButton);
+					} else if (sfxSelected) {
+						sfxSelected = false;
+						volumeSfx = volSfx.value;
+						PlayerPrefs.SetFloat ("volumeSfx", volumeSfx);
+						evento.SetSelectedGameObject (sfxButton);
 					} else if (qualitySelected) {
 						qualitySelected = false;
 						evento.SetSelectedGameObject (qualityButton);
@@ -251,6 +269,10 @@ public class PauseMenu : MonoBehaviour {
 		musicSelected = true;
 		evento.SetSelectedGameObject (volumeSlider);
 	}
+	public void ButtonVolumeSfx(){
+		sfxSelected = true;
+		evento.SetSelectedGameObject (volumeSfxSlider);
+	}
 
 	public void HighQuality(){
 		QualitySettings.SetQualityLevel (2);
@@ -288,7 +310,10 @@ public class PauseMenu : MonoBehaviour {
 		evento.SetSelectedGameObject (qualityButton);
 	}
 
-    
+	public void SetSfxLvl(float sfxLvl)
+	{
+		masterMixer.SetFloat ("sfxVol", sfxLvl);
+	}
 
 
 }
