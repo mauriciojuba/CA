@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 using UnityStandardAssets.ImageEffects;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.CinematicEffects;
 
 /// <summary>
 /// Controller class for two player Magic Splitscreen camera(s)
@@ -226,7 +227,7 @@ public class MagicSplitscreen : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        if(SceneManager.GetActiveScene().name == "Cave")
+        if(SceneManager.GetActiveScene().name == "Cave" || SceneManager.GetActiveScene().name == "Floresta")
         {
             this.Initialize();
 
@@ -324,6 +325,7 @@ public class MagicSplitscreen : MonoBehaviour
         }
 
         this.centralPosition /= this.NumPlayers;
+        Debug.Log("centralPositi");
     }
 
     /// <summary>
@@ -431,8 +433,8 @@ public class MagicSplitscreen : MonoBehaviour
     {
         // Clone the primary camera
         this.secondaryCamera = GameObject.Instantiate(this.primaryCamera) as Camera;
-        this.secondaryCamera.GetComponent<BloomOptimized>().enabled = false;
-        this.secondaryCamera.GetComponent<VignetteAndChromaticAberration>().enabled = false;
+        if(this.secondaryCamera.GetComponent<BloomOptimized>() != null) this.secondaryCamera.GetComponent<BloomOptimized>().enabled = false;
+        if(this.secondaryCamera.GetComponent<VignetteAndChromaticAberration>()!= null) this.secondaryCamera.GetComponent<VignetteAndChromaticAberration>().enabled = false;
         
         this.secondaryCamera.transform.parent = this.transform;
         this.secondaryCamera.clearFlags = CameraClearFlags.Depth;
@@ -550,7 +552,8 @@ public class MagicSplitscreen : MonoBehaviour
 
         // Turn off culling of the splitscreen mask layer for the main camera
         this.primaryCamera.cullingMask &= ~(1 << this.maskLayer);
-        this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = false;
+        if(this.primaryCamera.GetComponent<ColorCorrectionLookup>() != null) this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = false;
+        if (this.primaryCamera.GetComponent<TonemappingColorGrading>() != null) this.primaryCamera.GetComponent<TonemappingColorGrading>().enabled = false;
 
         this.IsSplitscreenOn = true;
     }
@@ -565,7 +568,8 @@ public class MagicSplitscreen : MonoBehaviour
         this.secondaryCamera.gameObject.SetActive(false);
         this.maskTransform.gameObject.SetActive(false);
         this.separatorRenderer.enabled = false;
-        this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = true;
+        if(this.primaryCamera.GetComponent<ColorCorrectionLookup>()!=null) this.primaryCamera.GetComponent<ColorCorrectionLookup>().enabled = true;
+        if (this.primaryCamera.GetComponent<TonemappingColorGrading>() != null) this.primaryCamera.GetComponent<TonemappingColorGrading>().enabled = true;
     }
     #endregion
 }
